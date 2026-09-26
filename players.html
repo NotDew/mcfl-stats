@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07080b">
+<meta name="description" content="Official stats, standings, records and Hall of Fame for the Minecraft Football League.">
+<title>Players &middot; MCFL Stats</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://mc-heads.net">
+<link rel="stylesheet" href="static/style.css">
+<link rel="icon" type="image/png" href="static/mcfl-logo.png">
+<link rel="apple-touch-icon" href="static/mcfl-logo.png">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="static/mcfl-logo.png" alt="MCFL">
+      <span class="brand-text">
+        <div class="brand-main">Minecraft Football League</div>
+        <div class="brand-sub">OFFICIAL STATS</div>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link " href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/></svg><span>Home</span></a>
+      <a class="nav-link " href="stats.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M12 20V4M20 20v-7"/></svg><span>Stats</span></a>
+      <a class="nav-link active" href="players.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3.1-6 7-6s7 2.7 7 6"/><path d="M16 6.2a3 3 0 0 1 0 5.8M22 20c0-2.8-2.3-5.2-5.5-5.9"/></svg><span>Players</span></a>
+      <a class="nav-link " href="teams.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6l-8-4Z"/></svg><span>Teams</span></a>
+      <a class="nav-link " href="standings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg><span>Standings</span></a>
+      <a class="nav-link " href="games.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><span>Schedule</span></a>
+      <a class="nav-link " href="hof.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.7 5.5 6 .9-4.35 4.2 1 6L12 16.8 6.6 19.6l1-6L3.3 9.4l6-.9L12 3Z"/></svg><span>Hall of Fame</span></a>
+      <a class="nav-link " href="history.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.1 13a9 9 0 1 0 2.6-6.4L3 9"/><path d="M3 4v5h5"/><path d="M12 8v5l3 2"/></svg><span>History</span></a>
+    </div>
+  </div>
+</nav>
+
+
+<main>
+
+<section class="hero">
+  <div class="hero-lines"></div>
+  <div class="wrap">
+    <span class="eyebrow">Season 19 rosters</span>
+    <h1 class="hero-title">Players</h1>
+    <p class="hero-sub">Every player currently signed to an MCFL team.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="search-row">
+      <label class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="player-search" placeholder="Search players or teams..." autocomplete="off" aria-label="Search players">
+      </label>
+      <span class="result-count" id="result-count">70 players</span>
+    </div>
+    <div class="chip-row" id="team-chips">
+      <button class="chip all active" data-team="">All teams</button>
+      <button class="chip" data-team="traders" style="--c:#ffc000"><span class="team-mark " style="--c:#ffc000" title="Traders"><img src="team_logos/Traders.png" alt="" loading="lazy" onerror="this.remove()"></span>Traders</button>
+      <button class="chip" data-team="mountaineers" style="--c:#009650"><span class="team-mark " style="--c:#009650" title="Mountaineers"><img src="team_logos/Mountaineers.png" alt="" loading="lazy" onerror="this.remove()"></span>Mountaineers</button>
+      <button class="chip" data-team="sniffers" style="--c:#f4b084"><span class="team-mark " style="--c:#f4b084" title="Sniffers"><img src="team_logos/Sniffers.png" alt="" loading="lazy" onerror="this.remove()"></span>Sniffers</button>
+      <button class="chip" data-team="tropics" style="--c:#e628c8"><span class="team-mark " style="--c:#e628c8" title="Tropics"><img src="team_logos/Tropics.png" alt="" loading="lazy" onerror="this.remove()"></span>Tropics</button>
+      <button class="chip" data-team="allays" style="--c:#00c8dc"><span class="team-mark " style="--c:#00c8dc" title="Allays"><img src="team_logos/Allays.png" alt="" loading="lazy" onerror="this.remove()"></span>Allays</button>
+      <button class="chip" data-team="totems" style="--c:#3cdc64"><span class="team-mark " style="--c:#3cdc64" title="Totems"><img src="team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>Totems</button>
+      <button class="chip" data-team="wardens" style="--c:#0070c0"><span class="team-mark " style="--c:#0070c0" title="Wardens"><img src="team_logos/Wardens.png" alt="" loading="lazy" onerror="this.remove()"></span>Wardens</button>
+      <button class="chip" data-team="devilbats" style="--c:#c00000"><span class="team-mark " style="--c:#c00000" title="Devilbats"><img src="team_logos/Devilbats.png" alt="" loading="lazy" onerror="this.remove()"></span>Devilbats</button>
+      <button class="chip" data-team="silverfish" style="--c:#aaaaaa"><span class="team-mark " style="--c:#aaaaaa" title="Silverfish"><img src="team_logos/Silverfish.png" alt="" loading="lazy" onerror="this.remove()"></span>Silverfish</button>
+      <button class="chip" data-team="raiders" style="--c:#141416"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders</button>
+    </div>
+
+    <div class="player-grid" id="player-list">
+      <a class="card player-card" style="--c:#aaaaaa" href="players/2002-sb-champs-2021-sb-champs.html" data-name="2002💍sb champs 2021💍sb champs" data-team="silverfish">
+        <span class="avatar lg" style="--c:#aaaaaa"><span class="avatar-initial">2</span><img src="https://mc-heads.net/avatar/2002%F0%9F%92%8DSB%20CHAMPS%202021%F0%9F%92%8DSB%20CHAMPS/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">2002💍SB CHAMPS 2021💍SB CHAMPS</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#aaaaaa" title="Silverfish"><img src="team_logos/Silverfish.png" alt="" loading="lazy" onerror="this.remove()"></span>Silverfish</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#e628c8" href="players/60minutes.html" data-name="60minutes" data-team="tropics">
+        <span class="avatar lg" style="--c:#e628c8"><span class="avatar-initial">6</span><img src="https://mc-heads.net/avatar/60minutes/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">60minutes</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#e628c8" title="Tropics"><img src="team_logos/Tropics.png" alt="" loading="lazy" onerror="this.remove()"></span>Tropics</span>
+        </div>
+        <div class="pc-amount">$600</div>
+      </a>
+      <a class="card player-card" style="--c:#141416" href="players/m1ner.html" data-name="_m1ner_" data-team="raiders">
+        <span class="avatar lg" style="--c:#141416"><span class="avatar-initial">_</span><img src="https://mc-heads.net/avatar/8769b711e8b24897a7d5131ac28b1b82/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">_m1ner_</div>
+          <span class="stars" title="2-star player" aria-label="2 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders</span>
+        </div>
+        <div class="pc-amount">$1,200</div>
+      </a>
+      <a class="card player-card" style="--c:#141416" href="players/alaskian.html" data-name="alaskian" data-team="raiders">
+        <span class="avatar lg" style="--c:#141416"><span class="avatar-initial">A</span><img src="https://mc-heads.net/avatar/alaskian/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">alaskian</div>
+          <span class="stars" title="3-star player" aria-label="3 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders</span>
+        </div>
+        <div class="pc-amount">$2,000</div>
+      </a>
+      <a class="card player-card" style="--c:#141416" href="players/alexd8011.html" data-name="alexd8011" data-team="raiders">
+        <span class="avatar lg" style="--c:#141416"><span class="avatar-initial">A</span><img src="https://mc-heads.net/avatar/Alexd8011/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Alexd8011</div>
+          <span class="stars" title="5-star player" aria-label="5 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders</span>
+        </div>
+        <div class="pc-amount">$4,000</div>
+      </a>
+      <a class="card player-card" style="--c:#c00000" href="players/avatar.html" data-name="avatar" data-team="devilbats">
+        <span class="avatar lg" style="--c:#c00000"><span class="avatar-initial">A</span><img src="https://mc-heads.net/avatar/avatar/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">avatar</div>
+          <span class="stars" title="2-star player" aria-label="2 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#c00000" title="Devilbats"><img src="team_logos/Devilbats.png" alt="" loading="lazy" onerror="this.remove()"></span>Devilbats</span>
+        </div>
+        <div class="pc-amount">$1,200</div>
+      </a>
+      <a class="card player-card" style="--c:#aaaaaa" href="players/baltimorebrownie.html" data-name="baltimorebrownie" data-team="silverfish">
+        <span class="avatar lg" style="--c:#aaaaaa"><span class="avatar-initial">B</span><img src="https://mc-heads.net/avatar/441f9831f5d84ec6933e7bfbd83fac0b/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">baltimorebrownie</div>
+          <span class="stars" title="4-star player" aria-label="4 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#aaaaaa" title="Silverfish"><img src="team_logos/Silverfish.png" alt="" loading="lazy" onerror="this.remove()"></span>Silverfish</span>
+        </div>
+        <div class="pc-amount">$3,000</div>
+      </a>
+      <a class="card player-card" style="--c:#f4b084" href="players/bobbilliby.html" data-name="bobbilliby" data-team="sniffers">
+        <span class="avatar lg" style="--c:#f4b084"><span class="avatar-initial">B</span><img src="https://mc-heads.net/avatar/BobBilliby/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">BobBilliby</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#f4b084" title="Sniffers"><img src="team_logos/Sniffers.png" alt="" loading="lazy" onerror="this.remove()"></span>Sniffers</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#3cdc64" href="players/bryce.html" data-name="bryce" data-team="totems">
+        <span class="avatar lg" style="--c:#3cdc64"><span class="avatar-initial">B</span><img src="https://mc-heads.net/avatar/Bryce/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Bryce</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#3cdc64" title="Totems"><img src="team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>Totems</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#f4b084" href="players/btalentx.html" data-name="btalentx" data-team="sniffers">
+        <span class="avatar lg" style="--c:#f4b084"><span class="avatar-initial">B</span><img src="https://mc-heads.net/avatar/btalentx/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">btalentx</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#f4b084" title="Sniffers"><img src="team_logos/Sniffers.png" alt="" loading="lazy" onerror="this.remove()"></span>Sniffers</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#c00000" href="players/canboon.html" data-name="canboon" data-team="devilbats">
+        <span class="avatar lg" style="--c:#c00000"><span class="avatar-initial">C</span><img src="https://mc-heads.net/avatar/7e53327c25304e88979d5450a663f675/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">canboon</div>
+          <span class="stars" title="3-star player" aria-label="3 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#c00000" title="Devilbats"><img src="team_logos/Devilbats.png" alt="" loading="lazy" onerror="this.remove()"></span>Devilbats</span>
+        </div>
+        <div class="pc-amount">$2,100</div>
+      </a>
+      <a class="card player-card" style="--c:#00c8dc" href="players/cedar.html" data-name="cedar" data-team="allays">
+        <span class="avatar lg" style="--c:#00c8dc"><span class="avatar-initial">C</span><img src="https://mc-heads.net/avatar/Cedar/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Cedar</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#00c8dc" title="Allays"><img src="team_logos/Allays.png" alt="" loading="lazy" onerror="this.remove()"></span>Allays</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#ffc000" href="players/cole.html" data-name="cole" data-team="traders">
+        <span class="avatar lg" style="--c:#ffc000"><span class="avatar-initial">C</span><img src="https://mc-heads.net/avatar/39e4f1bfadbe4580a3ce61d7e170b21f/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Cole</div>
+          <span class="stars" title="4-star player" aria-label="4 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#ffc000" title="Traders"><img src="team_logos/Traders.png" alt="" loading="lazy" onerror="this.remove()"></span>Traders</span>
+        </div>
+        <div class="pc-amount">$3,000</div>
+      </a>
+      <a class="card player-card" style="--c:#aaaaaa" href="players/cosmiclolll.html" data-name="cosmiclolll" data-team="silverfish">
+        <span class="avatar lg" style="--c:#aaaaaa"><span class="avatar-initial">C</span><img src="https://mc-heads.net/avatar/dccb9330573c42d58da548d5265dc4ee/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Cosmiclolll</div>
+          <span class="stars" title="2-star player" aria-label="2 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#aaaaaa" title="Silverfish"><img src="team_logos/Silverfish.png" alt="" loading="lazy" onerror="this.remove()"></span>Silverfish</span>
+        </div>
+        <div class="pc-amount">$1,200</div>
+      </a>
+      <a class="card player-card" style="--c:#3cdc64" href="players/daturkeyjava.html" data-name="daturkeyjava" data-team="totems">
+        <span class="avatar lg" style="--c:#3cdc64"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/1e23330963a449b78fd90521db8e6753/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">DaTurkeyJava</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#3cdc64" title="Totems"><img src="team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>Totems</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#aaaaaa" href="players/devblake9000.html" data-name="devblake9000" data-team="silverfish">
+        <span class="avatar lg" style="--c:#aaaaaa"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/42ee09f3675d4ae3bda67d905664d6ce/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">DevBlake9000</div>
+          <span class="stars" title="3-star player" aria-label="3 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#aaaaaa" title="Silverfish"><img src="team_logos/Silverfish.png" alt="" loading="lazy" onerror="this.remove()"></span>Silverfish</span>
+        </div>
+        <div class="pc-amount">$2,700</div>
+      </a>
+      <a class="card player-card" style="--c:#c00000" href="players/deybtww.html" data-name="deybtww" data-team="devilbats">
+        <span class="avatar lg" style="--c:#c00000"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/fb9bf0ce8df94a1a912f9cb21e1884d5/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">deybtww</div>
+          <span class="stars" title="5-star player" aria-label="5 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#c00000" title="Devilbats"><img src="team_logos/Devilbats.png" alt="" loading="lazy" onerror="this.remove()"></span>Devilbats</span>
+        </div>
+        <div class="pc-amount">$4,800</div>
+      </a>
+      <a class="card player-card" style="--c:#141416" href="players/drippy-gecko.html" data-name="drippy_gecko" data-team="raiders">
+        <span class="avatar lg" style="--c:#141416"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/Drippy_Gecko/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Drippy_Gecko</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#0070c0" href="players/dyn0btw.html" data-name="dyn0btw_" data-team="wardens">
+        <span class="avatar lg" style="--c:#0070c0"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/DyN0Btw_/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">DyN0Btw_</div>
+          <span class="stars" title="4-star player" aria-label="4 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#0070c0" title="Wardens"><img src="team_logos/Wardens.png" alt="" loading="lazy" onerror="this.remove()"></span>Wardens</span>
+        </div>
+        <div class="pc-amount">$3,000</div>
+      </a>
+      <a class="card player-card" style="--c:#0070c0" href="players/estriper.html" data-name="estriper" data-team="wardens">
+        <span class="avatar lg" style="--c:#0070c0"><span class="avatar-initial">E</span><img src="https://mc-heads.net/avatar/Estriper/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Estriper</div>
+          <span class="stars" title="1-star player" aria-label="1 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#0070c0" title="Wardens"><img src="team_logos/Wardens.png" alt="" loading="lazy" onerror="this.remove()"></span>Wardens</span>
+        </div>
+        <div class="pc-amount">$1,000</div>
+      </a>
+      <a class="card player-card" style="--c:#0070c0" href="players/evildog71.html" data-name="evildog71" data-team="wardens">
+        <span class="avatar lg" style="--c:#0070c0"><span class="avatar-initial">E</span><img src="https://mc-heads.net/avatar/2ac25e09a26a4d1099847eba385324c6/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">EvilDog71</div>
+          <span class="stars" title="2-star player" aria-label="2 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#0070c0" title="Wardens"><img src="team_logos/Wardens.png" alt="" loading="lazy" onerror="this.remove()"></span>Wardens</span>
+        </div>
+        <div class="pc-amount">$1,200</div>
+      </a>
+      <a class="card player-card" style="--c:#c00000" href="players/fdwz.html" data-name="fdwz" data-team="devilbats">
+        <span class="avatar lg" style="--c:#c00000"><span class="avatar-initial">F</span><img src="https://mc-heads.net/avatar/fdwz/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">fdwz</div>
+          <span class="stars" title="4-star player" aria-label="4 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#c00000" title="Devilbats"><img src="team_logos/Devilbats.png" alt="" loading="lazy" onerror="this.remove()"></span>Devilbats</span>
+        </div>
+        <div class="pc-amount">$3,000</div>
+      </a>
+      <a class="card player-card" style="--c:#009650" href="players/fighting-irish.html" data-name="fighting irish" data-team="mountaineers">
+        <span class="avatar lg" style="--c:#009650"><span class="avatar-initial">F</span><img src="https://mc-heads.net/avatar/Fighting%20Irish/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Fighting Irish</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#009650" title="Mountaineers"><img src="team_logos/Mountaineers.png" alt="" loading="lazy" onerror="this.remove()"></span>Mountaineers</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#0070c0" href="players/gamingwithliam.html" data-name="gamingwithliam" data-team="wardens">
+        <span class="avatar lg" style="--c:#0070c0"><span class="avatar-initial">G</span><img src="https://mc-heads.net/avatar/gamingwithLiam/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">gamingwithLiam</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#0070c0" title="Wardens"><img src="team_logos/Wardens.png" alt="" loading="lazy" onerror="this.remove()"></span>Wardens</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#ffc000" href="players/gingermatwho.html" data-name="gingermatwho" data-team="traders">
+        <span class="avatar lg" style="--c:#ffc000"><span class="avatar-initial">G</span><img src="https://mc-heads.net/avatar/gingermatwho/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">gingermatwho</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#ffc000" title="Traders"><img src="team_logos/Traders.png" alt="" loading="lazy" onerror="this.remove()"></span>Traders</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#ffc000" href="players/good2bad.html" data-name="good2bad" data-team="traders">
+        <span class="avatar lg" style="--c:#ffc000"><span class="avatar-initial">G</span><img src="https://mc-heads.net/avatar/good2bad/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">good2bad</div>
+          <span class="stars" title="3-star player" aria-label="3 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#ffc000" title="Traders"><img src="team_logos/Traders.png" alt="" loading="lazy" onerror="this.remove()"></span>Traders</span>
+        </div>
+        <div class="pc-amount">$2,000</div>
+      </a>
+      <a class="card player-card" style="--c:#141416" href="players/grape-juice.html" data-name="grape juice" data-team="raiders">
+        <span class="avatar lg" style="--c:#141416"><span class="avatar-initial">G</span><img src="https://mc-heads.net/avatar/Grape%20Juice/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Grape Juice</div>
+          <span class="stars" title="3-star player" aria-label="3 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders</span>
+        </div>
+        <div class="pc-amount">$2,000</div>
+      </a>
+      <a class="card player-card" style="--c:#aaaaaa" href="players/gunnarsser.html" data-name="gunnarsser" data-team="silverfish">
+        <span class="avatar lg" style="--c:#aaaaaa"><span class="avatar-initial">G</span><img src="https://mc-heads.net/avatar/68150815348e4414893f275f87ae21fa/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Gunnarsser</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#aaaaaa" title="Silverfish"><img src="team_logos/Silverfish.png" alt="" loading="lazy" onerror="this.remove()"></span>Silverfish</span>
+        </div>
+        <div class="pc-amount">$700</div>
+      </a>
+      <a class="card player-card" style="--c:#00c8dc" href="players/gunny.html" data-name="gunny" data-team="allays">
+        <span class="avatar lg" style="--c:#00c8dc"><span class="avatar-initial">G</span><img src="https://mc-heads.net/avatar/Gunny/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Gunny</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#00c8dc" title="Allays"><img src="team_logos/Allays.png" alt="" loading="lazy" onerror="this.remove()"></span>Allays</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#f4b084" href="players/h.html" data-name="h" data-team="sniffers">
+        <span class="avatar lg" style="--c:#f4b084"><span class="avatar-initial">H</span><img src="https://mc-heads.net/avatar/h/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">h</div>
+          <span class="stars" title="5-star player" aria-label="5 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#f4b084" title="Sniffers"><img src="team_logos/Sniffers.png" alt="" loading="lazy" onerror="this.remove()"></span>Sniffers</span>
+        </div>
+        <div class="pc-amount">$3,800</div>
+      </a>
+      <a class="card player-card" style="--c:#ffc000" href="players/hockeyboss3505.html" data-name="hockeyboss3505" data-team="traders">
+        <span class="avatar lg" style="--c:#ffc000"><span class="avatar-initial">H</span><img src="https://mc-heads.net/avatar/1820176363f74d00914cdb32ecaa4a3d/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Hockeyboss3505</div>
+          <span class="stars" title="3-star player" aria-label="3 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#ffc000" title="Traders"><img src="team_logos/Traders.png" alt="" loading="lazy" onerror="this.remove()"></span>Traders</span>
+        </div>
+        <div class="pc-amount">$2,200</div>
+      </a>
+      <a class="card player-card" style="--c:#f4b084" href="players/icedflxme.html" data-name="icedflxme" data-team="sniffers">
+        <span class="avatar lg" style="--c:#f4b084"><span class="avatar-initial">I</span><img src="https://mc-heads.net/avatar/IcedFlxme/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">IcedFlxme</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#f4b084" title="Sniffers"><img src="team_logos/Sniffers.png" alt="" loading="lazy" onerror="this.remove()"></span>Sniffers</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#aaaaaa" href="players/j.html" data-name="j" data-team="silverfish">
+        <span class="avatar lg" style="--c:#aaaaaa"><span class="avatar-initial">J</span><img src="https://mc-heads.net/avatar/J/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">J</div>
+          <span class="stars" title="1-star player" aria-label="1 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#aaaaaa" title="Silverfish"><img src="team_logos/Silverfish.png" alt="" loading="lazy" onerror="this.remove()"></span>Silverfish</span>
+        </div>
+        <div class="pc-amount">$750</div>
+      </a>
+      <a class="card player-card" style="--c:#009650" href="players/jj.html" data-name="jj" data-team="mountaineers">
+        <span class="avatar lg" style="--c:#009650"><span class="avatar-initial">J</span><img src="https://mc-heads.net/avatar/JJ/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">JJ</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#009650" title="Mountaineers"><img src="team_logos/Mountaineers.png" alt="" loading="lazy" onerror="this.remove()"></span>Mountaineers</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#141416" href="players/johnson-swanson.html" data-name="johnson swanson" data-team="raiders">
+        <span class="avatar lg" style="--c:#141416"><span class="avatar-initial">J</span><img src="https://mc-heads.net/avatar/Johnson%20Swanson/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Johnson Swanson</div>
+          <span class="stars" title="3-star player" aria-label="3 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders</span>
+        </div>
+        <div class="pc-amount">$2,000</div>
+      </a>
+      <a class="card player-card" style="--c:#e628c8" href="players/jtownw.html" data-name="jtownw" data-team="tropics">
+        <span class="avatar lg" style="--c:#e628c8"><span class="avatar-initial">J</span><img src="https://mc-heads.net/avatar/aa5ca18224ad49878fe42efea375990c/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">JtownW</div>
+          <span class="stars" title="5-star player" aria-label="5 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#e628c8" title="Tropics"><img src="team_logos/Tropics.png" alt="" loading="lazy" onerror="this.remove()"></span>Tropics</span>
+        </div>
+        <div class="pc-amount">$3,800</div>
+      </a>
+      <a class="card player-card" style="--c:#e628c8" href="players/keple.html" data-name="keple" data-team="tropics">
+        <span class="avatar lg" style="--c:#e628c8"><span class="avatar-initial">K</span><img src="https://mc-heads.net/avatar/Keple/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Keple</div>
+          <span class="stars" title="2-star player" aria-label="2 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#e628c8" title="Tropics"><img src="team_logos/Tropics.png" alt="" loading="lazy" onerror="this.remove()"></span>Tropics</span>
+        </div>
+        <div class="pc-amount">$1,200</div>
+      </a>
+      <a class="card player-card" style="--c:#3cdc64" href="players/kingsnoopie409.html" data-name="kingsnoopie409" data-team="totems">
+        <span class="avatar lg" style="--c:#3cdc64"><span class="avatar-initial">K</span><img src="https://mc-heads.net/avatar/fe7dbfd2080f4ebfbc3a0806d824850b/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">KingSnoopie409</div>
+          <span class="stars" title="2-star player" aria-label="2 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#3cdc64" title="Totems"><img src="team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>Totems</span>
+        </div>
+        <div class="pc-amount">$1,200</div>
+      </a>
+      <a class="card player-card" style="--c:#aaaaaa" href="players/kofeyy.html" data-name="kofeyy" data-team="silverfish">
+        <span class="avatar lg" style="--c:#aaaaaa"><span class="avatar-initial">K</span><img src="https://mc-heads.net/avatar/f28895eefce345c09500f90affeb6fda/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Kofeyy</div>
+          <span class="stars" title="4-star player" aria-label="4 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#aaaaaa" title="Silverfish"><img src="team_logos/Silverfish.png" alt="" loading="lazy" onerror="this.remove()"></span>Silverfish</span>
+        </div>
+        <div class="pc-amount">$3,600</div>
+      </a>
+      <a class="card player-card" style="--c:#00c8dc" href="players/kreak7.html" data-name="kreak7" data-team="allays">
+        <span class="avatar lg" style="--c:#00c8dc"><span class="avatar-initial">K</span><img src="https://mc-heads.net/avatar/b74d7c4d1d264843b194ce9465359755/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Kreak7</div>
+          <span class="stars" title="3-star player" aria-label="3 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#00c8dc" title="Allays"><img src="team_logos/Allays.png" alt="" loading="lazy" onerror="this.remove()"></span>Allays</span>
+        </div>
+        <div class="pc-amount">$2,000</div>
+      </a>
+      <a class="card player-card" style="--c:#ffc000" href="players/m1dn1qht.html" data-name="m1dn1qht" data-team="traders">
+        <span class="avatar lg" style="--c:#ffc000"><span class="avatar-initial">M</span><img src="https://mc-heads.net/avatar/M1dN1qht/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">M1dN1qht</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#ffc000" title="Traders"><img src="team_logos/Traders.png" alt="" loading="lazy" onerror="this.remove()"></span>Traders</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#141416" href="players/matatouille21.html" data-name="matatouille21" data-team="raiders">
+        <span class="avatar lg" style="--c:#141416"><span class="avatar-initial">M</span><img src="https://mc-heads.net/avatar/609157f7614f4d51b62d42f7147484a1/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Matatouille21</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#00c8dc" href="players/moneymaniac.html" data-name="moneymaniac" data-team="allays">
+        <span class="avatar lg" style="--c:#00c8dc"><span class="avatar-initial">M</span><img src="https://mc-heads.net/avatar/MoneyManiac/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">MoneyManiac</div>
+          <span class="stars" title="2-star player" aria-label="2 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#00c8dc" title="Allays"><img src="team_logos/Allays.png" alt="" loading="lazy" onerror="this.remove()"></span>Allays</span>
+        </div>
+        <div class="pc-amount">$1,500</div>
+      </a>
+      <a class="card player-card" style="--c:#009650" href="players/nightmaregaming6.html" data-name="nightmaregaming6" data-team="mountaineers">
+        <span class="avatar lg" style="--c:#009650"><span class="avatar-initial">N</span><img src="https://mc-heads.net/avatar/73c7651a44364b0bbbab2e957fef9b18/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">NightmareGaming6</div>
+          <span class="stars" title="3-star player" aria-label="3 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#009650" title="Mountaineers"><img src="team_logos/Mountaineers.png" alt="" loading="lazy" onerror="this.remove()"></span>Mountaineers</span>
+        </div>
+        <div class="pc-amount">$2,000</div>
+      </a>
+      <a class="card player-card" style="--c:#0070c0" href="players/obj.html" data-name="obj" data-team="wardens">
+        <span class="avatar lg" style="--c:#0070c0"><span class="avatar-initial">O</span><img src="https://mc-heads.net/avatar/OBJ/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">OBJ</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#0070c0" title="Wardens"><img src="team_logos/Wardens.png" alt="" loading="lazy" onerror="this.remove()"></span>Wardens</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#00c8dc" href="players/oreo.html" data-name="oreo" data-team="allays">
+        <span class="avatar lg" style="--c:#00c8dc"><span class="avatar-initial">O</span><img src="https://mc-heads.net/avatar/f2644111032d4fc2b8597e76017d7d47/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Oreo</div>
+          <span class="stars" title="2-star player" aria-label="2 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#00c8dc" title="Allays"><img src="team_logos/Allays.png" alt="" loading="lazy" onerror="this.remove()"></span>Allays</span>
+        </div>
+        <div class="pc-amount">$1,200</div>
+      </a>
+      <a class="card player-card" style="--c:#009650" href="players/ozymandias.html" data-name="ozymandias" data-team="mountaineers">
+        <span class="avatar lg" style="--c:#009650"><span class="avatar-initial">O</span><img src="https://mc-heads.net/avatar/Ozymandias/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Ozymandias</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#009650" title="Mountaineers"><img src="team_logos/Mountaineers.png" alt="" loading="lazy" onerror="this.remove()"></span>Mountaineers</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#f4b084" href="players/phobic.html" data-name="phobic" data-team="sniffers">
+        <span class="avatar lg" style="--c:#f4b084"><span class="avatar-initial">P</span><img src="https://mc-heads.net/avatar/phobic/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">phobic</div>
+          <span class="stars" title="4-star player" aria-label="4 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#f4b084" title="Sniffers"><img src="team_logos/Sniffers.png" alt="" loading="lazy" onerror="this.remove()"></span>Sniffers</span>
+        </div>
+        <div class="pc-amount">$3,500</div>
+      </a>
+      <a class="card player-card" style="--c:#e628c8" href="players/proffic.html" data-name="proffic" data-team="tropics">
+        <span class="avatar lg" style="--c:#e628c8"><span class="avatar-initial">P</span><img src="https://mc-heads.net/avatar/Proffic/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Proffic</div>
+          <span class="stars" title="4-star player" aria-label="4 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#e628c8" title="Tropics"><img src="team_logos/Tropics.png" alt="" loading="lazy" onerror="this.remove()"></span>Tropics</span>
+        </div>
+        <div class="pc-amount">$3,000</div>
+      </a>
+      <a class="card player-card" style="--c:#009650" href="players/pufferfish.html" data-name="pufferfish" data-team="mountaineers">
+        <span class="avatar lg" style="--c:#009650"><span class="avatar-initial">P</span><img src="https://mc-heads.net/avatar/ad76b3e8dd7344e185684fa9829db82d/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Pufferfish</div>
+          <span class="stars" title="3-star player" aria-label="3 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#009650" title="Mountaineers"><img src="team_logos/Mountaineers.png" alt="" loading="lazy" onerror="this.remove()"></span>Mountaineers</span>
+        </div>
+        <div class="pc-amount">$2,000</div>
+      </a>
+      <a class="card player-card" style="--c:#00c8dc" href="players/raccnn.html" data-name="raccnn" data-team="allays">
+        <span class="avatar lg" style="--c:#00c8dc"><span class="avatar-initial">R</span><img src="https://mc-heads.net/avatar/Raccnn/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Raccnn</div>
+          <span class="stars" title="3-star player" aria-label="3 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#00c8dc" title="Allays"><img src="team_logos/Allays.png" alt="" loading="lazy" onerror="this.remove()"></span>Allays</span>
+        </div>
+        <div class="pc-amount">$2,000</div>
+      </a>
+      <a class="card player-card" style="--c:#0070c0" href="players/remiray.html" data-name="remiray" data-team="wardens">
+        <span class="avatar lg" style="--c:#0070c0"><span class="avatar-initial">R</span><img src="https://mc-heads.net/avatar/remiray/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">remiray</div>
+          <span class="stars" title="2-star player" aria-label="2 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#0070c0" title="Wardens"><img src="team_logos/Wardens.png" alt="" loading="lazy" onerror="this.remove()"></span>Wardens</span>
+        </div>
+        <div class="pc-amount">$1,500</div>
+      </a>
+      <a class="card player-card" style="--c:#f4b084" href="players/res.html" data-name="res" data-team="sniffers">
+        <span class="avatar lg" style="--c:#f4b084"><span class="avatar-initial">R</span><img src="https://mc-heads.net/avatar/res/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">res</div>
+          <span class="stars" title="2-star player" aria-label="2 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#f4b084" title="Sniffers"><img src="team_logos/Sniffers.png" alt="" loading="lazy" onerror="this.remove()"></span>Sniffers</span>
+        </div>
+        <div class="pc-amount">$1,500</div>
+      </a>
+      <a class="card player-card" style="--c:#3cdc64" href="players/saginaw-boss.html" data-name="saginaw_boss" data-team="totems">
+        <span class="avatar lg" style="--c:#3cdc64"><span class="avatar-initial">S</span><img src="https://mc-heads.net/avatar/saginaw_boss/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">saginaw_boss</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#3cdc64" title="Totems"><img src="team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>Totems</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#009650" href="players/sexhaver17.html" data-name="sexhaver17" data-team="mountaineers">
+        <span class="avatar lg" style="--c:#009650"><span class="avatar-initial">S</span><img src="https://mc-heads.net/avatar/SexHaver17/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">SexHaver17</div>
+          <span class="stars" title="2-star player" aria-label="2 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#009650" title="Mountaineers"><img src="team_logos/Mountaineers.png" alt="" loading="lazy" onerror="this.remove()"></span>Mountaineers</span>
+        </div>
+        <div class="pc-amount">$1,200</div>
+      </a>
+      <a class="card player-card" style="--c:#3cdc64" href="players/shark.html" data-name="shark" data-team="totems">
+        <span class="avatar lg" style="--c:#3cdc64"><span class="avatar-initial">S</span><img src="https://mc-heads.net/avatar/Shark/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Shark</div>
+          <span class="stars" title="5-star player" aria-label="5 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#3cdc64" title="Totems"><img src="team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>Totems</span>
+        </div>
+        <div class="pc-amount">$3,800</div>
+      </a>
+      <a class="card player-card" style="--c:#00c8dc" href="players/spacey.html" data-name="spacey" data-team="allays">
+        <span class="avatar lg" style="--c:#00c8dc"><span class="avatar-initial">S</span><img src="https://mc-heads.net/avatar/Spacey/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Spacey</div>
+          <span class="stars" title="2-star player" aria-label="2 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#00c8dc" title="Allays"><img src="team_logos/Allays.png" alt="" loading="lazy" onerror="this.remove()"></span>Allays</span>
+        </div>
+        <div class="pc-amount">$1,200</div>
+      </a>
+      <a class="card player-card" style="--c:#00c8dc" href="players/tac10k.html" data-name="tac10k" data-team="allays">
+        <span class="avatar lg" style="--c:#00c8dc"><span class="avatar-initial">T</span><img src="https://mc-heads.net/avatar/52a49a0695ff481cbe75865c00ac8999/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">tac10k</div>
+          <span class="stars" title="5-star player" aria-label="5 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#00c8dc" title="Allays"><img src="team_logos/Allays.png" alt="" loading="lazy" onerror="this.remove()"></span>Allays</span>
+        </div>
+        <div class="pc-amount">$3,800</div>
+      </a>
+      <a class="card player-card" style="--c:#009650" href="players/tacoman.html" data-name="tacoman" data-team="mountaineers">
+        <span class="avatar lg" style="--c:#009650"><span class="avatar-initial">T</span><img src="https://mc-heads.net/avatar/1308260a52554461a71a03edcc0e3bf6/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Tacoman</div>
+          <span class="stars" title="4-star player" aria-label="4 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#009650" title="Mountaineers"><img src="team_logos/Mountaineers.png" alt="" loading="lazy" onerror="this.remove()"></span>Mountaineers</span>
+        </div>
+        <div class="pc-amount">$3,000</div>
+      </a>
+      <a class="card player-card" style="--c:#141416" href="players/the-yahoo.html" data-name="the yahoo" data-team="raiders">
+        <span class="avatar lg" style="--c:#141416"><span class="avatar-initial">T</span><img src="https://mc-heads.net/avatar/the%20yahoo/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">the yahoo</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#f4b084" href="players/toastanchess.html" data-name="toastanchess" data-team="sniffers">
+        <span class="avatar lg" style="--c:#f4b084"><span class="avatar-initial">T</span><img src="https://mc-heads.net/avatar/ToASTANcHESS/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">ToASTANcHESS</div>
+          <span class="stars" title="3-star player" aria-label="3 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#f4b084" title="Sniffers"><img src="team_logos/Sniffers.png" alt="" loading="lazy" onerror="this.remove()"></span>Sniffers</span>
+        </div>
+        <div class="pc-amount">$2,000</div>
+      </a>
+      <a class="card player-card" style="--c:#0070c0" href="players/tyler.html" data-name="tyler" data-team="wardens">
+        <span class="avatar lg" style="--c:#0070c0"><span class="avatar-initial">T</span><img src="https://mc-heads.net/avatar/Tyler/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Tyler</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#0070c0" title="Wardens"><img src="team_logos/Wardens.png" alt="" loading="lazy" onerror="this.remove()"></span>Wardens</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+      <a class="card player-card" style="--c:#3cdc64" href="players/webhop.html" data-name="webhop" data-team="totems">
+        <span class="avatar lg" style="--c:#3cdc64"><span class="avatar-initial">W</span><img src="https://mc-heads.net/avatar/064bfbe9458a485890abf71bbc729840/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Webhop</div>
+          <span class="stars" title="2-star player" aria-label="2 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#3cdc64" title="Totems"><img src="team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>Totems</span>
+        </div>
+        <div class="pc-amount">$1,250</div>
+      </a>
+      <a class="card player-card" style="--c:#e628c8" href="players/whiplikestoast.html" data-name="whiplikestoast" data-team="tropics">
+        <span class="avatar lg" style="--c:#e628c8"><span class="avatar-initial">W</span><img src="https://mc-heads.net/avatar/WhipLikesToast/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">WhipLikesToast</div>
+          <span class="stars" title="1-star player" aria-label="1 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#e628c8" title="Tropics"><img src="team_logos/Tropics.png" alt="" loading="lazy" onerror="this.remove()"></span>Tropics</span>
+        </div>
+        <div class="pc-amount">$750</div>
+      </a>
+      <a class="card player-card" style="--c:#0070c0" href="players/wopperwopper.html" data-name="wopperwopper" data-team="wardens">
+        <span class="avatar lg" style="--c:#0070c0"><span class="avatar-initial">W</span><img src="https://mc-heads.net/avatar/9d873adea3434d7591fbf6975781491b/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">wopperwopper</div>
+          <span class="stars" title="1-star player" aria-label="1 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#0070c0" title="Wardens"><img src="team_logos/Wardens.png" alt="" loading="lazy" onerror="this.remove()"></span>Wardens</span>
+        </div>
+        <div class="pc-amount">$900</div>
+      </a>
+      <a class="card player-card" style="--c:#0070c0" href="players/xdcoldclaw.html" data-name="xdcoldclaw" data-team="wardens">
+        <span class="avatar lg" style="--c:#0070c0"><span class="avatar-initial">X</span><img src="https://mc-heads.net/avatar/cfb64ccf7245419eaf514e3f7195f271/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">xdColdClaw</div>
+          <span class="stars" title="1-star player" aria-label="1 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#0070c0" title="Wardens"><img src="team_logos/Wardens.png" alt="" loading="lazy" onerror="this.remove()"></span>Wardens</span>
+        </div>
+        <div class="pc-amount">$950</div>
+      </a>
+      <a class="card player-card" style="--c:#ffc000" href="players/zero.html" data-name="zero" data-team="traders">
+        <span class="avatar lg" style="--c:#ffc000"><span class="avatar-initial">Z</span><img src="https://mc-heads.net/avatar/Zero/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">Zero</div>
+          <span class="stars" title="2-star player" aria-label="2 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#ffc000" title="Traders"><img src="team_logos/Traders.png" alt="" loading="lazy" onerror="this.remove()"></span>Traders</span>
+        </div>
+        <div class="pc-amount">$1,200</div>
+      </a>
+      <a class="card player-card" style="--c:#3cdc64" href="players/player.html" data-name="✞𝓛𝓲𝓰𝓱𝓽✞" data-team="totems">
+        <span class="avatar lg" style="--c:#3cdc64"><span class="avatar-initial">✞</span><img src="https://mc-heads.net/avatar/%E2%9C%9E%F0%9D%93%9B%F0%9D%93%B2%F0%9D%93%B0%F0%9D%93%B1%F0%9D%93%BD%E2%9C%9E/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">✞𝓛𝓲𝓰𝓱𝓽✞</div>
+          <span class="stars" title="4-star player" aria-label="4 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#3cdc64" title="Totems"><img src="team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>Totems</span>
+        </div>
+        <div class="pc-amount">$3,000</div>
+      </a>
+      <a class="card player-card" style="--c:#e628c8" href="players/player-2.html" data-name="𝓦𝓪𝓹𝔀_" data-team="tropics">
+        <span class="avatar lg" style="--c:#e628c8"><span class="avatar-initial">𝓦</span><img src="https://mc-heads.net/avatar/%F0%9D%93%A6%F0%9D%93%AA%F0%9D%93%B9%F0%9D%94%80_/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">𝓦𝓪𝓹𝔀_</div>
+          <span class="stars" title="2-star player" aria-label="2 star"><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="on" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#e628c8" title="Tropics"><img src="team_logos/Tropics.png" alt="" loading="lazy" onerror="this.remove()"></span>Tropics</span>
+        </div>
+        <div class="pc-amount">$1,200</div>
+      </a>
+      <a class="card player-card" style="--c:#0070c0" href="players/player-3.html" data-name="👑𝜥𝜼𝒈𝑱𝜶𝝌𝒊𝜽𝜼👑" data-team="wardens">
+        <span class="avatar lg" style="--c:#0070c0"><span class="avatar-initial">👑</span><img src="https://mc-heads.net/avatar/%F0%9F%91%91%F0%9D%9C%A5%F0%9D%9C%BC%F0%9D%92%88%F0%9D%91%B1%F0%9D%9C%B6%F0%9D%9D%8C%F0%9D%92%8A%F0%9D%9C%BD%F0%9D%9C%BC%F0%9F%91%91/64" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="pc-body">
+          <div class="pc-name">👑𝜥𝜼𝒈𝑱𝜶𝝌𝒊𝜽𝜼👑</div>
+          <span class="stars" title="0-star player" aria-label="0 star"><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg><svg class="" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></svg></span>
+          <span class="team-tag"><span class="team-mark " style="--c:#0070c0" title="Wardens"><img src="team_logos/Wardens.png" alt="" loading="lazy" onerror="this.remove()"></span>Wardens</span>
+        </div>
+        <div class="pc-amount">$500</div>
+      </a>
+    </div>
+    <p class="empty-note" id="no-results" hidden>No players match that search.</p>
+
+    <script>
+      (function () {
+        var input = document.getElementById('player-search');
+        var chips = document.getElementById('team-chips');
+        var cards = document.querySelectorAll('#player-list .player-card');
+        var count = document.getElementById('result-count');
+        var team = '';
+        function apply() {
+          var q = input.value.trim().toLowerCase();
+          var visible = 0;
+          cards.forEach(function (c) {
+            var ok = (!team || c.dataset.team === team) &&
+                     (!q || c.dataset.name.indexOf(q) !== -1 || c.dataset.team.indexOf(q) !== -1);
+            c.hidden = !ok;
+            if (ok) visible++;
+          });
+          count.textContent = visible + (visible === 1 ? ' player' : ' players');
+          document.getElementById('no-results').hidden = visible !== 0;
+        }
+        input.addEventListener('input', apply);
+        chips.addEventListener('click', function (e) {
+          var chip = e.target.closest('.chip');
+          if (!chip) return;
+          team = chip.dataset.team;
+          chips.querySelectorAll('.chip').forEach(function (c) { c.classList.toggle('active', c === chip); });
+          apply();
+        });
+      })();
+    </script>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="static/mcfl-logo.png" alt="MCFL">
+    </a>
+    <div>Minecraft Football League &middot; Stats updated September 26, 2026 at 21:02 UTC</div>
+  </div>
+</footer>
+
+<script>
+  // Generic tab switcher: <div data-tabs="group"> with .pill-tab[data-tab]
+  // buttons, and .tab-panel[data-group="group"][data-panel] panels.
+  document.querySelectorAll('[data-tabs]').forEach(function (bar) {
+    var group = bar.dataset.tabs;
+    bar.addEventListener('click', function (e) {
+      var btn = e.target.closest('.pill-tab');
+      if (!btn) return;
+      bar.querySelectorAll('.pill-tab').forEach(function (b) {
+        var on = b === btn;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-selected', on);
+      });
+      document.querySelectorAll('.tab-panel[data-group="' + group + '"]').forEach(function (p) {
+        p.hidden = p.dataset.panel !== btn.dataset.tab;
+      });
+      btn.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
