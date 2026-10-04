@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07080b">
+<meta name="description" content="MSSN -- official stats, standings, records and Hall of Fame for the Minecraft College Football League (MCFL).">
+<title>Fantasy &middot; MSSN Fantasy League</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://mc-heads.net">
+<script>
+  function mcHeadFailed(img) {
+    var rest = (img.getAttribute('data-fallback') || '').split(' ').filter(Boolean);
+    if (!rest.length) { img.remove(); return; }
+    img.setAttribute('data-fallback', rest.slice(1).join(' '));
+    img.src = rest[0];
+  }
+</script>
+<link rel="stylesheet" href="../static/style.css?v=3f398c2a0b">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="stylesheet" href="../static/fantasy.css?v=3f398c2a0b">
+<script data-goatcounter="https://mssn.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<link rel="icon" type="image/png" href="../static/mcfl-logo.png">
+<link rel="apple-touch-icon" href="../static/mcfl-logo.png">
+</head>
+<body class="league-mcfl">
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <img class="" src="../static/mcfl-logo.png" alt="MCFL">
+      <span class="brand-text">
+        <div class="brand-main">MSSN</div>
+        <div class="brand-sub">OFFICIAL STATS</div>
+      </span>
+    </a>
+    <details class="league-switch">
+      <summary aria-label="Switch league"><span class="ls-code">MCFL</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="ls-menu">
+        <div class="ls-head">MSSN leagues</div>
+        <a class="ls-item active" href="../fantasy/index.html" aria-current="true">
+<img src="../static/mcfl-logo.png" alt="">          <span class="ls-text"><strong>MCFL</strong><span>College &middot; Minecraft College Football League</span></span>
+<svg class="ls-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>        </a>
+        <a class="ls-item " href="../mfl/index.html">
+<img src="../static/mfl-logo.png" alt="">          <span class="ls-text"><strong>MFL</strong><span>Pro &middot; Minecraft Football League</span></span>
+        </a>
+      </div>
+    </details>
+    <div class="nav-links">
+      <a class="nav-link " href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/></svg><span>Home</span></a>
+      <a class="nav-link " href="../stats.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M12 20V4M20 20v-7"/></svg><span>Stats</span></a>
+      <a class="nav-link " href="../players.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3.1-6 7-6s7 2.7 7 6"/><path d="M16 6.2a3 3 0 0 1 0 5.8M22 20c0-2.8-2.3-5.2-5.5-5.9"/></svg><span>Players</span></a>
+      <a class="nav-link " href="../teams.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6l-8-4Z"/></svg><span>Teams</span></a>
+      <a class="nav-link " href="../standings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg><span>Standings</span></a>
+      <a class="nav-link " href="../games.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><span>Schedule</span></a>
+      <a class="nav-link " href="../hof.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.7 5.5 6 .9-4.35 4.2 1 6L12 16.8 6.6 19.6l1-6L3.3 9.4l6-.9L12 3Z"/></svg><span>Hall of Fame</span></a>
+      <a class="nav-link " href="../history.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.1 13a9 9 0 1 0 2.6-6.4L3 9"/><path d="M3 4v5h5"/><path d="M12 8v5l3 2"/></svg><span>History</span></a>
+      <a class="nav-link " href="../17-0/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3 2.5 5 6 5 10a5 5 0 0 1-10 0c0-4 2-7.5 5-10Z"/><path d="M9 12h6M12 9v6"/></svg><span>17&ndash;0</span></a>
+    </div>
+  </div>
+</nav>
+
+
+<main>
+<header class="fx-top">
+  <div class="wrap fx-top-row">
+    <a class="fx-brand" href="index.html#home">
+      <span class="fx-brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></span>
+      <span class="fx-brand-text"><strong>Fantasy</strong><span>MSSN &middot; Season 19</span></span>
+    </a>
+    <details class="fx-switch fx-league-switch" data-signed-in hidden>
+      <summary><span class="fx-sw-k">League</span><span class="fx-sw-v" data-league-name>MCFL Fantasy</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="fx-menu">
+        <div class="ls-head">Your leagues</div>
+        <div data-league-menu></div>
+      </div>
+    </details>
+    <details class="fx-switch fx-team-switch" data-in-league hidden>
+      <summary><span class="fx-sw-k">My team</span><span class="fx-sw-v" data-my-team-name></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="fx-menu">
+        <div class="ls-head" data-account-name></div>
+        <a class="fx-menu-item" href="index.html#team"><span class="fx-menu-text"><strong>My team</strong><span>Lineup, bench, add and drop</span></span></a>
+        <a class="fx-menu-item" href="index.html#trades"><span class="fx-menu-text"><strong>Trade center</strong><span>Offer trades to other managers</span></span></a>
+        <a class="fx-menu-item" href="index.html#settings"><span class="fx-menu-text"><strong>Account &amp; settings</strong><span>Team name, leave the league, sign out</span></span></a>
+      </div>
+    </details>
+    <span class="fx-private" title="Nothing on the site links here. Share the link only with people who should see it.">Private preview</span>
+  </div>
+  <nav class="fx-nav" aria-label="Fantasy">
+    <div class="wrap fx-nav-row">
+      <a class="fx-nav-link " href="index.html#leagues" data-view-link="leagues">Leagues</a>
+      <a class="fx-nav-link " href="index.html#home" data-view-link="home">Home</a>
+      <a class="fx-nav-link " href="index.html#team" data-view-link="team">My Team</a>
+      <a class="fx-nav-link " href="index.html#matchup" data-view-link="matchup">Matchup</a>
+      <a class="fx-nav-link " href="index.html#players" data-view-link="players">Players</a>
+      <a class="fx-nav-link " href="index.html#league" data-view-link="league">League</a>
+      <a class="fx-nav-link " href="index.html#standings" data-view-link="standings">Standings</a>
+      <a class="fx-nav-link " href="index.html#transactions" data-view-link="transactions">Transactions</a>
+      <a class="fx-nav-link " href="stats.html" data-view-link="stats">Stats</a>
+      <a class="fx-nav-link " href="index.html#settings" data-view-link="settings">Settings</a>
+    </div>
+  </nav>
+</header>
+
+<div class="wrap fx-page" id="fx-app">
+  <noscript><div class="card fx-pad">The fantasy league runs in your browser, so it needs JavaScript turned on.</div></noscript>
+
+  <section class="fx-view" data-view="signup" hidden>
+    <div class="fx-signup">
+      <div class="fx-signup-copy">
+        <span class="eyebrow">MSSN Fantasy League &middot; Season 19</span>
+        <h1 class="fx-head-title">MCFL Fantasy</h1>
+        <p class="muted">Make an account, then pick a league from the Leagues tab or create your own. Leagues can be public, or private with a password. Everyone drafts live, in snake order, and bots take any empty seats. Then run your team all season: set your lineup each week, pick up and drop players, claim off waivers and trade with the other managers.</p>
+        <ul class="fx-signup-points">
+          <li>Points come from the real MCFL games, as they're logged.</li>
+          <li>Be in several leagues with one account, and switch between them.</li>
+          <li>Join after the draft and you take over a bot's team.</li>
+          <li>Top 4 after Week 5 make the playoffs.</li>
+        </ul>
+      </div>
+      <div class="card fx-signup-form">
+        <div class="pill-tabs fx-auth-tabs" role="tablist">
+          <button type="button" class="pill-tab active" data-auth-tab="create" role="tab" aria-selected="true">Create account</button>
+          <button type="button" class="pill-tab" data-auth-tab="signin" role="tab" aria-selected="false">Sign in</button>
+        </div>
+        <form data-auth="create" novalidate>
+          <label class="fx-field"><span>Username</span><input name="user" maxlength="20" required autocomplete="username" autocapitalize="off" spellcheck="false" placeholder="Letters, numbers, _ or ."></label>
+          <label class="fx-field"><span>Password</span><input name="password" type="password" minlength="8" required autocomplete="new-password" placeholder="At least 8 characters"></label>
+          <p class="fx-form-error" data-auth-error hidden></p>
+          <button type="submit" class="btn btn-primary fx-signup-go">Create account <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </form>
+        <form data-auth="signin" novalidate hidden>
+          <label class="fx-field"><span>Username</span><input name="user" maxlength="20" required autocomplete="username" autocapitalize="off" spellcheck="false"></label>
+          <label class="fx-field"><span>Password</span><input name="password" type="password" required autocomplete="current-password"></label>
+          <p class="fx-form-error" data-auth-error hidden></p>
+          <button type="submit" class="btn btn-primary fx-signup-go">Sign in <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </form>
+        <p class="fx-foot-note" data-cloud-note>The league lives on the league server, so you can sign in from any device.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="fx-view" data-view="leagues" hidden></section>
+  <section class="fx-view" data-view="draft" hidden></section>
+  <section class="fx-view" data-view="home" hidden></section>
+  <section class="fx-view" data-view="team" hidden></section>
+  <section class="fx-view" data-view="matchup" hidden></section>
+  <section class="fx-view" data-view="players" hidden></section>
+  <section class="fx-view" data-view="league" hidden></section>
+  <section class="fx-view" data-view="standings" hidden></section>
+  <section class="fx-view" data-view="transactions" hidden></section>
+  <section class="fx-view" data-view="trades" hidden></section>
+
+  <section class="fx-view" data-view="settings" hidden>
+    <div class="section-head"><div><span class="eyebrow" data-league-name>MCFL Fantasy</span><h1 class="section-title">Settings</h1></div></div>
+    <div class="fx-settings">
+      <div class="card fx-block" data-account-card></div>
+      <div class="card fx-block">
+        <div class="table-head"><h2>League rules</h2></div>
+        <dl class="fx-dl">
+          <dt>Teams</dt><dd data-league-teams></dd>
+          <dt>Scoring</dt><dd>Points · Half PPR</dd>
+          <dt>Regular season</dt><dd>Weeks 1&ndash;5</dd>
+          <dt>Playoffs</dt><dd>Top 4, Weeks 6&ndash;7</dd>
+<dt><span class="fx-slot fx-slot-qb">QB</span> Quarterback</dt><dd>1</dd><dt><span class="fx-slot fx-slot-wr">WR</span> Wide receiver</dt><dd>2</dd><dt><span class="fx-slot fx-slot-flex">FLEX</span> Flex (QB/WR)</dt><dd>1</dd><dt><span class="fx-slot fx-slot-def">D/ST</span> Team defense</dt><dd>1</dd><dt><span class="fx-slot fx-slot-bench">BN</span> Bench</dt><dd>3</dd>          <dt>Waivers</dt><dd class="fx-dd-long">A dropped player sits on waivers until the next week starts. Claims go in reverse standings order; everyone else is a free agent you can add right away.</dd>
+          <dt>Trades</dt><dd class="fx-dd-long">Offer a trade to any team. People accept or decline from their Trade center; bot managers answer right away and accept when it makes their team better.</dd>
+        </dl>
+      </div>
+      <div class="card fx-block fx-scoring">
+        <div class="table-head"><h2>Scoring</h2><span class="faint">Per stat, per game</span></div>
+        <div class="fx-score-groups">
+          <div class="fx-sg">
+            <h3>Passing</h3>
+<div class="fx-sg-row"><span>Completion</span><strong class="pos">+0.5</strong></div><div class="fx-sg-row"><span>Passing yard</span><strong class="pos">+0.06</strong></div><div class="fx-sg-row"><span>Passing TD</span><strong class="pos">+5</strong></div><div class="fx-sg-row"><span>Interception thrown</span><strong class="neg">-2</strong></div>          </div>
+          <div class="fx-sg">
+            <h3>Rushing</h3>
+<div class="fx-sg-row"><span>Rushing yard</span><strong class="pos">+0.1</strong></div><div class="fx-sg-row"><span>Rushing TD</span><strong class="pos">+6</strong></div>          </div>
+          <div class="fx-sg">
+            <h3>Receiving</h3>
+<div class="fx-sg-row"><span>Reception</span><strong class="pos">+0.5</strong></div><div class="fx-sg-row"><span>Receiving yard</span><strong class="pos">+0.1</strong></div><div class="fx-sg-row"><span>Receiving TD</span><strong class="pos">+6</strong></div>          </div>
+          <div class="fx-sg">
+            <h3>Team defense (D/ST)</h3>
+<div class="fx-sg-row"><span>Starting points, each game</span><strong class="pos">+22</strong></div><div class="fx-sg-row"><span>Takeaway</span><strong class="pos">+4</strong></div><div class="fx-sg-row"><span>Sack</span><strong class="pos">+2</strong></div><div class="fx-sg-row"><span>Yard allowed</span><strong class="neg">-0.05</strong></div><div class="fx-sg-row"><span>TD allowed</span><strong class="neg">-3</strong></div>          </div>
+        </div>
+        <p class="fx-foot-note">We work out every point ourselves from the game logs (the logs' own fantasy points aren't used). Players score only on offense, and a player is a QB or WR by what they do with the ball, so a completion is worth the same as a catch. Defense is scored for each real team as a whole (D/ST): it starts every game on its starting points, then gains for takeaways and sacks and loses for yards and TDs the other offense gets. The numbers are balanced on real MCFL stats, so a decent game at any spot is worth about the same and a great one is worth a lot more. A player's sub appearances don't count toward their points.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<nav class="fx-bottom" aria-label="Fantasy shortcuts">
+  <a class="" href="index.html#leagues" data-view-link="leagues"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 19.5c-1.6-4.6.3-10.4 4.4-13 3.3-2.1 7.4-2.4 10.6-2-.4 3.2-.1 7.3-2 10.6-2.6 4.1-8.4 6-13 4.4Z"/><path d="m9 15 6-6M10.5 10.5l1.5 1.5M12.5 8.5 14 10M8.5 12.5 10 14"/></svg><span>Leagues</span></a>
+  <a class="" href="index.html#home" data-view-link="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/></svg><span>Home</span></a>
+  <a class="" href="index.html#team" data-view-link="team"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6l-8-4Z"/></svg><span>My Team</span></a>
+  <a class="" href="index.html#matchup" data-view-link="matchup"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><span>Matchup</span></a>
+  <a class="" href="index.html#players" data-view-link="players"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3.1-6 7-6s7 2.7 7 6"/><path d="M16 6.2a3 3 0 0 1 0 5.8M22 20c0-2.8-2.3-5.2-5.5-5.9"/></svg><span>Players</span></a>
+</nav>
+
+<dialog class="fx-dialog" id="fx-breakdown" aria-labelledby="fx-bd-title">
+  <form method="dialog" class="fx-dialog-inner">
+    <div class="fx-dialog-head"><h3 id="fx-bd-title">Fantasy points</h3><button class="fx-x" aria-label="Close">&times;</button></div>
+    <div class="fx-bd-body"></div>
+  </form>
+</dialog>
+
+<dialog class="fx-dialog" id="fx-modal" aria-labelledby="fx-md-title">
+  <form method="dialog" class="fx-dialog-inner">
+    <div class="fx-dialog-head"><h3 id="fx-md-title"></h3><button class="fx-x" value="cancel" aria-label="Close">&times;</button></div>
+    <div class="fx-md-body"></div>
+    <div class="fx-rq-actions"><button type="button" class="btn btn-primary" data-md-ok>OK</button><button class="btn btn-ghost" value="cancel">Cancel</button></div>
+  </form>
+</dialog>
+
+<div class="fx-toast" role="status" aria-live="polite" hidden></div>
+
+<script>window.FX = {froot: "", root: "../", league: "MSSN Fantasy League", size: 6,
+              cloud: "https://mcfl.duckdns.org/fantasy", iterations: 310000};</script>
+<script src="data/pool.js"></script><script src="engine.js?v=3f398c2a0b" defer></script>
+<script src="../static/fantasy-app.js?v=3f398c2a0b" defer></script>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <img class="" src="../static/mcfl-logo.png" alt="MCFL">
+    </a>
+    <div class="footer-text">
+      <div>MSSN &middot; MCFL stats updated October 04, 2026 at 06:00 UTC</div>
+      <div class="footer-credit">Made by <strong>NotDew</strong> &middot; <a class="footer-admin" href="../admin/index.html">Admin</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var GRACE_MS = 3 * 60 * 60 * 1000;
+  document.querySelectorAll('time.local-time').forEach(function (el) {
+    var d = new Date(el.getAttribute('datetime'));
+    if (isNaN(d)) return;
+    if (Date.now() > d.getTime() + GRACE_MS) {
+      var card = el.closest('.game-card');
+      if (card) {
+        var when = card.querySelector('.gc-when'); if (when) when.remove();
+        var st = card.querySelector('.gc-status'); if (st) { st.textContent = 'TBD'; st.className = 'gc-status tbd'; }
+      } else {
+        var tbd = document.createElement('span'); tbd.className = 'faint'; tbd.textContent = 'TBD';
+        el.replaceWith(tbd);
+      }
+      return;
+    }
+    var day = d.toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' });
+    if (el.hasAttribute('data-date-only')) { el.textContent = day + ' \u00b7 time TBD'; return; }
+    var time = d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
+    el.textContent = day + ' \u00b7 ' + time;
+    el.title = d.toLocaleString();
+  });
+</script>
+<script>
+  document.addEventListener('click', function (e) {
+    document.querySelectorAll('details.league-switch[open]').forEach(function (d) {
+      if (!d.contains(e.target)) d.removeAttribute('open');
+    });
+  });
+</script>
+<script>
+  document.addEventListener('click', function (e) {
+    var card = e.target.closest && e.target.closest('[data-href]');
+    if (!card || (e.target.closest('a') && !e.target.closest('.gc-link'))) return;
+    e.preventDefault();
+    window.location.href = card.getAttribute('data-href');
+  });
+</script>
+<script>
+  document.querySelectorAll('[data-tabs]').forEach(function (bar) {
+    var group = bar.dataset.tabs;
+    bar.addEventListener('click', function (e) {
+      var btn = e.target.closest('.pill-tab');
+      if (!btn) return;
+      bar.querySelectorAll('.pill-tab').forEach(function (b) {
+        var on = b === btn;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-selected', on);
+      });
+      document.querySelectorAll('.tab-panel[data-group="' + group + '"]').forEach(function (p) {
+        p.hidden = p.dataset.panel !== btn.dataset.tab;
+      });
+      btn.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>

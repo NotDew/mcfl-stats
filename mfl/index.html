@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07080b">
+<meta name="description" content="MSSN -- official stats, standings, records and Hall of Fame for the Minecraft Football League (MFL).">
+<title>MSSN &middot; Minecraft Football League</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://mc-heads.net">
+<script>
+  function mcHeadFailed(img) {
+    var rest = (img.getAttribute('data-fallback') || '').split(' ').filter(Boolean);
+    if (!rest.length) { img.remove(); return; }
+    img.setAttribute('data-fallback', rest.slice(1).join(' '));
+    img.src = rest[0];
+  }
+</script>
+<link rel="stylesheet" href="static/style.css?v=3f398c2a0b">
+<script data-goatcounter="https://mssn.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<link rel="icon" type="image/png" href="static/mfl-logo.png">
+<link rel="apple-touch-icon" href="static/mfl-logo.png">
+</head>
+<body class="league-mfl">
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img class="" src="static/mfl-logo.png" alt="MFL">
+      <span class="brand-text">
+        <div class="brand-main">MSSN</div>
+        <div class="brand-sub">OFFICIAL STATS</div>
+      </span>
+    </a>
+    <details class="league-switch">
+      <summary aria-label="Switch league"><span class="ls-code">MFL</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="ls-menu">
+        <div class="ls-head">MSSN leagues</div>
+        <a class="ls-item " href="../index.html">
+<img src="../static/mcfl-logo.png" alt="">          <span class="ls-text"><strong>MCFL</strong><span>College &middot; Minecraft College Football League</span></span>
+        </a>
+        <a class="ls-item active" href="../mfl/index.html" aria-current="true">
+<img src="../static/mfl-logo.png" alt="">          <span class="ls-text"><strong>MFL</strong><span>Pro &middot; Minecraft Football League</span></span>
+<svg class="ls-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>        </a>
+      </div>
+    </details>
+    <div class="nav-links">
+      <a class="nav-link active" href="index.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/></svg><span>Home</span></a>
+      <a class="nav-link " href="stats.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M12 20V4M20 20v-7"/></svg><span>Stats</span></a>
+      <a class="nav-link " href="players.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3.1-6 7-6s7 2.7 7 6"/><path d="M16 6.2a3 3 0 0 1 0 5.8M22 20c0-2.8-2.3-5.2-5.5-5.9"/></svg><span>Players</span></a>
+      <a class="nav-link " href="teams.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6l-8-4Z"/></svg><span>Teams</span></a>
+      <a class="nav-link " href="standings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg><span>Standings</span></a>
+      <a class="nav-link " href="games.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><span>Schedule</span></a>
+      <a class="nav-link " href="hof.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.7 5.5 6 .9-4.35 4.2 1 6L12 16.8 6.6 19.6l1-6L3.3 9.4l6-.9L12 3Z"/></svg><span>Hall of Fame</span></a>
+      <a class="nav-link " href="history.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.1 13a9 9 0 1 0 2.6-6.4L3 9"/><path d="M3 4v5h5"/><path d="M12 8v5l3 2"/></svg><span>History</span></a>
+      <a class="nav-link " href="../17-0/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3 2.5 5 6 5 10a5 5 0 0 1-10 0c0-4 2-7.5 5-10Z"/><path d="M9 12h6M12 9v6"/></svg><span>17&ndash;0</span></a>
+    </div>
+  </div>
+</nav>
+
+
+<main>
+
+<section class="score-strip" aria-label="Recent scores">
+  <button class="ss-nav prev" type="button" aria-label="Earlier games"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></button>
+  <div class="ss-track">
+    <a class="score-card final" href="games/2.html">
+      <div class="sc-top">
+        <span class="sc-league">MFL</span>
+<span class="sc-status">Final</span>      </div>
+      <div class="sc-row  lost">
+        <span class="team-mark " style="--c:#8c3cc8" title="Dragons"><img src="team_logos/Dragons.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Dragons</span>
+        <span class="sc-score">18</span>
+      </div>
+      <div class="sc-row won ">
+        <span class="team-mark " style="--c:#ffaa1e" title="Blazes"><img src="team_logos/Blazes.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Blazes</span>
+        <span class="sc-score">44</span>
+      </div>
+      <div class="sc-foot">
+<span class="sc-mvp">MVP</span><span class="avatar" style="--c:#ffaa1e"><span class="avatar-initial">V</span><img src="https://mc-heads.net/avatar/6b47f2371a384e4a83cd6826edd49c0e/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Vx3sty/64 https://minotar.net/helm/6b47f2371a384e4a83cd6826edd49c0e/64 https://crafatar.com/avatars/6b47f2371a384e4a83cd6826edd49c0e?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><span class="sc-who">Vx3sty</span>          <span class="sc-date">Sep 28</span>
+      </div>
+    </a>
+    <a class="score-card final" href="../games/3.html">
+      <div class="sc-top">
+        <span class="sc-league">MCFL</span>
+<span class="sc-status">Final</span>      </div>
+      <div class="sc-row won ">
+        <span class="team-mark " style="--c:#c00000" title="Devilbats"><img src="../team_logos/Devilbats.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Devilbats</span>
+        <span class="sc-score">66</span>
+      </div>
+      <div class="sc-row  lost">
+        <span class="team-mark " style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Raiders</span>
+        <span class="sc-score">37</span>
+      </div>
+      <div class="sc-foot">
+<span class="sc-mvp">MVP</span><span class="avatar" style="--c:#c00000"><span class="avatar-initial">C</span><img src="https://mc-heads.net/avatar/38e362f6aa36461db7a901796d507fb9/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/canboon2/64 https://minotar.net/helm/38e362f6aa36461db7a901796d507fb9/64 https://crafatar.com/avatars/38e362f6aa36461db7a901796d507fb9?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><span class="sc-who">canboon2</span>          <span class="sc-date">Sep 28</span>
+      </div>
+    </a>
+    <a class="score-card final" href="games/3.html">
+      <div class="sc-top">
+        <span class="sc-league">MFL</span>
+<span class="sc-status">Final</span>      </div>
+      <div class="sc-row won ">
+        <span class="team-mark " style="--c:#e6461e" title="Magmas"><img src="team_logos/Magmas.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Magmas</span>
+        <span class="sc-score">60</span>
+      </div>
+      <div class="sc-row  lost">
+        <span class="team-mark " style="--c:#3ca03c" title="Gators"><img src="team_logos/Gators.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Gators</span>
+        <span class="sc-score">24</span>
+      </div>
+      <div class="sc-foot">
+<span class="sc-mvp">MVP</span><span class="avatar" style="--c:#e6461e"><span class="avatar-initial">B</span><img src="https://mc-heads.net/avatar/5b32c015bf2a4080a490c4b6b4e042d7/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/beefourr/64 https://minotar.net/helm/5b32c015bf2a4080a490c4b6b4e042d7/64 https://crafatar.com/avatars/5b32c015bf2a4080a490c4b6b4e042d7?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><span class="sc-who">beefourr</span>          <span class="sc-date">Sep 28</span>
+      </div>
+    </a>
+    <a class="score-card final" href="../games/4.html">
+      <div class="sc-top">
+        <span class="sc-league">MCFL</span>
+<span class="sc-status">Final</span>      </div>
+      <div class="sc-row  lost">
+        <span class="team-mark " style="--c:#ffc000" title="Traders"><img src="../team_logos/Traders.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Traders</span>
+        <span class="sc-score">21</span>
+      </div>
+      <div class="sc-row won ">
+        <span class="team-mark " style="--c:#e628c8" title="Tropics"><img src="../team_logos/Tropics.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Tropics</span>
+        <span class="sc-score">62</span>
+      </div>
+      <div class="sc-foot">
+<span class="sc-mvp">MVP</span><span class="avatar" style="--c:#e628c8"><span class="avatar-initial">J</span><img src="https://mc-heads.net/avatar/aa5ca18224ad49878fe42efea375990c/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/JtownW/64 https://minotar.net/helm/aa5ca18224ad49878fe42efea375990c/64 https://crafatar.com/avatars/aa5ca18224ad49878fe42efea375990c?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><span class="sc-who">JtownW</span>          <span class="sc-date">Sep 28</span>
+      </div>
+    </a>
+    <a class="score-card final" href="../games/5.html">
+      <div class="sc-top">
+        <span class="sc-league">MCFL</span>
+<span class="sc-status">Final</span>      </div>
+      <div class="sc-row  lost">
+        <span class="team-mark " style="--c:#f4b084" title="Sniffers"><img src="../team_logos/Sniffers.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Sniffers</span>
+        <span class="sc-score">26</span>
+      </div>
+      <div class="sc-row won ">
+        <span class="team-mark " style="--c:#00c8dc" title="Allays"><img src="../team_logos/Allays.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Allays</span>
+        <span class="sc-score">33</span>
+      </div>
+      <div class="sc-foot">
+<span class="sc-mvp">MVP</span><span class="avatar" style="--c:#00c8dc"><span class="avatar-initial">R</span><img src="https://mc-heads.net/avatar/4d10e1e60f9f4701babecb97ce31721d/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Raccnn/64 https://minotar.net/helm/4d10e1e60f9f4701babecb97ce31721d/64 https://crafatar.com/avatars/4d10e1e60f9f4701babecb97ce31721d?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><span class="sc-who">Raccnn</span>          <span class="sc-date">Sep 28</span>
+      </div>
+    </a>
+    <a class="score-card final" href="games/4.html">
+      <div class="sc-top">
+        <span class="sc-league">MFL</span>
+<span class="sc-status">Final</span>      </div>
+      <div class="sc-row  lost">
+        <span class="team-mark " style="--c:#c8e1f5" title="Polar Bears"><img src="team_logos/Polar Bears.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Polar Bears</span>
+        <span class="sc-score">13</span>
+      </div>
+      <div class="sc-row won ">
+        <span class="team-mark " style="--c:#78d2f0" title="Breeze"><img src="team_logos/Breeze.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Breeze</span>
+        <span class="sc-score">30</span>
+      </div>
+      <div class="sc-foot">
+<span class="sc-mvp">MVP</span><span class="avatar" style="--c:#78d2f0"><span class="avatar-initial">1</span><img src="https://mc-heads.net/avatar/9aaf7adfa7a5476aa043601264a7c1be/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/1of1___/64 https://minotar.net/helm/9aaf7adfa7a5476aa043601264a7c1be/64 https://crafatar.com/avatars/9aaf7adfa7a5476aa043601264a7c1be?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><span class="sc-who">1of1___</span>          <span class="sc-date">Sep 29</span>
+      </div>
+    </a>
+    <a class="score-card final" href="games/5.html">
+      <div class="sc-top">
+        <span class="sc-league">MFL</span>
+<span class="sc-status">Final</span>      </div>
+      <div class="sc-row  lost">
+        <span class="team-mark " style="--c:#5a64a0" title="Phantoms"><img src="team_logos/Phantoms.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Phantoms</span>
+        <span class="sc-score">40</span>
+      </div>
+      <div class="sc-row won ">
+        <span class="team-mark " style="--c:#ebebeb" title="Ghasts"><img src="team_logos/Ghasts.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Ghasts</span>
+        <span class="sc-score">56</span>
+      </div>
+      <div class="sc-foot">
+<span class="sc-mvp">MVP</span><span class="avatar" style="--c:#5a64a0"><span class="avatar-initial">H</span><img src="https://mc-heads.net/avatar/902654c8db3f4658b5d9d60db699b299/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Henryvz/64 https://minotar.net/helm/902654c8db3f4658b5d9d60db699b299/64 https://crafatar.com/avatars/902654c8db3f4658b5d9d60db699b299?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><span class="sc-who">Henryvz</span>          <span class="sc-date">Sep 29</span>
+      </div>
+    </a>
+    <a class="score-card final" href="../games/6.html">
+      <div class="sc-top">
+        <span class="sc-league">MCFL</span>
+<span class="sc-status">Final</span>      </div>
+      <div class="sc-row  lost">
+        <span class="team-mark " style="--c:#3cdc64" title="Totems"><img src="../team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Totems</span>
+        <span class="sc-score">0</span>
+      </div>
+      <div class="sc-row won ">
+        <span class="team-mark " style="--c:#aaaaaa" title="Silverfish"><img src="../team_logos/Silverfish.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Silverfish</span>
+        <span class="sc-score">80</span>
+      </div>
+      <div class="sc-foot">
+<span class="sc-mvp">MVP</span><span class="avatar" style="--c:#aaaaaa"><span class="avatar-initial">B</span><img src="https://mc-heads.net/avatar/441f9831f5d84ec6933e7bfbd83fac0b/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/BaltimoreBrownie/64 https://minotar.net/helm/441f9831f5d84ec6933e7bfbd83fac0b/64 https://crafatar.com/avatars/441f9831f5d84ec6933e7bfbd83fac0b?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><span class="sc-who">BaltimoreBrownie</span>          <span class="sc-date">Sep 30</span>
+      </div>
+    </a>
+    <a class="score-card final" href="games/6.html">
+      <div class="sc-top">
+        <span class="sc-league">MFL</span>
+<span class="sc-status">Final</span>      </div>
+      <div class="sc-row won ">
+        <span class="team-mark " style="--c:#28aaa0" title="Guardians"><img src="team_logos/Guardians.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Guardians</span>
+        <span class="sc-score">77</span>
+      </div>
+      <div class="sc-row  lost">
+        <span class="team-mark " style="--c:#78d2f0" title="Breeze"><img src="team_logos/Breeze.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Breeze</span>
+        <span class="sc-score">33</span>
+      </div>
+      <div class="sc-foot">
+<span class="sc-mvp">MVP</span><span class="avatar" style="--c:#28aaa0"><span class="avatar-initial">B</span><img src="https://mc-heads.net/avatar/4926a3a6f30846819461c2853eb5ea16/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/BigPoppaRS/64 https://minotar.net/helm/4926a3a6f30846819461c2853eb5ea16/64 https://crafatar.com/avatars/4926a3a6f30846819461c2853eb5ea16?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><span class="sc-who">BigPoppaRS</span>          <span class="sc-date">Sep 30</span>
+      </div>
+    </a>
+    <a class="score-card final" href="../games/7.html">
+      <div class="sc-top">
+        <span class="sc-league">MCFL</span>
+<span class="sc-status">Final</span>      </div>
+      <div class="sc-row won ">
+        <span class="team-mark " style="--c:#e628c8" title="Tropics"><img src="../team_logos/Tropics.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Tropics</span>
+        <span class="sc-score">37</span>
+      </div>
+      <div class="sc-row  lost">
+        <span class="team-mark " style="--c:#00c8dc" title="Allays"><img src="../team_logos/Allays.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Allays</span>
+        <span class="sc-score">25</span>
+      </div>
+      <div class="sc-foot">
+<span class="sc-mvp">MVP</span><span class="avatar" style="--c:#00c8dc"><span class="avatar-initial">T</span><img src="https://mc-heads.net/avatar/52a49a0695ff481cbe75865c00ac8999/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/tacf/64 https://minotar.net/helm/52a49a0695ff481cbe75865c00ac8999/64 https://crafatar.com/avatars/52a49a0695ff481cbe75865c00ac8999?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><span class="sc-who">tacf</span>          <span class="sc-date">Oct 1</span>
+      </div>
+    </a>
+    <a class="score-card final" href="games/7.html">
+      <div class="sc-top">
+        <span class="sc-league">MFL</span>
+<span class="sc-status">Final</span>      </div>
+      <div class="sc-row won ">
+        <span class="team-mark " style="--c:#ffaa1e" title="Blazes"><img src="team_logos/Blazes.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Blazes</span>
+        <span class="sc-score">50</span>
+      </div>
+      <div class="sc-row  lost">
+        <span class="team-mark " style="--c:#e6461e" title="Magmas"><img src="team_logos/Magmas.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Magmas</span>
+        <span class="sc-score">32</span>
+      </div>
+      <div class="sc-foot">
+<span class="sc-mvp">MVP</span><span class="avatar" style="--c:#ffaa1e"><span class="avatar-initial">V</span><img src="https://mc-heads.net/avatar/6b47f2371a384e4a83cd6826edd49c0e/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Vx3sty/64 https://minotar.net/helm/6b47f2371a384e4a83cd6826edd49c0e/64 https://crafatar.com/avatars/6b47f2371a384e4a83cd6826edd49c0e?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><span class="sc-who">Vx3sty</span>          <span class="sc-date">Oct 1</span>
+      </div>
+    </a>
+    <a class="score-card final" href="games/8.html">
+      <div class="sc-top">
+        <span class="sc-league">MFL</span>
+<span class="sc-status">Final</span>      </div>
+      <div class="sc-row  lost">
+        <span class="team-mark " style="--c:#3ca03c" title="Gators"><img src="team_logos/Gators.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Gators</span>
+        <span class="sc-score">27</span>
+      </div>
+      <div class="sc-row won ">
+        <span class="team-mark " style="--c:#ebebeb" title="Ghasts"><img src="team_logos/Ghasts.png" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="sc-team">Ghasts</span>
+        <span class="sc-score">34</span>
+      </div>
+      <div class="sc-foot">
+<span class="sc-mvp">MVP</span><span class="avatar" style="--c:#ebebeb"><span class="avatar-initial">A</span><img src="https://mc-heads.net/avatar/923b4f2c63834738b457abee7bdc607b/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Avoidss/64 https://minotar.net/helm/923b4f2c63834738b457abee7bdc607b/64 https://crafatar.com/avatars/923b4f2c63834738b457abee7bdc607b?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><span class="sc-who">Avoidss</span>          <span class="sc-date">Oct 2</span>
+      </div>
+    </a>
+  </div>
+  <button class="ss-nav next" type="button" aria-label="Later games"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></button>
+</section>
+
+<section class="section home-main">
+  <div class="wrap home-layout">
+    <div class="home-news">
+      <div class="news-head">
+        <h2 class="news-title">Latest headlines &amp; updates</h2>
+      </div>
+      <a class="card lead-story" href="articles/mfl-s21-week-1-recap.html">
+        <div class="lead-body">
+          <div class="art-meta"><strong>MSSN Newsroom</strong> &middot; Sep 29, 2026</div>
+          <h3 class="lead-title">eennvy Throws for 946 Yards as Axolotls Open MFL Season With a 74-Point Blast</h3>
+<div class="art-tags"><span>#MFL</span><span>#S21</span><span>#Week 1</span><span>#Power Rankings</span><span>#Predictions</span></div><p class="lead-summary">The Axolotls put up 74 points behind eennvy&#39;s 10 touchdown passes, the Magmas and Blazes rolled, and five teams start Season 21 unbeaten.</p>        </div>
+      </a>
+    </div>
+
+    <aside class="home-side">
+      <a class="discord-card" href="https://discord.gg/yQUVPHgTuX" target="_blank" rel="noopener">
+        <span class="dc-pill">Community hub</span>
+        <div class="dc-title">Join the official Discord</div>
+        <p>Chat with players and teams, follow every signing and get game-day updates as they happen.</p>
+        <span class="dc-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.3 5.3A17 17 0 0 0 15 4l-.5 1a15.7 15.7 0 0 0-5 0L9 4a17 17 0 0 0-4.3 1.3C2 9.4 1.3 13.3 1.6 17.2A17 17 0 0 0 6.9 20l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12 12 0 0 0 10.6 0l.4.3-1.7.8L17.1 20a17 17 0 0 0 5.3-2.8c.4-4.5-.7-8.4-3.1-11.9ZM8.7 14.8c-1 0-1.9-1-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Zm6.6 0c-1 0-1.9-1-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Z"/></svg></span>
+      </a>
+
+      <div class="card deals-card">
+        <div class="deals-head">
+          <span class="deals-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h14l-4-4M20 16H6l4 4"/></svg></span>
+          <div>
+            <div class="deals-title">Recent deals</div>
+            <div class="deals-sub">NIL signings</div>
+          </div>
+        </div>
+        <div class="deals-list">
+          <div class="deal" style="--c:#aaaaaa">
+            <div class="deal-top">
+              <span class="deal-league">MCFL &middot; Signing</span>
+              <span class="deal-date">Sep 28</span>
+            </div>
+            <div class="deal-body">
+              <span class="avatar" style="--c:#aaaaaa"><span class="avatar-initial">🍀</span><img src="https://mc-heads.net/avatar/%F0%9F%8D%80Yeet%F0%9F%8D%80/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="" onerror="mcHeadFailed(this)"></span>
+              <div class="deal-text">
+                <div class="deal-name"><a class="plink" href="../players/yeet.html">🍀Yeet🍀</a></div>
+                <div class="deal-team"><span class="team-mark " style="--c:#aaaaaa" title="Silverfish"><img src="../team_logos/Silverfish.png" alt="" loading="lazy" onerror="this.remove()"></span><a href="../teams/silverfish.html">Silverfish</a></div>
+              </div>
+<span class="deal-amount">$500</span>            </div>
+          </div>
+          <div class="deal" style="--c:#e628c8">
+            <div class="deal-top">
+              <span class="deal-league">MCFL &middot; Signing</span>
+              <span class="deal-date">Sep 28</span>
+            </div>
+            <div class="deal-body">
+              <span class="avatar" style="--c:#e628c8"><span class="avatar-initial">S</span><img src="https://mc-heads.net/avatar/slinky/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://minotar.net/helm/slinky/64" onerror="mcHeadFailed(this)"></span>
+              <div class="deal-text">
+                <div class="deal-name"><a class="plink" href="../players/slinky.html">slinky</a></div>
+                <div class="deal-team"><span class="team-mark " style="--c:#e628c8" title="Tropics"><img src="../team_logos/Tropics.png" alt="" loading="lazy" onerror="this.remove()"></span><a href="../teams/tropics.html">Tropics</a></div>
+              </div>
+<span class="deal-amount">$500</span>            </div>
+          </div>
+          <div class="deal" style="--c:#141416">
+            <div class="deal-top">
+              <span class="deal-league">MCFL &middot; Signing</span>
+              <span class="deal-date">Sep 28</span>
+            </div>
+            <div class="deal-body">
+              <span class="avatar" style="--c:#141416"><span class="avatar-initial">L</span><img src="https://mc-heads.net/avatar/lacedmeds/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://minotar.net/helm/lacedmeds/64" onerror="mcHeadFailed(this)"></span>
+              <div class="deal-text">
+                <div class="deal-name"><a class="plink" href="../players/lacedmeds.html">lacedmeds</a></div>
+                <div class="deal-team"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span><a href="../teams/raiders.html">Raiders</a></div>
+              </div>
+<span class="deal-amount">$1,200</span>            </div>
+          </div>
+          <div class="deal" style="--c:#ffc000">
+            <div class="deal-top">
+              <span class="deal-league">MCFL &middot; Signing</span>
+              <span class="deal-date">Sep 28</span>
+            </div>
+            <div class="deal-body">
+              <span class="avatar" style="--c:#ffc000"><span class="avatar-initial">S</span><img src="https://mc-heads.net/avatar/6af883b5903e4bf8807c6ce1e8598c80/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/surecool/64 https://minotar.net/helm/6af883b5903e4bf8807c6ce1e8598c80/64 https://crafatar.com/avatars/6af883b5903e4bf8807c6ce1e8598c80?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+              <div class="deal-text">
+                <div class="deal-name"><a class="plink" href="../players/surecool.html">surecool</a></div>
+                <div class="deal-team"><span class="team-mark " style="--c:#ffc000" title="Traders"><img src="../team_logos/Traders.png" alt="" loading="lazy" onerror="this.remove()"></span><a href="../teams/traders.html">Traders</a></div>
+              </div>
+<span class="deal-amount">$500</span>            </div>
+          </div>
+          <div class="deal" style="--c:#c00000">
+            <div class="deal-top">
+              <span class="deal-league">MCFL &middot; Signing</span>
+              <span class="deal-date">Sep 27</span>
+            </div>
+            <div class="deal-body">
+              <span class="avatar" style="--c:#c00000"><span class="avatar-initial">J</span><img src="https://mc-heads.net/avatar/jjjjj/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://minotar.net/helm/jjjjj/64" onerror="mcHeadFailed(this)"></span>
+              <div class="deal-text">
+                <div class="deal-name"><a class="plink" href="../players/jjjjj.html">jjjjj</a></div>
+                <div class="deal-team"><span class="team-mark " style="--c:#c00000" title="Devilbats"><img src="../team_logos/Devilbats.png" alt="" loading="lazy" onerror="this.remove()"></span><a href="../teams/devilbats.html">Devilbats</a></div>
+              </div>
+<span class="deal-amount">$500</span>            </div>
+          </div>
+          <div class="deal" style="--c:#0070c0">
+            <div class="deal-top">
+              <span class="deal-league">MCFL &middot; Signing</span>
+              <span class="deal-date">Sep 25</span>
+            </div>
+            <div class="deal-body">
+              <span class="avatar" style="--c:#0070c0"><span class="avatar-initial">O</span><img src="https://mc-heads.net/avatar/OBJ/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://minotar.net/helm/OBJ/64" onerror="mcHeadFailed(this)"></span>
+              <div class="deal-text">
+                <div class="deal-name"><a class="plink" href="../players/obj.html">OBJ</a></div>
+                <div class="deal-team"><span class="team-mark " style="--c:#0070c0" title="Wardens"><img src="../team_logos/Wardens.png" alt="" loading="lazy" onerror="this.remove()"></span><a href="../teams/wardens.html">Wardens</a></div>
+              </div>
+<span class="deal-amount">$500</span>            </div>
+          </div>
+          <div class="deal" style="--c:#e628c8">
+            <div class="deal-top">
+              <span class="deal-league">MCFL &middot; Signing</span>
+              <span class="deal-date">Sep 24</span>
+            </div>
+            <div class="deal-body">
+              <span class="avatar" style="--c:#e628c8"><span class="avatar-initial">K</span><img src="https://mc-heads.net/avatar/b05ad420c1c04a658fb2e4208ea00095/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Kepleleple/64 https://minotar.net/helm/b05ad420c1c04a658fb2e4208ea00095/64 https://crafatar.com/avatars/b05ad420c1c04a658fb2e4208ea00095?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+              <div class="deal-text">
+                <div class="deal-name"><a class="plink" href="../players/kepleleple.html">Kepleleple</a></div>
+                <div class="deal-team"><span class="team-mark " style="--c:#e628c8" title="Tropics"><img src="../team_logos/Tropics.png" alt="" loading="lazy" onerror="this.remove()"></span><a href="../teams/tropics.html">Tropics</a></div>
+              </div>
+<span class="deal-amount">$1,200</span>            </div>
+          </div>
+          <div class="deal" style="--c:#e628c8">
+            <div class="deal-top">
+              <span class="deal-league">MCFL &middot; Signing</span>
+              <span class="deal-date">Sep 23</span>
+            </div>
+            <div class="deal-body">
+              <span class="avatar" style="--c:#e628c8"><span class="avatar-initial">P</span><img src="https://mc-heads.net/avatar/ea999150ce754f63b61b9b123ffec4f6/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Proffic/64 https://minotar.net/helm/ea999150ce754f63b61b9b123ffec4f6/64 https://crafatar.com/avatars/ea999150ce754f63b61b9b123ffec4f6?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+              <div class="deal-text">
+                <div class="deal-name"><a class="plink" href="../players/proffic.html">Proffic</a></div>
+                <div class="deal-team"><span class="team-mark " style="--c:#e628c8" title="Tropics"><img src="../team_logos/Tropics.png" alt="" loading="lazy" onerror="this.remove()"></span><a href="../teams/tropics.html">Tropics</a></div>
+              </div>
+<span class="deal-amount">$3,000</span>            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="eyebrow">Explore</span><h2 class="section-title">Around the league</h2></div>
+    </div>
+    <div class="nav-grid">
+      <a class="card nav-card" href="../17-0/index.html">
+        <span class="nc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        <span class="nc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3 2.5 5 6 5 10a5 5 0 0 1-10 0c0-4 2-7.5 5-10Z"/><path d="M9 12h6M12 9v6"/></svg></span>
+        <div>
+          <div class="nc-title">17&ndash;0 Challenge</div>
+          <p>Draft a team from real players and chase a perfect season.</p>
+        </div>
+      </a>
+      <a class="card nav-card" href="players.html">
+        <span class="nc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        <span class="nc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3.1-6 7-6s7 2.7 7 6"/><path d="M16 6.2a3 3 0 0 1 0 5.8M22 20c0-2.8-2.3-5.2-5.5-5.9"/></svg></span>
+        <div>
+          <div class="nc-title">Players</div>
+          <p>Every signed player, searchable by name or team.</p>
+        </div>
+      </a>
+      <a class="card nav-card" href="teams.html">
+        <span class="nc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        <span class="nc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6l-8-4Z"/></svg></span>
+        <div>
+          <div class="nc-title">Teams</div>
+          <p>Rosters, team leaders and NIL cap space.</p>
+        </div>
+      </a>
+      <a class="card nav-card" href="hof.html">
+        <span class="nc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        <span class="nc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.7 5.5 6 .9-4.35 4.2 1 6L12 16.8 6.6 19.6l1-6L3.3 9.4l6-.9L12 3Z"/></svg></span>
+        <div>
+          <div class="nc-title">Hall of Fame</div>
+          <p>The all-time roster, position by position.</p>
+        </div>
+      </a>
+      <a class="card nav-card" href="history.html">
+        <span class="nc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        <span class="nc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.1 13a9 9 0 1 0 2.6-6.4L3 9"/><path d="M3 4v5h5"/><path d="M12 8v5l3 2"/></svg></span>
+        <div>
+          <div class="nc-title">League History</div>
+          <p>Records, career leaders and past seasons.</p>
+        </div>
+      </a>
+      <a class="card nav-card" href="standings.html">
+        <span class="nc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        <span class="nc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></span>
+        <div>
+          <div class="nc-title">Standings</div>
+          <p>Conference tables, every season.</p>
+        </div>
+      </a>
+      <a class="card nav-card" href="games.html">
+        <span class="nc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        <span class="nc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span>
+        <div>
+          <div class="nc-title">Schedule</div>
+          <p>Every matchup and final score, week by week.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var strip = document.querySelector('.score-strip');
+    if (!strip) return;
+    var track = strip.querySelector('.ss-track');
+    var finals = track.querySelectorAll('.score-card.final');
+    var last = finals[finals.length - 1];
+    if (last) track.scrollLeft = Math.max(0, last.offsetLeft + last.offsetWidth - track.clientWidth + 24);
+    strip.querySelectorAll('.ss-nav').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var dir = btn.classList.contains('next') ? 1 : -1;
+        track.scrollBy({ left: dir * track.clientWidth * 0.8, behavior: 'smooth' });
+      });
+    });
+  })();
+</script>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img class="" src="static/mfl-logo.png" alt="MFL">
+    </a>
+    <div class="footer-text">
+      <div>MSSN &middot; MFL stats updated October 04, 2026 at 06:00 UTC</div>
+      <div class="footer-credit">Made by <strong>NotDew</strong> &middot; <a class="footer-admin" href="../admin/index.html">Admin</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var GRACE_MS = 3 * 60 * 60 * 1000;
+  document.querySelectorAll('time.local-time').forEach(function (el) {
+    var d = new Date(el.getAttribute('datetime'));
+    if (isNaN(d)) return;
+    if (Date.now() > d.getTime() + GRACE_MS) {
+      var card = el.closest('.game-card');
+      if (card) {
+        var when = card.querySelector('.gc-when'); if (when) when.remove();
+        var st = card.querySelector('.gc-status'); if (st) { st.textContent = 'TBD'; st.className = 'gc-status tbd'; }
+      } else {
+        var tbd = document.createElement('span'); tbd.className = 'faint'; tbd.textContent = 'TBD';
+        el.replaceWith(tbd);
+      }
+      return;
+    }
+    var day = d.toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' });
+    if (el.hasAttribute('data-date-only')) { el.textContent = day + ' \u00b7 time TBD'; return; }
+    var time = d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
+    el.textContent = day + ' \u00b7 ' + time;
+    el.title = d.toLocaleString();
+  });
+</script>
+<script>
+  document.addEventListener('click', function (e) {
+    document.querySelectorAll('details.league-switch[open]').forEach(function (d) {
+      if (!d.contains(e.target)) d.removeAttribute('open');
+    });
+  });
+</script>
+<script>
+  document.addEventListener('click', function (e) {
+    var card = e.target.closest && e.target.closest('[data-href]');
+    if (!card || (e.target.closest('a') && !e.target.closest('.gc-link'))) return;
+    e.preventDefault();
+    window.location.href = card.getAttribute('data-href');
+  });
+</script>
+<script>
+  document.querySelectorAll('[data-tabs]').forEach(function (bar) {
+    var group = bar.dataset.tabs;
+    bar.addEventListener('click', function (e) {
+      var btn = e.target.closest('.pill-tab');
+      if (!btn) return;
+      bar.querySelectorAll('.pill-tab').forEach(function (b) {
+        var on = b === btn;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-selected', on);
+      });
+      document.querySelectorAll('.tab-panel[data-group="' + group + '"]').forEach(function (p) {
+        p.hidden = p.dataset.panel !== btn.dataset.tab;
+      });
+      btn.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>

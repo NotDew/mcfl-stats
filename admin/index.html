@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07080b">
+<meta name="description" content="MSSN -- official stats, standings, records and Hall of Fame for the Minecraft College Football League (MCFL).">
+<title>Admin &middot; MSSN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://mc-heads.net">
+<script>
+  function mcHeadFailed(img) {
+    var rest = (img.getAttribute('data-fallback') || '').split(' ').filter(Boolean);
+    if (!rest.length) { img.remove(); return; }
+    img.setAttribute('data-fallback', rest.slice(1).join(' '));
+    img.src = rest[0];
+  }
+</script>
+<link rel="stylesheet" href="../static/style.css?v=3f398c2a0b">
+<meta name="robots" content="noindex, nofollow"><link rel="icon" type="image/png" href="../static/mcfl-logo.png">
+<link rel="apple-touch-icon" href="../static/mcfl-logo.png">
+</head>
+<body class="league-mcfl">
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <img class="" src="../static/mcfl-logo.png" alt="MCFL">
+      <span class="brand-text">
+        <div class="brand-main">MSSN</div>
+        <div class="brand-sub">OFFICIAL STATS</div>
+      </span>
+    </a>
+    <details class="league-switch">
+      <summary aria-label="Switch league"><span class="ls-code">MCFL</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="ls-menu">
+        <div class="ls-head">MSSN leagues</div>
+        <a class="ls-item active" href="../admin/index.html" aria-current="true">
+<img src="../static/mcfl-logo.png" alt="">          <span class="ls-text"><strong>MCFL</strong><span>College &middot; Minecraft College Football League</span></span>
+<svg class="ls-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>        </a>
+        <a class="ls-item " href="../mfl/index.html">
+<img src="../static/mfl-logo.png" alt="">          <span class="ls-text"><strong>MFL</strong><span>Pro &middot; Minecraft Football League</span></span>
+        </a>
+      </div>
+    </details>
+    <div class="nav-links">
+      <a class="nav-link " href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/></svg><span>Home</span></a>
+      <a class="nav-link " href="../stats.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M12 20V4M20 20v-7"/></svg><span>Stats</span></a>
+      <a class="nav-link " href="../players.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3.1-6 7-6s7 2.7 7 6"/><path d="M16 6.2a3 3 0 0 1 0 5.8M22 20c0-2.8-2.3-5.2-5.5-5.9"/></svg><span>Players</span></a>
+      <a class="nav-link " href="../teams.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6l-8-4Z"/></svg><span>Teams</span></a>
+      <a class="nav-link " href="../standings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg><span>Standings</span></a>
+      <a class="nav-link " href="../games.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><span>Schedule</span></a>
+      <a class="nav-link " href="../hof.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.7 5.5 6 .9-4.35 4.2 1 6L12 16.8 6.6 19.6l1-6L3.3 9.4l6-.9L12 3Z"/></svg><span>Hall of Fame</span></a>
+      <a class="nav-link " href="../history.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.1 13a9 9 0 1 0 2.6-6.4L3 9"/><path d="M3 4v5h5"/><path d="M12 8v5l3 2"/></svg><span>History</span></a>
+      <a class="nav-link " href="../17-0/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3 2.5 5 6 5 10a5 5 0 0 1-10 0c0-4 2-7.5 5-10Z"/><path d="M9 12h6M12 9v6"/></svg><span>17&ndash;0</span></a>
+    </div>
+  </div>
+</nav>
+
+
+<main>
+
+<section class="section admin-page">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="eyebrow">MSSN admin</span><h1 class="section-title">Insights</h1></div>
+      <span class="admin-updated" id="admin-updated"></span>
+    </div>
+
+    <div class="card admin-lock" id="admin-lock">
+      <h2>Admin panel</h2>
+      <p id="admin-lock-note">Enter the admin password to unlock site insights.</p>
+      <form id="admin-form" autocomplete="off">
+        <input type="password" id="admin-password" placeholder="Password" aria-label="Admin password" required>
+        <button class="btn btn-primary" type="submit">Unlock</button>
+      </form>
+      <p class="admin-error" id="admin-error" role="alert"></p>
+    </div>
+
+    <div id="admin-body" hidden>
+      <div class="admin-tiles" id="admin-tiles"></div>
+
+      <div class="card admin-card">
+        <div class="admin-card-head"><h3>Page views per day</h3><span class="faint" id="admin-range"></span></div>
+        <div class="admin-chart" id="admin-chart"></div>
+        <details class="admin-table-toggle"><summary>Show as table</summary><div id="admin-daily-table"></div></details>
+      </div>
+
+      <div class="admin-grid">
+        <div class="card admin-card admin-wide"><div class="admin-card-head"><h3>Most viewed pages</h3></div><ol class="admin-list" id="list-pages"></ol></div>
+        <div class="card admin-card"><div class="admin-card-head"><h3>Most used sections</h3></div><ol class="admin-list" id="list-sections"></ol></div>
+        <div class="card admin-card"><div class="admin-card-head"><h3>By league</h3></div><ol class="admin-list" id="list-leagues"></ol></div>
+        <div class="card admin-card"><div class="admin-card-head"><h3>Where visitors come from</h3></div><ol class="admin-list" id="list-referrers"></ol></div>
+        <div class="card admin-card"><div class="admin-card-head"><h3>Devices</h3></div><ol class="admin-list" id="list-sizes"></ol></div>
+        <div class="card admin-card"><div class="admin-card-head"><h3>Browsers</h3></div><ol class="admin-list" id="list-browsers"></ol></div>
+        <div class="card admin-card"><div class="admin-card-head"><h3>Operating systems</h3></div><ol class="admin-list" id="list-systems"></ol></div>
+        <div class="card admin-card"><div class="admin-card-head"><h3>Countries</h3></div><ol class="admin-list" id="list-locations"></ol></div>
+      </div>
+      <p class="faint admin-foot">Visits are counted by GoatCounter (no cookies, no personal data). Numbers refresh with every site build. <button class="admin-lockbtn" id="admin-relock" type="button">Lock</button></p>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var ROOT = '../';
+  var locked = null;
+  var $ = function (id) { return document.getElementById(id); };
+  var fmt = function (n) { return Number(n || 0).toLocaleString(); };
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function b64(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
+
+  async function decrypt(pass) {
+    var base = await crypto.subtle.importKey('raw', new TextEncoder().encode(pass), 'PBKDF2', false, ['deriveKey']);
+    var key = await crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(locked.salt), iterations: locked.iterations, hash: 'SHA-256' },
+      base, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+    var plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(locked.iv) }, key, b64(locked.data));
+    return JSON.parse(new TextDecoder().decode(plain));
+  }
+
+  function list(id, rows, linkPaths) {
+    var ol = $(id); ol.textContent = '';
+    if (!rows || !rows.length) { ol.appendChild(el('li', 'admin-empty', 'No data yet.')); return; }
+    var max = Math.max.apply(null, rows.map(function (r) { return r.views; })) || 1;
+    var total = rows.reduce(function (s, r) { return s + r.views; }, 0) || 1;
+    rows.forEach(function (r) {
+      var li = el('li');
+      var label = el('span', 'al-label');
+      if (linkPaths && r.path) {
+        var a = el('a', null, r.title || r.path); a.href = ROOT + r.path.replace(/^\//, ''); a.title = r.path;
+        label.appendChild(a);
+        if (r.title) label.appendChild(el('span', 'al-path', r.path));
+      } else { label.textContent = r.name; }
+      li.appendChild(label);
+      li.appendChild(el('span', 'al-value', fmt(r.views) + (linkPaths ? '' : '  ·  ' + Math.round(r.views / total * 100) + '%')));
+      var bar = el('span', 'al-bar'); bar.style.width = Math.max(2, r.views / max * 100) + '%';
+      li.appendChild(bar);
+      ol.appendChild(li);
+    });
+  }
+
+  function chart(daily) {
+    var box = $('admin-chart'); box.textContent = '';
+    var W = 720, H = 220, padL = 40, padB = 26, padT = 10, n = daily.length;
+    var max = Math.max.apply(null, daily.map(function (d) { return d.views; })) || 1;
+    var step = Math.pow(10, Math.floor(Math.log10(max))); var top = Math.ceil(max / step) * step;
+    if (top / step < 3) { step /= 2; }
+    var ns = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(ns, 'svg'); svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+    svg.setAttribute('role', 'img'); svg.setAttribute('aria-label', 'Page views per day');
+    var plotH = H - padB - padT, bw = (W - padL) / n;
+    for (var v = 0; v <= top; v += step) {
+      var y = padT + plotH - v / top * plotH;
+      var line = document.createElementNS(ns, 'line');
+      line.setAttribute('x1', padL); line.setAttribute('x2', W); line.setAttribute('y1', y); line.setAttribute('y2', y);
+      line.setAttribute('class', 'ac-grid'); svg.appendChild(line);
+      var t = document.createElementNS(ns, 'text'); t.setAttribute('x', padL - 8); t.setAttribute('y', y + 4);
+      t.setAttribute('class', 'ac-axis'); t.setAttribute('text-anchor', 'end'); t.textContent = fmt(v); svg.appendChild(t);
+    }
+    var tip = el('div', 'ac-tip'); tip.hidden = true;
+    daily.forEach(function (d, i) {
+      var h = d.views / top * plotH, x = padL + i * bw;
+      var g = document.createElementNS(ns, 'g'); g.setAttribute('class', 'ac-col');
+      var hit = document.createElementNS(ns, 'rect');
+      hit.setAttribute('x', x); hit.setAttribute('y', padT); hit.setAttribute('width', bw); hit.setAttribute('height', plotH);
+      hit.setAttribute('class', 'ac-hit'); g.appendChild(hit);
+      var r = document.createElementNS(ns, 'path');
+      var bx = x + 1, bwid = Math.max(bw - 2, 2), by = padT + plotH - h, rad = Math.min(4, h, bwid / 2);
+      r.setAttribute('d', 'M' + bx + ',' + (padT + plotH) + 'V' + (by + rad) + 'Q' + bx + ',' + by + ' ' + (bx + rad) + ',' + by +
+        'H' + (bx + bwid - rad) + 'Q' + (bx + bwid) + ',' + by + ' ' + (bx + bwid) + ',' + (by + rad) + 'V' + (padT + plotH) + 'Z');
+      r.setAttribute('class', 'ac-bar'); g.appendChild(r);
+      if ((i % 5 === 0 && i < n - 3) || i === n - 1) {
+        var last = i === n - 1, t = document.createElementNS(ns, 'text'); t.setAttribute('x', last ? x + bw : x + bw / 2); t.setAttribute('y', H - 8);
+        t.setAttribute('class', 'ac-axis'); t.setAttribute('text-anchor', last ? 'end' : 'middle');
+        t.textContent = new Date(d.day + 'T12:00:00Z').toLocaleDateString([], { month: 'short', day: 'numeric' }); svg.appendChild(t);
+      }
+      g.addEventListener('mouseenter', function () {
+        tip.hidden = false;
+        tip.textContent = new Date(d.day + 'T12:00:00Z').toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' }) + ' — ' + fmt(d.views) + ' views';
+        tip.style.left = ((x + bw / 2) / W * 100) + '%';
+      });
+      g.addEventListener('mouseleave', function () { tip.hidden = true; });
+      svg.appendChild(g);
+    });
+    box.appendChild(svg); box.appendChild(tip);
+    var tbl = el('table', 'admin-table'); var head = el('tr'); head.appendChild(el('th', null, 'Day')); head.appendChild(el('th', null, 'Views')); tbl.appendChild(head);
+    daily.slice().reverse().forEach(function (d) { var tr = el('tr'); tr.appendChild(el('td', null, d.day)); tr.appendChild(el('td', null, fmt(d.views))); tbl.appendChild(tr); });
+    $('admin-daily-table').textContent = ''; $('admin-daily-table').appendChild(tbl);
+  }
+
+  function show(data) {
+    $('admin-lock').hidden = true; $('admin-body').hidden = false;
+    $('admin-updated').textContent = 'Updated ' + new Date(data.generated_at).toLocaleString();
+    $('admin-range').textContent = 'Last ' + data.daily.length + ' days';
+    var t = data.totals, tiles = $('admin-tiles'); tiles.textContent = '';
+    [['Views, last ' + data.daily.length + ' days', fmt(t.views)], ['Last 7 days', fmt(t.last_7_days)], ['Today', fmt(t.today)],
+     ['Busiest day', t.busiest_day ? fmt(t.busiest_day.views) : '–', t.busiest_day ? new Date(t.busiest_day.day + 'T12:00:00Z').toLocaleDateString([], { month: 'short', day: 'numeric' }) : '']]
+      .forEach(function (x) { var c = el('div', 'card stat-tile'); c.appendChild(el('div', 'k', x[0])); c.appendChild(el('div', 'v', x[1])); if (x[2]) c.appendChild(el('div', 'faint', x[2])); tiles.appendChild(c); });
+    chart(data.daily);
+    list('list-pages', data.top_pages, true);
+    ['sections', 'leagues', 'referrers', 'sizes', 'browsers', 'systems', 'locations'].forEach(function (k) { list('list-' + k, data[k]); });
+  }
+
+  function lock() { try { sessionStorage.removeItem('mssn-admin'); } catch (e) {} location.reload(); }
+  $('admin-relock').addEventListener('click', lock);
+
+  fetch('insights.json', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(async function (j) {
+    locked = j;
+    if (!j.configured) { $('admin-lock-note').textContent = 'Insights aren’t set up yet: ' + j.reason; $('admin-form').hidden = true; return; }
+    var saved = null; try { saved = sessionStorage.getItem('mssn-admin'); } catch (e) {}
+    if (saved) { try { show(await decrypt(saved)); return; } catch (e) {} }
+  }).catch(function () { $('admin-lock-note').textContent = 'Couldn’t load insights.'; });
+
+  $('admin-form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    var pass = $('admin-password').value; $('admin-error').textContent = 'Unlocking…';
+    try {
+      var data = await decrypt(pass);
+      try { sessionStorage.setItem('mssn-admin', pass); } catch (e2) {}
+      $('admin-error').textContent = ''; show(data);
+    } catch (err) { $('admin-error').textContent = 'Wrong password.'; $('admin-password').select(); }
+  });
+})();
+</script>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <img class="" src="../static/mcfl-logo.png" alt="MCFL">
+    </a>
+    <div class="footer-text">
+      <div>MSSN &middot; MCFL stats updated October 04, 2026 at 06:00 UTC</div>
+      <div class="footer-credit">Made by <strong>NotDew</strong> &middot; <a class="footer-admin" href="../admin/index.html">Admin</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var GRACE_MS = 3 * 60 * 60 * 1000;
+  document.querySelectorAll('time.local-time').forEach(function (el) {
+    var d = new Date(el.getAttribute('datetime'));
+    if (isNaN(d)) return;
+    if (Date.now() > d.getTime() + GRACE_MS) {
+      var card = el.closest('.game-card');
+      if (card) {
+        var when = card.querySelector('.gc-when'); if (when) when.remove();
+        var st = card.querySelector('.gc-status'); if (st) { st.textContent = 'TBD'; st.className = 'gc-status tbd'; }
+      } else {
+        var tbd = document.createElement('span'); tbd.className = 'faint'; tbd.textContent = 'TBD';
+        el.replaceWith(tbd);
+      }
+      return;
+    }
+    var day = d.toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' });
+    if (el.hasAttribute('data-date-only')) { el.textContent = day + ' \u00b7 time TBD'; return; }
+    var time = d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
+    el.textContent = day + ' \u00b7 ' + time;
+    el.title = d.toLocaleString();
+  });
+</script>
+<script>
+  document.addEventListener('click', function (e) {
+    document.querySelectorAll('details.league-switch[open]').forEach(function (d) {
+      if (!d.contains(e.target)) d.removeAttribute('open');
+    });
+  });
+</script>
+<script>
+  document.addEventListener('click', function (e) {
+    var card = e.target.closest && e.target.closest('[data-href]');
+    if (!card || (e.target.closest('a') && !e.target.closest('.gc-link'))) return;
+    e.preventDefault();
+    window.location.href = card.getAttribute('data-href');
+  });
+</script>
+<script>
+  document.querySelectorAll('[data-tabs]').forEach(function (bar) {
+    var group = bar.dataset.tabs;
+    bar.addEventListener('click', function (e) {
+      var btn = e.target.closest('.pill-tab');
+      if (!btn) return;
+      bar.querySelectorAll('.pill-tab').forEach(function (b) {
+        var on = b === btn;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-selected', on);
+      });
+      document.querySelectorAll('.tab-panel[data-group="' + group + '"]').forEach(function (p) {
+        p.hidden = p.dataset.panel !== btn.dataset.tab;
+      });
+      btn.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
