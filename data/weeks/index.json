@@ -1,0 +1,13 @@
+{
+ "league": "MCFL",
+ "season": 19,
+ "completed_weeks": [
+  1,
+  2
+ ],
+ "latest_completed_week": 2,
+ "files": {
+  "1": "week-1.json",
+  "2": "week-2.json"
+ }
+}

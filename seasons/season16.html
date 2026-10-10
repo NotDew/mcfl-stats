@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07080b">
+<meta name="description" content="MSSN -- official stats, standings, records and Hall of Fame for the Minecraft College Football League (MCFL).">
+<title>Season 16 &middot; MCFL &middot; MSSN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://mc-heads.net">
+<script>
+  function mcHeadFailed(img) {
+    var rest = (img.getAttribute('data-fallback') || '').split(' ').filter(Boolean);
+    if (!rest.length) { img.remove(); return; }
+    img.setAttribute('data-fallback', rest.slice(1).join(' '));
+    img.src = rest[0];
+  }
+</script>
+<link rel="stylesheet" href="../static/style.css?v=6cad7fd3c9">
+<script data-goatcounter="https://mssn.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<link rel="icon" type="image/png" href="../static/mcfl-logo.png">
+<link rel="apple-touch-icon" href="../static/mcfl-logo.png">
+</head>
+<body class="league-mcfl">
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <img class="" src="../static/mcfl-logo.png" alt="MCFL">
+      <span class="brand-text">
+        <div class="brand-main">MSSN</div>
+        <div class="brand-sub">OFFICIAL STATS</div>
+      </span>
+    </a>
+    <details class="league-switch">
+      <summary aria-label="Switch league"><span class="ls-code">MCFL</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="ls-menu">
+        <div class="ls-head">MSSN leagues</div>
+        <a class="ls-item active" href="../seasons/season16.html" aria-current="true">
+<img src="../static/mcfl-logo.png" alt="">          <span class="ls-text"><strong>MCFL</strong><span>College &middot; Minecraft College Football League</span></span>
+<svg class="ls-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>        </a>
+        <a class="ls-item " href="../mfl/history.html">
+<img src="../static/mfl-logo.png" alt="">          <span class="ls-text"><strong>MFL</strong><span>Pro &middot; Minecraft Football League</span></span>
+        </a>
+      </div>
+    </details>
+    <div class="nav-links">
+      <a class="nav-link " href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/></svg><span>Home</span></a>
+      <a class="nav-link " href="../stats.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M12 20V4M20 20v-7"/></svg><span>Stats</span></a>
+      <a class="nav-link " href="../players.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3.1-6 7-6s7 2.7 7 6"/><path d="M16 6.2a3 3 0 0 1 0 5.8M22 20c0-2.8-2.3-5.2-5.5-5.9"/></svg><span>Players</span></a>
+      <a class="nav-link " href="../teams.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6l-8-4Z"/></svg><span>Teams</span></a>
+      <a class="nav-link " href="../standings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg><span>Standings</span></a>
+      <a class="nav-link " href="../games.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><span>Schedule</span></a>
+      <a class="nav-link " href="../hof.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.7 5.5 6 .9-4.35 4.2 1 6L12 16.8 6.6 19.6l1-6L3.3 9.4l6-.9L12 3Z"/></svg><span>Hall of Fame</span></a>
+      <a class="nav-link active" href="../history.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.1 13a9 9 0 1 0 2.6-6.4L3 9"/><path d="M3 4v5h5"/><path d="M12 8v5l3 2"/></svg><span>History</span></a>
+      <a class="nav-link " href="../17-0/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3 2.5 5 6 5 10a5 5 0 0 1-10 0c0-4 2-7.5 5-10Z"/><path d="M9 12h6M12 9v6"/></svg><span>17&ndash;0</span></a>
+    </div>
+  </div>
+</nav>
+
+
+<main>
+
+<section class="hero">
+  <div class="hero-lines"></div>
+  <div class="wrap">
+    <div class="crumb"><a href="../history.html">League History</a> <span>/</span> <span>Season 16</span></div>
+    <span class="eyebrow">Season archive</span>
+    <h1 class="hero-title">Season 16</h1>
+    <p class="hero-sub">Final standings and statistical leaders.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow">Season 16</span><h2 class="section-title">Awards &amp; championship</h2></div></div>
+    <div class="card final-card">
+  <div class="final-label">National Championship</div>
+  <div class="scoreboard">
+    <div class="sb-side  won" style="--c:#82828a">
+      <span class="team-mark lg" style="--c:#82828a" title="Frogs"><img src="../team_logos/Frogs.png" alt="" loading="lazy" onerror="this.remove()"></span>
+      <div class="sb-team">
+        <div class="ft-name">Frogs</div>
+        <div class="ft-tag">Champions</div>
+      </div>
+      <div class="ft-score">49</div>
+    </div>
+<div class="sb-mid">Final</div>    <div class="sb-side sb-right " style="--c:#7030a0">
+      <span class="team-mark lg" style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>
+      <div class="sb-team">
+        <div class="ft-name">Masons</div>
+        <div class="ft-tag">Runner-up</div>
+      </div>
+      <div class="ft-score">39</div>
+    </div>
+  </div>
+</div>
+<div class="award-list">
+  <div class="card award-card">
+    <div class="aw-name">Heisham</div>
+    <div class="player-cell"><span class="avatar" style="--c:#82828a"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/48ad73880d98431aa0986bef3d259c33/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/DarkClip/64 https://minotar.net/helm/48ad73880d98431aa0986bef3d259c33/64 https://crafatar.com/avatars/48ad73880d98431aa0986bef3d259c33?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><div style="min-width:0"><div class="pname">DarkClip</div><span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Illusioners"><img src="../team_logos/Illusioners.png" alt="" loading="lazy" onerror="this.remove()"></span>Illusioners</span></div></div>
+  </div>
+  <div class="card award-card">
+    <div class="aw-name">OPOY</div>
+    <div class="player-cell"><span class="avatar" style="--c:#7030a0"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/aa288b5d6d064d5697bb06754b234a34/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/DiablxZ/64 https://minotar.net/helm/aa288b5d6d064d5697bb06754b234a34/64 https://crafatar.com/avatars/aa288b5d6d064d5697bb06754b234a34?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><div style="min-width:0"><div class="pname">DiablxZ</div><span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span></div></div>
+  </div>
+  <div class="card award-card">
+    <div class="aw-name">DPOY</div>
+    <div class="player-cell"><span class="avatar" style="--c:#7030a0"><span class="avatar-initial">V</span><img src="https://mc-heads.net/avatar/6b47f2371a384e4a83cd6826edd49c0e/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Vx3sty/64 https://minotar.net/helm/6b47f2371a384e4a83cd6826edd49c0e/64 https://crafatar.com/avatars/6b47f2371a384e4a83cd6826edd49c0e?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><div style="min-width:0"><div class="pname">Vx3sty</div><span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span></div></div>
+  </div>
+  <div class="card award-card">
+    <div class="aw-name">COTY</div>
+    <div class="player-cell"><span class="avatar" style="--c:#3cdc64"><span class="avatar-initial">2</span><img src="https://mc-heads.net/avatar/2XXS/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://minotar.net/helm/2XXS/64" onerror="mcHeadFailed(this)"></span><div style="min-width:0"><div class="pname">2XXS</div><span class="team-tag"><span class="team-mark " style="--c:#3cdc64" title="Totems"><img src="../team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>Totems</span></div></div>
+  </div>
+  <div class="card award-card">
+    <div class="aw-name">FOTY</div>
+    <div class="player-cell"><span class="avatar" style="--c:#82828a"><span class="avatar-initial">C</span><img src="https://mc-heads.net/avatar/compwise/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://minotar.net/helm/compwise/64" onerror="mcHeadFailed(this)"></span><div style="min-width:0"><div class="pname">compwise</div><span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Illusioners"><img src="../team_logos/Illusioners.png" alt="" loading="lazy" onerror="this.remove()"></span>Illusioners</span></div></div>
+  </div>
+  <div class="card award-card">
+    <div class="aw-name">TSOTY</div>
+    <div class="player-cell"><span class="avatar" style="--c:#82828a"><span class="avatar-initial">C</span><img src="https://mc-heads.net/avatar/39e4f1bfadbe4580a3ce61d7e170b21f/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Cole/64 https://minotar.net/helm/39e4f1bfadbe4580a3ce61d7e170b21f/64 https://crafatar.com/avatars/39e4f1bfadbe4580a3ce61d7e170b21f?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><div style="min-width:0"><div class="pname">Cole</div><span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Fletchers"><img src="../team_logos/Fletchers.png" alt="" loading="lazy" onerror="this.remove()"></span>Fletchers</span></div></div>
+  </div>
+  <div class="card award-card">
+    <div class="aw-name">Pancake</div>
+    <div class="player-cell"><span class="avatar" style="--c:#7030a0"><span class="avatar-initial">1</span><img src="https://mc-heads.net/avatar/82aa804b768f4ca99a9f97f144368025/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/125/64 https://minotar.net/helm/82aa804b768f4ca99a9f97f144368025/64 https://crafatar.com/avatars/82aa804b768f4ca99a9f97f144368025?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><div style="min-width:0"><div class="pname">125</div><span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span></div></div>
+  </div>
+  <div class="card award-card">
+    <div class="aw-name">Rush</div>
+    <div class="player-cell"><span class="avatar" style="--c:#82828a"><span class="avatar-initial">L</span><img src="https://mc-heads.net/avatar/Lover%20of%20Halo%203%20rat/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="" onerror="mcHeadFailed(this)"></span><div style="min-width:0"><div class="pname">Lover of Halo 3 rat</div><span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Zephyrs"><img src="../team_logos/Zephyrs.png" alt="" loading="lazy" onerror="this.remove()"></span>Zephyrs</span></div></div>
+  </div>
+  <div class="card award-card">
+    <div class="aw-name">5MOTY</div>
+    <div class="player-cell"><span class="avatar" style="--c:#7030a0"><span class="avatar-initial">P</span><img src="https://mc-heads.net/avatar/p.ug/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="" onerror="mcHeadFailed(this)"></span><div style="min-width:0"><div class="pname">p.ug</div><span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span></div></div>
+  </div>
+  <div class="card award-card">
+    <div class="aw-name">Sportsmanship</div>
+    <div class="player-cell"><span class="avatar" style="--c:#3cdc64"><span class="avatar-initial">S</span><img src="https://mc-heads.net/avatar/fe7dbfd2080f4ebfbc3a0806d824850b/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/SolarMuffin/64 https://minotar.net/helm/fe7dbfd2080f4ebfbc3a0806d824850b/64 https://crafatar.com/avatars/fe7dbfd2080f4ebfbc3a0806d824850b?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><div style="min-width:0"><div class="pname">SolarMuffin</div><span class="team-tag"><span class="team-mark " style="--c:#3cdc64" title="Totems"><img src="../team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>Totems</span></div></div>
+  </div>
+  <div class="card award-card">
+    <div class="aw-name">Switchblade</div>
+    <div class="player-cell"><span class="avatar" style="--c:#82828a"><span class="avatar-initial">C</span><img src="https://mc-heads.net/avatar/a82733bf1bd740f9a98afb148e4bb7a3/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Calvin530/64 https://minotar.net/helm/a82733bf1bd740f9a98afb148e4bb7a3/64 https://crafatar.com/avatars/a82733bf1bd740f9a98afb148e4bb7a3?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><div style="min-width:0"><div class="pname">Calvin530</div><span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Ravagers"><img src="../team_logos/Ravagers.png" alt="" loading="lazy" onerror="this.remove()"></span>Ravagers</span></div></div>
+  </div>
+  <div class="card award-card">
+    <div class="aw-name">MIP</div>
+    <div class="player-cell"><span class="avatar" style="--c:#7030a0"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/42ee09f3675d4ae3bda67d905664d6ce/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/DevBlake9000/64 https://minotar.net/helm/42ee09f3675d4ae3bda67d905664d6ce/64 https://crafatar.com/avatars/42ee09f3675d4ae3bda67d905664d6ce?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><div style="min-width:0"><div class="pname">DevBlake9000</div><span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span></div></div>
+  </div>
+  <div class="card award-card">
+    <div class="aw-name">National Championship MVP</div>
+    <div class="player-cell"><span class="avatar" style="--c:#82828a"><span class="avatar-initial">B</span><img src="https://mc-heads.net/avatar/670b07ebdd38454ab340cc6ef3ce387b/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Badger/64 https://minotar.net/helm/670b07ebdd38454ab340cc6ef3ce387b/64 https://crafatar.com/avatars/670b07ebdd38454ab340cc6ef3ce387b?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span><div style="min-width:0"><div class="pname">Badger</div><span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Frogs"><img src="../team_logos/Frogs.png" alt="" loading="lazy" onerror="this.remove()"></span>Frogs</span></div></div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow">Final</span><h2 class="section-title">Standings</h2></div></div>
+    <div class="card table-card"><div class="table-scroll">
+<table class="data-table">
+  <thead>
+    <tr>
+      <th class="l">#</th><th class="l">Team</th><th>W</th><th>L</th><th>T</th><th>PCT</th><th>Diff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="lead">
+      <td class="l rank-num">1</td>
+      <td class="l">
+<span class="team-link">          <span class="team-mark md" style="--c:#82828a" title="Illusioners"><img src="../team_logos/Illusioners.png" alt="" loading="lazy" onerror="this.remove()"></span>Illusioners
+</span>      </td>
+      <td class="strong">6</td>
+      <td>0</td>
+<td>0</td>      <td>1.000</td>
+      <td class="pos">+86</td>
+    </tr>
+    <tr class="">
+      <td class="l rank-num">2</td>
+      <td class="l">
+<span class="team-link">          <span class="team-mark md" style="--c:#ffff00" title="Bees"><img src="../team_logos/Bees.png" alt="" loading="lazy" onerror="this.remove()"></span>Bees
+</span>      </td>
+      <td class="strong">4</td>
+      <td>2</td>
+<td>0</td>      <td>.667</td>
+      <td class="pos">+33</td>
+    </tr>
+    <tr class="">
+      <td class="l rank-num">3</td>
+      <td class="l">
+<span class="team-link">          <span class="team-mark md" style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons
+</span>      </td>
+      <td class="strong">4</td>
+      <td>2</td>
+<td>0</td>      <td>.667</td>
+      <td class="pos">+12</td>
+    </tr>
+    <tr class="">
+      <td class="l rank-num">4</td>
+      <td class="l">
+<span class="team-link">          <span class="team-mark md" style="--c:#82828a" title="Zephyrs"><img src="../team_logos/Zephyrs.png" alt="" loading="lazy" onerror="this.remove()"></span>Zephyrs
+</span>      </td>
+      <td class="strong">3</td>
+      <td>2</td>
+<td>1</td>      <td>.583</td>
+      <td class="neg">-6</td>
+    </tr>
+    <tr class="">
+      <td class="l rank-num">5</td>
+      <td class="l">
+<a class="team-link" href="../teams/totems.html">          <span class="team-mark md" style="--c:#3cdc64" title="Totems"><img src="../team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>Totems
+</a>      </td>
+      <td class="strong">3</td>
+      <td>3</td>
+<td>0</td>      <td>.500</td>
+      <td class="pos">+53</td>
+    </tr>
+    <tr class="">
+      <td class="l rank-num">6</td>
+      <td class="l">
+<a class="team-link" href="../teams/raiders.html">          <span class="team-mark md" style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders
+</a>      </td>
+      <td class="strong">3</td>
+      <td>3</td>
+<td>0</td>      <td>.500</td>
+      <td class="neg">-27</td>
+    </tr>
+    <tr class="">
+      <td class="l rank-num">7</td>
+      <td class="l">
+<span class="team-link">          <span class="team-mark md" style="--c:#82828a" title="Frogs"><img src="../team_logos/Frogs.png" alt="" loading="lazy" onerror="this.remove()"></span>Frogs
+</span>      </td>
+      <td class="strong">2</td>
+      <td>3</td>
+<td>1</td>      <td>.417</td>
+      <td class="pos">+3</td>
+    </tr>
+    <tr class="">
+      <td class="l rank-num">8</td>
+      <td class="l">
+<span class="team-link">          <span class="team-mark md" style="--c:#82828a" title="Ravagers"><img src="../team_logos/Ravagers.png" alt="" loading="lazy" onerror="this.remove()"></span>Ravagers
+</span>      </td>
+      <td class="strong">1</td>
+      <td>2</td>
+<td>3</td>      <td>.417</td>
+      <td class="neg">-7</td>
+    </tr>
+    <tr class="">
+      <td class="l rank-num">9</td>
+      <td class="l">
+<span class="team-link">          <span class="team-mark md" style="--c:#82828a" title="Fletchers"><img src="../team_logos/Fletchers.png" alt="" loading="lazy" onerror="this.remove()"></span>Fletchers
+</span>      </td>
+      <td class="strong">2</td>
+      <td>4</td>
+<td>0</td>      <td>.333</td>
+      <td class="neg">-4</td>
+    </tr>
+    <tr class="">
+      <td class="l rank-num">10</td>
+      <td class="l">
+<span class="team-link">          <span class="team-mark md" style="--c:#82828a" title="Golems"><img src="../team_logos/Golems.png" alt="" loading="lazy" onerror="this.remove()"></span>Golems
+</span>      </td>
+      <td class="strong">2</td>
+      <td>4</td>
+<td>0</td>      <td>.333</td>
+      <td class="neg">-32</td>
+    </tr>
+    <tr class="">
+      <td class="l rank-num">11</td>
+      <td class="l">
+<a class="team-link" href="../teams/traders.html">          <span class="team-mark md" style="--c:#ffc000" title="Traders"><img src="../team_logos/Traders.png" alt="" loading="lazy" onerror="this.remove()"></span>Traders
+</a>      </td>
+      <td class="strong">2</td>
+      <td>4</td>
+<td>0</td>      <td>.333</td>
+      <td class="neg">-79</td>
+    </tr>
+    <tr class="">
+      <td class="l rank-num">12</td>
+      <td class="l">
+<span class="team-link">          <span class="team-mark md" style="--c:#82828a" title="Vindicators"><img src="../team_logos/Vindicators.png" alt="" loading="lazy" onerror="this.remove()"></span>Vindicators
+</span>      </td>
+      <td class="strong">1</td>
+      <td>4</td>
+<td>1</td>      <td>.250</td>
+      <td class="pos">+4</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow">Season 16</span><h2 class="section-title">Leaders</h2></div></div>
+    <div class="panel-grid">
+<div class="card leader-card">
+  <div class="lc-head">
+    <div class="lc-title">Pass Pct</div>
+    <div class="lc-short">PASS PCT</div>
+  </div>
+  <div class="lb-row r1">
+    <span class="lb-rank">1</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">B</span><img src="https://mc-heads.net/avatar/670b07ebdd38454ab340cc6ef3ce387b/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Badger/64 https://minotar.net/helm/670b07ebdd38454ab340cc6ef3ce387b/64 https://crafatar.com/avatars/670b07ebdd38454ab340cc6ef3ce387b?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/badger.html">Badger</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Frogs"><img src="../team_logos/Frogs.png" alt="" loading="lazy" onerror="this.remove()"></span>Frogs</span>
+  </div>
+</div>
+    <span class="lb-val">53</span>
+  </div>
+  <div class="lb-row r2">
+    <span class="lb-rank">2</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">C</span><img src="https://mc-heads.net/avatar/a82733bf1bd740f9a98afb148e4bb7a3/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Calvin530/64 https://minotar.net/helm/a82733bf1bd740f9a98afb148e4bb7a3/64 https://crafatar.com/avatars/a82733bf1bd740f9a98afb148e4bb7a3?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/calvin530.html">Calvin530</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Ravagers"><img src="../team_logos/Ravagers.png" alt="" loading="lazy" onerror="this.remove()"></span>Ravagers</span>
+  </div>
+</div>
+    <span class="lb-val">52</span>
+  </div>
+  <div class="lb-row r3">
+    <span class="lb-rank">3</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">M</span><img src="https://mc-heads.net/avatar/b7c067f2147f4434a85fd737caa43436/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/MightyAL/64 https://minotar.net/helm/b7c067f2147f4434a85fd737caa43436/64 https://crafatar.com/avatars/b7c067f2147f4434a85fd737caa43436?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/mightyal.html">MightyAL</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Ravagers"><img src="../team_logos/Ravagers.png" alt="" loading="lazy" onerror="this.remove()"></span>Ravagers</span>
+  </div>
+</div>
+    <span class="lb-val">50</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">4</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#3cdc64"><span class="avatar-initial">S</span><img src="https://mc-heads.net/avatar/df4a028726a34c8a871b716eb7d47651/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Solar/64 https://minotar.net/helm/df4a028726a34c8a871b716eb7d47651/64 https://crafatar.com/avatars/df4a028726a34c8a871b716eb7d47651?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/solar.html">Solar</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#3cdc64" title="Totems"><img src="../team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>Totems</span>
+  </div>
+</div>
+    <span class="lb-val">50</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">5</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/48ad73880d98431aa0986bef3d259c33/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/DarkClip/64 https://minotar.net/helm/48ad73880d98431aa0986bef3d259c33/64 https://crafatar.com/avatars/48ad73880d98431aa0986bef3d259c33?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/darkclip.html">DarkClip</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Illusioners"><img src="../team_logos/Illusioners.png" alt="" loading="lazy" onerror="this.remove()"></span>Illusioners</span>
+  </div>
+</div>
+    <span class="lb-val">49</span>
+  </div>
+</div>
+<div class="card leader-card">
+  <div class="lc-head">
+    <div class="lc-title">Passing Yards</div>
+    <div class="lc-short">PASSING YD</div>
+  </div>
+  <div class="lb-row r1">
+    <span class="lb-rank">1</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">V</span><img src="https://mc-heads.net/avatar/6b47f2371a384e4a83cd6826edd49c0e/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Vx3sty/64 https://minotar.net/helm/6b47f2371a384e4a83cd6826edd49c0e/64 https://crafatar.com/avatars/6b47f2371a384e4a83cd6826edd49c0e?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/vx3sty.html">Vx3sty</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">2,122</span>
+  </div>
+  <div class="lb-row r2">
+    <span class="lb-rank">2</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#141416"><span class="avatar-initial">B</span><img src="https://mc-heads.net/avatar/aa6c30ca2ffc4761a8a458c8475b980e/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/bradford/64 https://minotar.net/helm/aa6c30ca2ffc4761a8a458c8475b980e/64 https://crafatar.com/avatars/aa6c30ca2ffc4761a8a458c8475b980e?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/bradford.html">bradford</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders</span>
+  </div>
+</div>
+    <span class="lb-val">1,737</span>
+  </div>
+  <div class="lb-row r3">
+    <span class="lb-rank">3</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/48ad73880d98431aa0986bef3d259c33/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/DarkClip/64 https://minotar.net/helm/48ad73880d98431aa0986bef3d259c33/64 https://crafatar.com/avatars/48ad73880d98431aa0986bef3d259c33?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/darkclip.html">DarkClip</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Illusioners"><img src="../team_logos/Illusioners.png" alt="" loading="lazy" onerror="this.remove()"></span>Illusioners</span>
+  </div>
+</div>
+    <span class="lb-val">1,681</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">4</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">C</span><img src="https://mc-heads.net/avatar/39e4f1bfadbe4580a3ce61d7e170b21f/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Cole/64 https://minotar.net/helm/39e4f1bfadbe4580a3ce61d7e170b21f/64 https://crafatar.com/avatars/39e4f1bfadbe4580a3ce61d7e170b21f?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/cole.html">Cole</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Fletchers"><img src="../team_logos/Fletchers.png" alt="" loading="lazy" onerror="this.remove()"></span>Fletchers</span>
+  </div>
+</div>
+    <span class="lb-val">1,354</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">5</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/fb9bf0ce8df94a1a912f9cb21e1884d5/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/deybtww/64 https://minotar.net/helm/fb9bf0ce8df94a1a912f9cb21e1884d5/64 https://crafatar.com/avatars/fb9bf0ce8df94a1a912f9cb21e1884d5?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/deybtww.html">deybtww</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">1,269</span>
+  </div>
+</div>
+<div class="card leader-card">
+  <div class="lc-head">
+    <div class="lc-title">Passing TDs</div>
+    <div class="lc-short">PASSING TD</div>
+  </div>
+  <div class="lb-row r1">
+    <span class="lb-rank">1</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">V</span><img src="https://mc-heads.net/avatar/6b47f2371a384e4a83cd6826edd49c0e/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Vx3sty/64 https://minotar.net/helm/6b47f2371a384e4a83cd6826edd49c0e/64 https://crafatar.com/avatars/6b47f2371a384e4a83cd6826edd49c0e?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/vx3sty.html">Vx3sty</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">33</span>
+  </div>
+  <div class="lb-row r2">
+    <span class="lb-rank">2</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/fb9bf0ce8df94a1a912f9cb21e1884d5/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/deybtww/64 https://minotar.net/helm/fb9bf0ce8df94a1a912f9cb21e1884d5/64 https://crafatar.com/avatars/fb9bf0ce8df94a1a912f9cb21e1884d5?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/deybtww.html">deybtww</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">21</span>
+  </div>
+  <div class="lb-row r3">
+    <span class="lb-rank">3</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#141416"><span class="avatar-initial">B</span><img src="https://mc-heads.net/avatar/aa6c30ca2ffc4761a8a458c8475b980e/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/bradford/64 https://minotar.net/helm/aa6c30ca2ffc4761a8a458c8475b980e/64 https://crafatar.com/avatars/aa6c30ca2ffc4761a8a458c8475b980e?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/bradford.html">bradford</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders</span>
+  </div>
+</div>
+    <span class="lb-val">20</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">4</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/48ad73880d98431aa0986bef3d259c33/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/DarkClip/64 https://minotar.net/helm/48ad73880d98431aa0986bef3d259c33/64 https://crafatar.com/avatars/48ad73880d98431aa0986bef3d259c33?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/darkclip.html">DarkClip</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Illusioners"><img src="../team_logos/Illusioners.png" alt="" loading="lazy" onerror="this.remove()"></span>Illusioners</span>
+  </div>
+</div>
+    <span class="lb-val">19</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">5</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">J</span><img src="https://mc-heads.net/avatar/08781d6c8cf140d487ae80a08cfab3c4/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/johnworld/64 https://minotar.net/helm/08781d6c8cf140d487ae80a08cfab3c4/64 https://crafatar.com/avatars/08781d6c8cf140d487ae80a08cfab3c4?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/johnworld.html">johnworld</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Zephyrs"><img src="../team_logos/Zephyrs.png" alt="" loading="lazy" onerror="this.remove()"></span>Zephyrs</span>
+  </div>
+</div>
+    <span class="lb-val">12</span>
+  </div>
+</div>
+<div class="card leader-card">
+  <div class="lc-head">
+    <div class="lc-title">Completions</div>
+    <div class="lc-short">PASS COMP</div>
+  </div>
+  <div class="lb-row r1">
+    <span class="lb-rank">1</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">V</span><img src="https://mc-heads.net/avatar/6b47f2371a384e4a83cd6826edd49c0e/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Vx3sty/64 https://minotar.net/helm/6b47f2371a384e4a83cd6826edd49c0e/64 https://crafatar.com/avatars/6b47f2371a384e4a83cd6826edd49c0e?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/vx3sty.html">Vx3sty</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">106</span>
+  </div>
+  <div class="lb-row r2">
+    <span class="lb-rank">2</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#141416"><span class="avatar-initial">B</span><img src="https://mc-heads.net/avatar/aa6c30ca2ffc4761a8a458c8475b980e/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/bradford/64 https://minotar.net/helm/aa6c30ca2ffc4761a8a458c8475b980e/64 https://crafatar.com/avatars/aa6c30ca2ffc4761a8a458c8475b980e?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/bradford.html">bradford</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders</span>
+  </div>
+</div>
+    <span class="lb-val">95</span>
+  </div>
+  <div class="lb-row r3">
+    <span class="lb-rank">3</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">C</span><img src="https://mc-heads.net/avatar/39e4f1bfadbe4580a3ce61d7e170b21f/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Cole/64 https://minotar.net/helm/39e4f1bfadbe4580a3ce61d7e170b21f/64 https://crafatar.com/avatars/39e4f1bfadbe4580a3ce61d7e170b21f?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/cole.html">Cole</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Fletchers"><img src="../team_logos/Fletchers.png" alt="" loading="lazy" onerror="this.remove()"></span>Fletchers</span>
+  </div>
+</div>
+    <span class="lb-val">80</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">4</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/48ad73880d98431aa0986bef3d259c33/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/DarkClip/64 https://minotar.net/helm/48ad73880d98431aa0986bef3d259c33/64 https://crafatar.com/avatars/48ad73880d98431aa0986bef3d259c33?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/darkclip.html">DarkClip</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Illusioners"><img src="../team_logos/Illusioners.png" alt="" loading="lazy" onerror="this.remove()"></span>Illusioners</span>
+  </div>
+</div>
+    <span class="lb-val">64</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">5</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/fb9bf0ce8df94a1a912f9cb21e1884d5/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/deybtww/64 https://minotar.net/helm/fb9bf0ce8df94a1a912f9cb21e1884d5/64 https://crafatar.com/avatars/fb9bf0ce8df94a1a912f9cb21e1884d5?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/deybtww.html">deybtww</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">56</span>
+  </div>
+</div>
+<div class="card leader-card">
+  <div class="lc-head">
+    <div class="lc-title">Interceptions Thrown</div>
+    <div class="lc-short">INT (O)</div>
+  </div>
+  <div class="lb-row r1">
+    <span class="lb-rank">1</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/fb9bf0ce8df94a1a912f9cb21e1884d5/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/deybtww/64 https://minotar.net/helm/fb9bf0ce8df94a1a912f9cb21e1884d5/64 https://crafatar.com/avatars/fb9bf0ce8df94a1a912f9cb21e1884d5?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/deybtww.html">deybtww</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">13</span>
+  </div>
+  <div class="lb-row r2">
+    <span class="lb-rank">2</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#141416"><span class="avatar-initial">B</span><img src="https://mc-heads.net/avatar/aa6c30ca2ffc4761a8a458c8475b980e/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/bradford/64 https://minotar.net/helm/aa6c30ca2ffc4761a8a458c8475b980e/64 https://crafatar.com/avatars/aa6c30ca2ffc4761a8a458c8475b980e?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/bradford.html">bradford</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders</span>
+  </div>
+</div>
+    <span class="lb-val">12</span>
+  </div>
+  <div class="lb-row r3">
+    <span class="lb-rank">3</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">V</span><img src="https://mc-heads.net/avatar/6b47f2371a384e4a83cd6826edd49c0e/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Vx3sty/64 https://minotar.net/helm/6b47f2371a384e4a83cd6826edd49c0e/64 https://crafatar.com/avatars/6b47f2371a384e4a83cd6826edd49c0e?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/vx3sty.html">Vx3sty</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">11</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">4</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">R</span><img src="https://mc-heads.net/avatar/05356c611dc548eeb7882661f537d01f/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/rsndom/64 https://minotar.net/helm/05356c611dc548eeb7882661f537d01f/64 https://crafatar.com/avatars/05356c611dc548eeb7882661f537d01f?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/rsndom.html">rsndom</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Golems"><img src="../team_logos/Golems.png" alt="" loading="lazy" onerror="this.remove()"></span>Golems</span>
+  </div>
+</div>
+    <span class="lb-val">10</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">5</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/48ad73880d98431aa0986bef3d259c33/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/DarkClip/64 https://minotar.net/helm/48ad73880d98431aa0986bef3d259c33/64 https://crafatar.com/avatars/48ad73880d98431aa0986bef3d259c33?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/darkclip.html">DarkClip</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Illusioners"><img src="../team_logos/Illusioners.png" alt="" loading="lazy" onerror="this.remove()"></span>Illusioners</span>
+  </div>
+</div>
+    <span class="lb-val">10</span>
+  </div>
+</div>
+<div class="card leader-card">
+  <div class="lc-head">
+    <div class="lc-title">Receptions</div>
+    <div class="lc-short">REC</div>
+  </div>
+  <div class="lb-row r1">
+    <span class="lb-rank">1</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">I</span><img src="https://mc-heads.net/avatar/2c6039d4fbcf4a43888b99a6b66d904f/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/iOwnRazer/64 https://minotar.net/helm/2c6039d4fbcf4a43888b99a6b66d904f/64 https://crafatar.com/avatars/2c6039d4fbcf4a43888b99a6b66d904f?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/iownrazer.html">iOwnRazer</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Fletchers"><img src="../team_logos/Fletchers.png" alt="" loading="lazy" onerror="this.remove()"></span>Fletchers</span>
+  </div>
+</div>
+    <span class="lb-val">61</span>
+  </div>
+  <div class="lb-row r2">
+    <span class="lb-rank">2</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/aa288b5d6d064d5697bb06754b234a34/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/DiablxZ/64 https://minotar.net/helm/aa288b5d6d064d5697bb06754b234a34/64 https://crafatar.com/avatars/aa288b5d6d064d5697bb06754b234a34?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/diablxz.html">DiablxZ</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">54</span>
+  </div>
+  <div class="lb-row r3">
+    <span class="lb-rank">3</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#ffff00"><span class="avatar-initial">P</span><img src="https://mc-heads.net/avatar/e339e9aa03914b49ba697e9bcf1b0a3d/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Purp/64 https://minotar.net/helm/e339e9aa03914b49ba697e9bcf1b0a3d/64 https://crafatar.com/avatars/e339e9aa03914b49ba697e9bcf1b0a3d?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/purp.html">Purp</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#ffff00" title="Bees"><img src="../team_logos/Bees.png" alt="" loading="lazy" onerror="this.remove()"></span>Bees</span>
+  </div>
+</div>
+    <span class="lb-val">51</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">4</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/42ee09f3675d4ae3bda67d905664d6ce/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/DevBlake9000/64 https://minotar.net/helm/42ee09f3675d4ae3bda67d905664d6ce/64 https://crafatar.com/avatars/42ee09f3675d4ae3bda67d905664d6ce?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/devblake9000.html">DevBlake9000</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">41</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">5</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#141416"><span class="avatar-initial">C</span><img src="https://mc-heads.net/avatar/38e362f6aa36461db7a901796d507fb9/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/canboon2/64 https://minotar.net/helm/38e362f6aa36461db7a901796d507fb9/64 https://crafatar.com/avatars/38e362f6aa36461db7a901796d507fb9?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/canboon2.html">canboon2</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders</span>
+  </div>
+</div>
+    <span class="lb-val">39</span>
+  </div>
+</div>
+<div class="card leader-card">
+  <div class="lc-head">
+    <div class="lc-title">Receiving Yards</div>
+    <div class="lc-short">REC YD</div>
+  </div>
+  <div class="lb-row r1">
+    <span class="lb-rank">1</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#ffff00"><span class="avatar-initial">P</span><img src="https://mc-heads.net/avatar/e339e9aa03914b49ba697e9bcf1b0a3d/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Purp/64 https://minotar.net/helm/e339e9aa03914b49ba697e9bcf1b0a3d/64 https://crafatar.com/avatars/e339e9aa03914b49ba697e9bcf1b0a3d?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/purp.html">Purp</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#ffff00" title="Bees"><img src="../team_logos/Bees.png" alt="" loading="lazy" onerror="this.remove()"></span>Bees</span>
+  </div>
+</div>
+    <span class="lb-val">1,341</span>
+  </div>
+  <div class="lb-row r2">
+    <span class="lb-rank">2</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/aa288b5d6d064d5697bb06754b234a34/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/DiablxZ/64 https://minotar.net/helm/aa288b5d6d064d5697bb06754b234a34/64 https://crafatar.com/avatars/aa288b5d6d064d5697bb06754b234a34?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/diablxz.html">DiablxZ</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">1,052</span>
+  </div>
+  <div class="lb-row r3">
+    <span class="lb-rank">3</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">I</span><img src="https://mc-heads.net/avatar/2c6039d4fbcf4a43888b99a6b66d904f/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/iOwnRazer/64 https://minotar.net/helm/2c6039d4fbcf4a43888b99a6b66d904f/64 https://crafatar.com/avatars/2c6039d4fbcf4a43888b99a6b66d904f?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/iownrazer.html">iOwnRazer</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Fletchers"><img src="../team_logos/Fletchers.png" alt="" loading="lazy" onerror="this.remove()"></span>Fletchers</span>
+  </div>
+</div>
+    <span class="lb-val">1,044</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">4</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#141416"><span class="avatar-initial">P</span><img src="https://mc-heads.net/avatar/b8ed3d12a3aa4a5b8b447fc588801e5a/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/pvpprojosh/64 https://minotar.net/helm/b8ed3d12a3aa4a5b8b447fc588801e5a/64 https://crafatar.com/avatars/b8ed3d12a3aa4a5b8b447fc588801e5a?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/pvpprojosh.html">pvpprojosh</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders</span>
+  </div>
+</div>
+    <span class="lb-val">731</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">5</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/42ee09f3675d4ae3bda67d905664d6ce/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/DevBlake9000/64 https://minotar.net/helm/42ee09f3675d4ae3bda67d905664d6ce/64 https://crafatar.com/avatars/42ee09f3675d4ae3bda67d905664d6ce?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/devblake9000.html">DevBlake9000</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">729</span>
+  </div>
+</div>
+<div class="card leader-card">
+  <div class="lc-head">
+    <div class="lc-title">Receiving TDs</div>
+    <div class="lc-short">REC TD</div>
+  </div>
+  <div class="lb-row r1">
+    <span class="lb-rank">1</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#ffff00"><span class="avatar-initial">P</span><img src="https://mc-heads.net/avatar/e339e9aa03914b49ba697e9bcf1b0a3d/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Purp/64 https://minotar.net/helm/e339e9aa03914b49ba697e9bcf1b0a3d/64 https://crafatar.com/avatars/e339e9aa03914b49ba697e9bcf1b0a3d?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/purp.html">Purp</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#ffff00" title="Bees"><img src="../team_logos/Bees.png" alt="" loading="lazy" onerror="this.remove()"></span>Bees</span>
+  </div>
+</div>
+    <span class="lb-val">17</span>
+  </div>
+  <div class="lb-row r2">
+    <span class="lb-rank">2</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/aa288b5d6d064d5697bb06754b234a34/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/DiablxZ/64 https://minotar.net/helm/aa288b5d6d064d5697bb06754b234a34/64 https://crafatar.com/avatars/aa288b5d6d064d5697bb06754b234a34?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/diablxz.html">DiablxZ</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">15</span>
+  </div>
+  <div class="lb-row r3">
+    <span class="lb-rank">3</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">I</span><img src="https://mc-heads.net/avatar/2c6039d4fbcf4a43888b99a6b66d904f/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/iOwnRazer/64 https://minotar.net/helm/2c6039d4fbcf4a43888b99a6b66d904f/64 https://crafatar.com/avatars/2c6039d4fbcf4a43888b99a6b66d904f?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/iownrazer.html">iOwnRazer</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Fletchers"><img src="../team_logos/Fletchers.png" alt="" loading="lazy" onerror="this.remove()"></span>Fletchers</span>
+  </div>
+</div>
+    <span class="lb-val">14</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">4</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">P</span><img src="https://mc-heads.net/avatar/ef73ef091bf043859d8db3c493dd4d86/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Peach_Pug/64 https://minotar.net/helm/ef73ef091bf043859d8db3c493dd4d86/64 https://crafatar.com/avatars/ef73ef091bf043859d8db3c493dd4d86?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/peach-pug.html">Peach_Pug</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">11</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">5</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">F</span><img src="https://mc-heads.net/avatar/bacca52adecb4b9f93a116af947ef1fa/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Flatvent_One/64 https://minotar.net/helm/bacca52adecb4b9f93a116af947ef1fa/64 https://crafatar.com/avatars/bacca52adecb4b9f93a116af947ef1fa?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/flatvent-one.html">Flatvent_One</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Zephyrs"><img src="../team_logos/Zephyrs.png" alt="" loading="lazy" onerror="this.remove()"></span>Zephyrs</span>
+  </div>
+</div>
+    <span class="lb-val">11</span>
+  </div>
+</div>
+<div class="card leader-card">
+  <div class="lc-head">
+    <div class="lc-title">Rushing Yards</div>
+    <div class="lc-short">RUSHING YD</div>
+  </div>
+  <div class="lb-row r1">
+    <span class="lb-rank">1</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">C</span><img src="https://mc-heads.net/avatar/39e4f1bfadbe4580a3ce61d7e170b21f/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Cole/64 https://minotar.net/helm/39e4f1bfadbe4580a3ce61d7e170b21f/64 https://crafatar.com/avatars/39e4f1bfadbe4580a3ce61d7e170b21f?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/cole.html">Cole</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Fletchers"><img src="../team_logos/Fletchers.png" alt="" loading="lazy" onerror="this.remove()"></span>Fletchers</span>
+  </div>
+</div>
+    <span class="lb-val">119</span>
+  </div>
+  <div class="lb-row r2">
+    <span class="lb-rank">2</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#141416"><span class="avatar-initial">B</span><img src="https://mc-heads.net/avatar/aa6c30ca2ffc4761a8a458c8475b980e/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/bradford/64 https://minotar.net/helm/aa6c30ca2ffc4761a8a458c8475b980e/64 https://crafatar.com/avatars/aa6c30ca2ffc4761a8a458c8475b980e?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/bradford.html">bradford</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders</span>
+  </div>
+</div>
+    <span class="lb-val">95</span>
+  </div>
+  <div class="lb-row r3">
+    <span class="lb-rank">3</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/fb9bf0ce8df94a1a912f9cb21e1884d5/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/deybtww/64 https://minotar.net/helm/fb9bf0ce8df94a1a912f9cb21e1884d5/64 https://crafatar.com/avatars/fb9bf0ce8df94a1a912f9cb21e1884d5?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/deybtww.html">deybtww</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">72</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">4</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">G</span><img src="https://mc-heads.net/avatar/096b3ac17998409a82b52ed29fbd739e/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Gtatankmat/64 https://minotar.net/helm/096b3ac17998409a82b52ed29fbd739e/64 https://crafatar.com/avatars/096b3ac17998409a82b52ed29fbd739e?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/gtatankmat.html">Gtatankmat</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Vindicators"><img src="../team_logos/Vindicators.png" alt="" loading="lazy" onerror="this.remove()"></span>Vindicators</span>
+  </div>
+</div>
+    <span class="lb-val">45</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">5</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/48ad73880d98431aa0986bef3d259c33/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/DarkClip/64 https://minotar.net/helm/48ad73880d98431aa0986bef3d259c33/64 https://crafatar.com/avatars/48ad73880d98431aa0986bef3d259c33?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/darkclip.html">DarkClip</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Illusioners"><img src="../team_logos/Illusioners.png" alt="" loading="lazy" onerror="this.remove()"></span>Illusioners</span>
+  </div>
+</div>
+    <span class="lb-val">27</span>
+  </div>
+</div>
+<div class="card leader-card">
+  <div class="lc-head">
+    <div class="lc-title">Rushing TDs</div>
+    <div class="lc-short">RUSHING TD</div>
+  </div>
+  <div class="lb-row r1">
+    <span class="lb-rank">1</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/fb9bf0ce8df94a1a912f9cb21e1884d5/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/deybtww/64 https://minotar.net/helm/fb9bf0ce8df94a1a912f9cb21e1884d5/64 https://crafatar.com/avatars/fb9bf0ce8df94a1a912f9cb21e1884d5?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/deybtww.html">deybtww</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">2</span>
+  </div>
+  <div class="lb-row r2">
+    <span class="lb-rank">2</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/48ad73880d98431aa0986bef3d259c33/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/DarkClip/64 https://minotar.net/helm/48ad73880d98431aa0986bef3d259c33/64 https://crafatar.com/avatars/48ad73880d98431aa0986bef3d259c33?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/darkclip.html">DarkClip</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Illusioners"><img src="../team_logos/Illusioners.png" alt="" loading="lazy" onerror="this.remove()"></span>Illusioners</span>
+  </div>
+</div>
+    <span class="lb-val">1</span>
+  </div>
+  <div class="lb-row r3">
+    <span class="lb-rank">3</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#141416"><span class="avatar-initial">B</span><img src="https://mc-heads.net/avatar/aa6c30ca2ffc4761a8a458c8475b980e/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/bradford/64 https://minotar.net/helm/aa6c30ca2ffc4761a8a458c8475b980e/64 https://crafatar.com/avatars/aa6c30ca2ffc4761a8a458c8475b980e?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/bradford.html">bradford</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders</span>
+  </div>
+</div>
+    <span class="lb-val">1</span>
+  </div>
+</div>
+<div class="card leader-card">
+  <div class="lc-head">
+    <div class="lc-title">Sacks</div>
+    <div class="lc-short">SACKS</div>
+  </div>
+  <div class="lb-row r1">
+    <span class="lb-rank">1</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">A</span><img src="https://mc-heads.net/avatar/64d1c3c9ac41430a8806d9f33bbfbd80/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Azwdy/64 https://minotar.net/helm/64d1c3c9ac41430a8806d9f33bbfbd80/64 https://crafatar.com/avatars/64d1c3c9ac41430a8806d9f33bbfbd80?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/azwdy.html">Azwdy</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Zephyrs"><img src="../team_logos/Zephyrs.png" alt="" loading="lazy" onerror="this.remove()"></span>Zephyrs</span>
+  </div>
+</div>
+    <span class="lb-val">16</span>
+  </div>
+  <div class="lb-row r2">
+    <span class="lb-rank">2</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">1</span><img src="https://mc-heads.net/avatar/82aa804b768f4ca99a9f97f144368025/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/125/64 https://minotar.net/helm/82aa804b768f4ca99a9f97f144368025/64 https://crafatar.com/avatars/82aa804b768f4ca99a9f97f144368025?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/125.html">125</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">10</span>
+  </div>
+  <div class="lb-row r3">
+    <span class="lb-rank">3</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">S</span><img src="https://mc-heads.net/avatar/6067300f72824943ade423ed76a17062/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/sflucx/64 https://minotar.net/helm/6067300f72824943ade423ed76a17062/64 https://crafatar.com/avatars/6067300f72824943ade423ed76a17062?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/sflucx.html">sflucx</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Illusioners"><img src="../team_logos/Illusioners.png" alt="" loading="lazy" onerror="this.remove()"></span>Illusioners</span>
+  </div>
+</div>
+    <span class="lb-val">6</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">4</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">F</span><img src="https://mc-heads.net/avatar/5b1496d781174a6199c17f2748e1ff28/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/frown/64 https://minotar.net/helm/5b1496d781174a6199c17f2748e1ff28/64 https://crafatar.com/avatars/5b1496d781174a6199c17f2748e1ff28?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/frown.html">frown</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Frogs"><img src="../team_logos/Frogs.png" alt="" loading="lazy" onerror="this.remove()"></span>Frogs</span>
+  </div>
+</div>
+    <span class="lb-val">5</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">5</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">S</span><img src="https://mc-heads.net/avatar/390e511befdd4cbc8e45bf71cec735ec/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/StaleCake/64 https://minotar.net/helm/390e511befdd4cbc8e45bf71cec735ec/64 https://crafatar.com/avatars/390e511befdd4cbc8e45bf71cec735ec?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/stalecake.html">StaleCake</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Frogs"><img src="../team_logos/Frogs.png" alt="" loading="lazy" onerror="this.remove()"></span>Frogs</span>
+  </div>
+</div>
+    <span class="lb-val">4</span>
+  </div>
+</div>
+<div class="card leader-card">
+  <div class="lc-head">
+    <div class="lc-title">Sacks Allowed</div>
+    <div class="lc-short">SACKS ALLOWED</div>
+  </div>
+  <div class="lb-row r1">
+    <span class="lb-rank">1</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">C</span><img src="https://mc-heads.net/avatar/53aae4a2b6c24fc88d6b6af5babbe59e/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/CDG18/64 https://minotar.net/helm/53aae4a2b6c24fc88d6b6af5babbe59e/64 https://crafatar.com/avatars/53aae4a2b6c24fc88d6b6af5babbe59e?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/cdg18.html">CDG18</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Fletchers"><img src="../team_logos/Fletchers.png" alt="" loading="lazy" onerror="this.remove()"></span>Fletchers</span>
+  </div>
+</div>
+    <span class="lb-val">16</span>
+  </div>
+  <div class="lb-row r2">
+    <span class="lb-rank">2</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">1</span><img src="https://mc-heads.net/avatar/82aa804b768f4ca99a9f97f144368025/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/125/64 https://minotar.net/helm/82aa804b768f4ca99a9f97f144368025/64 https://crafatar.com/avatars/82aa804b768f4ca99a9f97f144368025?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/125.html">125</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">15</span>
+  </div>
+  <div class="lb-row r3">
+    <span class="lb-rank">3</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#141416"><span class="avatar-initial">O</span><img src="https://mc-heads.net/avatar/f2644111032d4fc2b8597e76017d7d47/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Oreo/64 https://minotar.net/helm/f2644111032d4fc2b8597e76017d7d47/64 https://crafatar.com/avatars/f2644111032d4fc2b8597e76017d7d47?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/oreo.html">Oreo</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders</span>
+  </div>
+</div>
+    <span class="lb-val">13</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">4</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">A</span><img src="https://mc-heads.net/avatar/64d1c3c9ac41430a8806d9f33bbfbd80/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Azwdy/64 https://minotar.net/helm/64d1c3c9ac41430a8806d9f33bbfbd80/64 https://crafatar.com/avatars/64d1c3c9ac41430a8806d9f33bbfbd80?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/azwdy.html">Azwdy</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Zephyrs"><img src="../team_logos/Zephyrs.png" alt="" loading="lazy" onerror="this.remove()"></span>Zephyrs</span>
+  </div>
+</div>
+    <span class="lb-val">8</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">5</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#3cdc64"><span class="avatar-initial">W</span><img src="https://mc-heads.net/avatar/064bfbe9458a485890abf71bbc729840/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Webhop/64 https://minotar.net/helm/064bfbe9458a485890abf71bbc729840/64 https://crafatar.com/avatars/064bfbe9458a485890abf71bbc729840?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/webhop.html">Webhop</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#3cdc64" title="Totems"><img src="../team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>Totems</span>
+  </div>
+</div>
+    <span class="lb-val">8</span>
+  </div>
+</div>
+<div class="card leader-card">
+  <div class="lc-head">
+    <div class="lc-title">Interceptions</div>
+    <div class="lc-short">INT (D)</div>
+  </div>
+  <div class="lb-row r1">
+    <span class="lb-rank">1</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#3cdc64"><span class="avatar-initial">S</span><img src="https://mc-heads.net/avatar/df4a028726a34c8a871b716eb7d47651/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Solar/64 https://minotar.net/helm/df4a028726a34c8a871b716eb7d47651/64 https://crafatar.com/avatars/df4a028726a34c8a871b716eb7d47651?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/solar.html">Solar</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#3cdc64" title="Totems"><img src="../team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>Totems</span>
+  </div>
+</div>
+    <span class="lb-val">14</span>
+  </div>
+  <div class="lb-row r2">
+    <span class="lb-rank">2</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">V</span><img src="https://mc-heads.net/avatar/6b47f2371a384e4a83cd6826edd49c0e/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Vx3sty/64 https://minotar.net/helm/6b47f2371a384e4a83cd6826edd49c0e/64 https://crafatar.com/avatars/6b47f2371a384e4a83cd6826edd49c0e?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/vx3sty.html">Vx3sty</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">11</span>
+  </div>
+  <div class="lb-row r3">
+    <span class="lb-rank">3</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">R</span><img src="https://mc-heads.net/avatar/05356c611dc548eeb7882661f537d01f/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/rsndom/64 https://minotar.net/helm/05356c611dc548eeb7882661f537d01f/64 https://crafatar.com/avatars/05356c611dc548eeb7882661f537d01f?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/rsndom.html">rsndom</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Golems"><img src="../team_logos/Golems.png" alt="" loading="lazy" onerror="this.remove()"></span>Golems</span>
+  </div>
+</div>
+    <span class="lb-val">8</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">4</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/aa288b5d6d064d5697bb06754b234a34/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/DiablxZ/64 https://minotar.net/helm/aa288b5d6d064d5697bb06754b234a34/64 https://crafatar.com/avatars/aa288b5d6d064d5697bb06754b234a34?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/diablxz.html">DiablxZ</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">6</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">5</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">C</span><img src="https://mc-heads.net/avatar/39e4f1bfadbe4580a3ce61d7e170b21f/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Cole/64 https://minotar.net/helm/39e4f1bfadbe4580a3ce61d7e170b21f/64 https://crafatar.com/avatars/39e4f1bfadbe4580a3ce61d7e170b21f?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/cole.html">Cole</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Fletchers"><img src="../team_logos/Fletchers.png" alt="" loading="lazy" onerror="this.remove()"></span>Fletchers</span>
+  </div>
+</div>
+    <span class="lb-val">5</span>
+  </div>
+</div>
+<div class="card leader-card">
+  <div class="lc-head">
+    <div class="lc-title">Pass Deflections</div>
+    <div class="lc-short">SWATS</div>
+  </div>
+  <div class="lb-row r1">
+    <span class="lb-rank">1</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">R</span><img src="https://mc-heads.net/avatar/05356c611dc548eeb7882661f537d01f/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/rsndom/64 https://minotar.net/helm/05356c611dc548eeb7882661f537d01f/64 https://crafatar.com/avatars/05356c611dc548eeb7882661f537d01f?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/rsndom.html">rsndom</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Golems"><img src="../team_logos/Golems.png" alt="" loading="lazy" onerror="this.remove()"></span>Golems</span>
+  </div>
+</div>
+    <span class="lb-val">12</span>
+  </div>
+  <div class="lb-row r2">
+    <span class="lb-rank">2</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">D</span><img src="https://mc-heads.net/avatar/fb9bf0ce8df94a1a912f9cb21e1884d5/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/deybtww/64 https://minotar.net/helm/fb9bf0ce8df94a1a912f9cb21e1884d5/64 https://crafatar.com/avatars/fb9bf0ce8df94a1a912f9cb21e1884d5?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/deybtww.html">deybtww</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">12</span>
+  </div>
+  <div class="lb-row r3">
+    <span class="lb-rank">3</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#82828a"><span class="avatar-initial">I</span><img src="https://mc-heads.net/avatar/2c6039d4fbcf4a43888b99a6b66d904f/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/iOwnRazer/64 https://minotar.net/helm/2c6039d4fbcf4a43888b99a6b66d904f/64 https://crafatar.com/avatars/2c6039d4fbcf4a43888b99a6b66d904f?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/iownrazer.html">iOwnRazer</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#82828a" title="Fletchers"><img src="../team_logos/Fletchers.png" alt="" loading="lazy" onerror="this.remove()"></span>Fletchers</span>
+  </div>
+</div>
+    <span class="lb-val">8</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">4</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#7030a0"><span class="avatar-initial">V</span><img src="https://mc-heads.net/avatar/6b47f2371a384e4a83cd6826edd49c0e/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/Vx3sty/64 https://minotar.net/helm/6b47f2371a384e4a83cd6826edd49c0e/64 https://crafatar.com/avatars/6b47f2371a384e4a83cd6826edd49c0e?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/vx3sty.html">Vx3sty</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#7030a0" title="Masons"><img src="../team_logos/Masons.png" alt="" loading="lazy" onerror="this.remove()"></span>Masons</span>
+  </div>
+</div>
+    <span class="lb-val">8</span>
+  </div>
+  <div class="lb-row ">
+    <span class="lb-rank">5</span>
+    <div class="player-cell">
+  <span class="avatar" style="--c:#141416"><span class="avatar-initial">B</span><img src="https://mc-heads.net/avatar/aa6c30ca2ffc4761a8a458c8475b980e/64" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback="https://mc-heads.net/avatar/bradford/64 https://minotar.net/helm/aa6c30ca2ffc4761a8a458c8475b980e/64 https://crafatar.com/avatars/aa6c30ca2ffc4761a8a458c8475b980e?size=64&amp;overlay" onerror="mcHeadFailed(this)"></span>
+  <div style="min-width:0">
+    <div class="pname"><a class="plink" href="../players/bradford.html">bradford</a></div>
+    <span class="team-tag"><span class="team-mark " style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>Raiders</span>
+  </div>
+</div>
+    <span class="lb-val">8</span>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <img class="" src="../static/mcfl-logo.png" alt="MCFL">
+    </a>
+    <div class="footer-text">
+      <div>MSSN &middot; MCFL stats updated October 10, 2026 at 21:00 UTC</div>
+      <div class="footer-credit">Made by <strong>NotDew</strong> &middot; <a class="footer-admin" href="../admin/index.html">Admin</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var GRACE_MS = 3 * 60 * 60 * 1000;
+  document.querySelectorAll('time.local-time').forEach(function (el) {
+    var d = new Date(el.getAttribute('datetime'));
+    if (isNaN(d)) return;
+    if (Date.now() > d.getTime() + GRACE_MS) {
+      var card = el.closest('.game-card');
+      if (card) {
+        var when = card.querySelector('.gc-when'); if (when) when.remove();
+        var st = card.querySelector('.gc-status'); if (st) { st.textContent = 'TBD'; st.className = 'gc-status tbd'; }
+      } else {
+        var tbd = document.createElement('span'); tbd.className = 'faint'; tbd.textContent = 'TBD';
+        el.replaceWith(tbd);
+      }
+      return;
+    }
+    var day = d.toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' });
+    if (el.hasAttribute('data-date-only')) { el.textContent = day + ' \u00b7 time TBD'; return; }
+    var time = d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
+    el.textContent = day + ' \u00b7 ' + time;
+    el.title = d.toLocaleString();
+  });
+</script>
+<script>
+  document.addEventListener('click', function (e) {
+    document.querySelectorAll('details.league-switch[open]').forEach(function (d) {
+      if (!d.contains(e.target)) d.removeAttribute('open');
+    });
+  });
+</script>
+<script>
+  document.addEventListener('click', function (e) {
+    var card = e.target.closest && e.target.closest('[data-href]');
+    if (!card || (e.target.closest('a') && !e.target.closest('.gc-link'))) return;
+    e.preventDefault();
+    window.location.href = card.getAttribute('data-href');
+  });
+</script>
+<script>
+  document.querySelectorAll('[data-tabs]').forEach(function (bar) {
+    var group = bar.dataset.tabs;
+    bar.addEventListener('click', function (e) {
+      var btn = e.target.closest('.pill-tab');
+      if (!btn) return;
+      bar.querySelectorAll('.pill-tab').forEach(function (b) {
+        var on = b === btn;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-selected', on);
+      });
+      document.querySelectorAll('.tab-panel[data-group="' + group + '"]').forEach(function (p) {
+        p.hidden = p.dataset.panel !== btn.dataset.tab;
+      });
+      btn.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>

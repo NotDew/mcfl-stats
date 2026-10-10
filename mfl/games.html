@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07080b">
+<meta name="description" content="MSSN -- official stats, standings, records and Hall of Fame for the Minecraft Football League (MFL).">
+<title>Schedule &middot; MFL &middot; MSSN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://mc-heads.net">
+<script>
+  function mcHeadFailed(img) {
+    var rest = (img.getAttribute('data-fallback') || '').split(' ').filter(Boolean);
+    if (!rest.length) { img.remove(); return; }
+    img.setAttribute('data-fallback', rest.slice(1).join(' '));
+    img.src = rest[0];
+  }
+</script>
+<link rel="stylesheet" href="static/style.css?v=6cad7fd3c9">
+<script data-goatcounter="https://mssn.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<link rel="icon" type="image/png" href="static/mfl-logo.png">
+<link rel="apple-touch-icon" href="static/mfl-logo.png">
+</head>
+<body class="league-mfl">
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img class="" src="static/mfl-logo.png" alt="MFL">
+      <span class="brand-text">
+        <div class="brand-main">MSSN</div>
+        <div class="brand-sub">OFFICIAL STATS</div>
+      </span>
+    </a>
+    <details class="league-switch">
+      <summary aria-label="Switch league"><span class="ls-code">MFL</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="ls-menu">
+        <div class="ls-head">MSSN leagues</div>
+        <a class="ls-item " href="../games.html">
+<img src="../static/mcfl-logo.png" alt="">          <span class="ls-text"><strong>MCFL</strong><span>College &middot; Minecraft College Football League</span></span>
+        </a>
+        <a class="ls-item active" href="../mfl/games.html" aria-current="true">
+<img src="../static/mfl-logo.png" alt="">          <span class="ls-text"><strong>MFL</strong><span>Pro &middot; Minecraft Football League</span></span>
+<svg class="ls-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>        </a>
+      </div>
+    </details>
+    <div class="nav-links">
+      <a class="nav-link " href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/></svg><span>Home</span></a>
+      <a class="nav-link " href="stats.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M12 20V4M20 20v-7"/></svg><span>Stats</span></a>
+      <a class="nav-link " href="players.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3.1-6 7-6s7 2.7 7 6"/><path d="M16 6.2a3 3 0 0 1 0 5.8M22 20c0-2.8-2.3-5.2-5.5-5.9"/></svg><span>Players</span></a>
+      <a class="nav-link " href="teams.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6l-8-4Z"/></svg><span>Teams</span></a>
+      <a class="nav-link " href="standings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg><span>Standings</span></a>
+      <a class="nav-link active" href="games.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><span>Schedule</span></a>
+      <a class="nav-link " href="hof.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.7 5.5 6 .9-4.35 4.2 1 6L12 16.8 6.6 19.6l1-6L3.3 9.4l6-.9L12 3Z"/></svg><span>Hall of Fame</span></a>
+      <a class="nav-link " href="history.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.1 13a9 9 0 1 0 2.6-6.4L3 9"/><path d="M3 4v5h5"/><path d="M12 8v5l3 2"/></svg><span>History</span></a>
+      <a class="nav-link " href="../17-0/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3 2.5 5 6 5 10a5 5 0 0 1-10 0c0-4 2-7.5 5-10Z"/><path d="M9 12h6M12 9v6"/></svg><span>17&ndash;0</span></a>
+    </div>
+  </div>
+</nav>
+
+
+<main>
+
+<section class="hero">
+  <div class="hero-lines"></div>
+  <div class="wrap">
+    <span class="eyebrow">Season 21</span>
+    <h1 class="hero-title">Schedule</h1>
+    <p class="hero-sub">Every MSSN matchup, week by week &mdash; MFL first. Final scores fill in as games are logged.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="stats-toolbar">
+    <div class="pill-tabs" data-tabs="weeks" role="tablist">
+      <button class="pill-tab " data-tab="w1" role="tab" aria-selected="false">Week 1</button>
+      <button class="pill-tab active" data-tab="w2" role="tab" aria-selected="true">Week 2</button>
+      <button class="pill-tab " data-tab="w3" role="tab" aria-selected="false">Week 3</button>
+      <button class="pill-tab " data-tab="w4" role="tab" aria-selected="false">Week 4</button>
+      <button class="pill-tab " data-tab="w5" role="tab" aria-selected="false">Week 5</button>
+      <button class="pill-tab " data-tab="w6" role="tab" aria-selected="false">Week 6</button>
+      <button class="pill-tab " data-tab="w7" role="tab" aria-selected="false">Week 7</button>
+    </div>
+  </div>
+
+  <div class="tab-panel" data-group="weeks" data-panel="w1" hidden>
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Season 21</span>
+        <h2 class="section-title">Week 1</h2>
+      </div>
+    </div>
+    <div class="league-row mine">
+      <div class="league-row-head">
+        <span class="lr-name"><img class="lr-logo" src="static/mfl-logo.png" alt="MFL"><strong>MFL</strong><span class="lr-level">Pro</span></span>
+        <span class="faint lr-status">5 of 5 final</span>
+      </div>
+      <div class="game-grid">
+<div class="card game-card final  has-box" data-href="games/1.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/1.html" aria-label="Box score: Axolotls at Guardians"></a>  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#ff82be" title="Axolotls"><img src="team_logos/Axolotls.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/axolotls.html">Axolotls</a> <span class="gc-rec">1-0</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">74</span>  </div>
+  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#28aaa0" title="Guardians"><img src="team_logos/Guardians.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/guardians.html">Guardians</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">35</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card final  has-box" data-href="games/4.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/4.html" aria-label="Box score: Polar Bears at Breeze"></a>  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#c8e1f5" title="Polar Bears"><img src="team_logos/Polar Bears.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/polar-bears.html">Polar Bears</a> <span class="gc-rec">0-1</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">13</span>  </div>
+  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#78d2f0" title="Breeze"><img src="team_logos/Breeze.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/breeze.html">Breeze</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">30</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card final  has-box" data-href="games/5.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/5.html" aria-label="Box score: Phantoms at Ghasts"></a>  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#5a64a0" title="Phantoms"><img src="team_logos/Phantoms.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/phantoms.html">Phantoms</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">40</span>  </div>
+  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#ebebeb" title="Ghasts"><img src="team_logos/Ghasts.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/ghasts.html">Ghasts</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">56</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card final  has-box" data-href="games/2.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/2.html" aria-label="Box score: Dragons at Blazes"></a>  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#8c3cc8" title="Dragons"><img src="team_logos/Dragons.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/dragons.html">Dragons</a> <span class="gc-rec">0-1</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">18</span>  </div>
+  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#ffaa1e" title="Blazes"><img src="team_logos/Blazes.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/blazes.html">Blazes</a> <span class="gc-rec">3-0</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">44</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card final  has-box" data-href="games/3.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/3.html" aria-label="Box score: Magmas at Gators"></a>  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#e6461e" title="Magmas"><img src="team_logos/Magmas.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/magmas.html">Magmas</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">60</span>  </div>
+  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#3ca03c" title="Gators"><img src="team_logos/Gators.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/gators.html">Gators</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">24</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+      </div>
+    </div>
+    <div class="league-row ">
+      <div class="league-row-head">
+        <span class="lr-name"><img class="lr-logo" src="../static/mcfl-logo.png" alt="MCFL"><strong>MCFL</strong><span class="lr-level">College</span></span>
+        <span class="faint lr-status">5 of 5 final</span>
+      </div>
+      <div class="game-grid">
+<div class="card game-card final  has-box" data-href="../games/5.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/5.html" aria-label="Box score: Sniffers at Allays"></a>  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#f4b084" title="Sniffers"><img src="../team_logos/Sniffers.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/sniffers.html">Sniffers</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">26</span>  </div>
+  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#00c8dc" title="Allays"><img src="../team_logos/Allays.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/allays.html">Allays</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">33</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card final gotw has-box" data-href="../games/4.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/4.html" aria-label="Box score: Traders at Tropics"></a><div class="gotw-tag">Game of the Week</div>  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#ffc000" title="Traders"><img src="../team_logos/Traders.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/traders.html">Traders</a> <span class="gc-rec">1-2</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">21</span>  </div>
+  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#e628c8" title="Tropics"><img src="../team_logos/Tropics.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/tropics.html">Tropics</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">62</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card final  has-box" data-href="../games/2.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/2.html" aria-label="Box score: Mountaineers at Totems"></a>  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#009650" title="Mountaineers"><img src="../team_logos/Mountaineers.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/mountaineers.html">Mountaineers</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">53</span>  </div>
+  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#3cdc64" title="Totems"><img src="../team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/totems.html">Totems</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">7</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card final  has-box" data-href="../games/1.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/1.html" aria-label="Box score: Silverfish at Wardens"></a>  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#aaaaaa" title="Silverfish"><img src="../team_logos/Silverfish.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/silverfish.html">Silverfish</a> <span class="gc-rec">3-0</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">63</span>  </div>
+  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#0070c0" title="Wardens"><img src="../team_logos/Wardens.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/wardens.html">Wardens</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">0</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card final  has-box" data-href="../games/3.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/3.html" aria-label="Box score: Devilbats at Raiders"></a>  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#c00000" title="Devilbats"><img src="../team_logos/Devilbats.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/devilbats.html">Devilbats</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">66</span>  </div>
+  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/raiders.html">Raiders</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">37</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-panel" data-group="weeks" data-panel="w2" >
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Season 21</span>
+        <h2 class="section-title">Week 2</h2>
+      </div>
+    </div>
+    <div class="league-row mine">
+      <div class="league-row-head">
+        <span class="lr-name"><img class="lr-logo" src="static/mfl-logo.png" alt="MFL"><strong>MFL</strong><span class="lr-level">Pro</span></span>
+        <span class="faint lr-status">Deadline Mon Oct 5 &middot; 3 of 5 final</span>
+      </div>
+      <div class="game-grid">
+<div class="card game-card   has-box" data-href="games/preview-w2-axolotls-at-polar-bears.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w2-axolotls-at-polar-bears.html" aria-label="Matchup preview: Axolotls at Polar Bears"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#ff82be" title="Axolotls"><img src="team_logos/Axolotls.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/axolotls.html">Axolotls</a> <span class="gc-rec">1-0</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#c8e1f5" title="Polar Bears"><img src="team_logos/Polar Bears.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/polar-bears.html">Polar Bears</a> <span class="gc-rec">0-1</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card final  has-box" data-href="games/6.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/6.html" aria-label="Box score: Guardians at Breeze"></a>  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#28aaa0" title="Guardians"><img src="team_logos/Guardians.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/guardians.html">Guardians</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">77</span>  </div>
+  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#78d2f0" title="Breeze"><img src="team_logos/Breeze.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/breeze.html">Breeze</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">33</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w2-phantoms-at-dragons.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w2-phantoms-at-dragons.html" aria-label="Matchup preview: Phantoms at Dragons"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#5a64a0" title="Phantoms"><img src="team_logos/Phantoms.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/phantoms.html">Phantoms</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#8c3cc8" title="Dragons"><img src="team_logos/Dragons.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/dragons.html">Dragons</a> <span class="gc-rec">0-1</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card final  has-box" data-href="games/7.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/7.html" aria-label="Box score: Blazes at Magmas"></a>  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#ffaa1e" title="Blazes"><img src="team_logos/Blazes.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/blazes.html">Blazes</a> <span class="gc-rec">3-0</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">50</span>  </div>
+  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#e6461e" title="Magmas"><img src="team_logos/Magmas.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/magmas.html">Magmas</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">32</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card final  has-box" data-href="games/8.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/8.html" aria-label="Box score: Gators at Ghasts"></a>  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#3ca03c" title="Gators"><img src="team_logos/Gators.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/gators.html">Gators</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">27</span>  </div>
+  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#ebebeb" title="Ghasts"><img src="team_logos/Ghasts.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/ghasts.html">Ghasts</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">34</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+      </div>
+    </div>
+    <div class="league-row ">
+      <div class="league-row-head">
+        <span class="lr-name"><img class="lr-logo" src="../static/mcfl-logo.png" alt="MCFL"><strong>MCFL</strong><span class="lr-level">College</span></span>
+        <span class="faint lr-status">5 of 5 final</span>
+      </div>
+      <div class="game-grid">
+<div class="card game-card final  has-box" data-href="../games/7.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/7.html" aria-label="Box score: Tropics at Allays"></a>  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#e628c8" title="Tropics"><img src="../team_logos/Tropics.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/tropics.html">Tropics</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">37</span>  </div>
+  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#00c8dc" title="Allays"><img src="../team_logos/Allays.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/allays.html">Allays</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">25</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card final  has-box" data-href="../games/8.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/8.html" aria-label="Box score: Traders at Sniffers"></a>  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#ffc000" title="Traders"><img src="../team_logos/Traders.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/traders.html">Traders</a> <span class="gc-rec">1-2</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">2</span>  </div>
+  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#f4b084" title="Sniffers"><img src="../team_logos/Sniffers.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/sniffers.html">Sniffers</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">0</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card final  has-box" data-href="../games/10.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/10.html" aria-label="Box score: Raiders at Mountaineers"></a>  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/raiders.html">Raiders</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">48</span>  </div>
+  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#009650" title="Mountaineers"><img src="../team_logos/Mountaineers.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/mountaineers.html">Mountaineers</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">6</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card final  has-box" data-href="../games/9.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/9.html" aria-label="Box score: Devilbats at Wardens"></a>  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#c00000" title="Devilbats"><img src="../team_logos/Devilbats.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/devilbats.html">Devilbats</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">70</span>  </div>
+  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#0070c0" title="Wardens"><img src="../team_logos/Wardens.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/wardens.html">Wardens</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">28</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card final  has-box" data-href="../games/6.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/6.html" aria-label="Box score: Totems at Silverfish"></a>  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#3cdc64" title="Totems"><img src="../team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/totems.html">Totems</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">0</span>  </div>
+  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#aaaaaa" title="Silverfish"><img src="../team_logos/Silverfish.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/silverfish.html">Silverfish</a> <span class="gc-rec">3-0</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">80</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-panel" data-group="weeks" data-panel="w3" hidden>
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Season 21</span>
+        <h2 class="section-title">Week 3</h2>
+      </div>
+    </div>
+    <div class="league-row mine">
+      <div class="league-row-head">
+        <span class="lr-name"><img class="lr-logo" src="static/mfl-logo.png" alt="MFL"><strong>MFL</strong><span class="lr-level">Pro</span></span>
+        <span class="faint lr-status">1 of 5 final</span>
+      </div>
+      <div class="game-grid">
+<div class="card game-card   has-box" data-href="games/preview-w3-axolotls-at-breeze.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w3-axolotls-at-breeze.html" aria-label="Matchup preview: Axolotls at Breeze"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#ff82be" title="Axolotls"><img src="team_logos/Axolotls.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/axolotls.html">Axolotls</a> <span class="gc-rec">1-0</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#78d2f0" title="Breeze"><img src="team_logos/Breeze.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/breeze.html">Breeze</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w3-guardians-at-polar-bears.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w3-guardians-at-polar-bears.html" aria-label="Matchup preview: Guardians at Polar Bears"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#28aaa0" title="Guardians"><img src="team_logos/Guardians.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/guardians.html">Guardians</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#c8e1f5" title="Polar Bears"><img src="team_logos/Polar Bears.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/polar-bears.html">Polar Bears</a> <span class="gc-rec">0-1</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card final  has-box" data-href="games/9.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/9.html" aria-label="Box score: Phantoms at Blazes"></a>  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#5a64a0" title="Phantoms"><img src="team_logos/Phantoms.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/phantoms.html">Phantoms</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">28</span>  </div>
+  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#ffaa1e" title="Blazes"><img src="team_logos/Blazes.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/blazes.html">Blazes</a> <span class="gc-rec">3-0</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">47</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w3-dragons-at-gators.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w3-dragons-at-gators.html" aria-label="Matchup preview: Dragons at Gators"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#8c3cc8" title="Dragons"><img src="team_logos/Dragons.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/dragons.html">Dragons</a> <span class="gc-rec">0-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#3ca03c" title="Gators"><img src="team_logos/Gators.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/gators.html">Gators</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w3-magmas-at-ghasts.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w3-magmas-at-ghasts.html" aria-label="Matchup preview: Magmas at Ghasts"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#e6461e" title="Magmas"><img src="team_logos/Magmas.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/magmas.html">Magmas</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#ebebeb" title="Ghasts"><img src="team_logos/Ghasts.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/ghasts.html">Ghasts</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+      </div>
+    </div>
+    <div class="league-row ">
+      <div class="league-row-head">
+        <span class="lr-name"><img class="lr-logo" src="../static/mcfl-logo.png" alt="MCFL"><strong>MCFL</strong><span class="lr-level">College</span></span>
+        <span class="faint lr-status">1 of 5 final</span>
+      </div>
+      <div class="game-grid">
+<div class="card game-card   has-box" data-href="../games/preview-w3-allays-at-devilbats.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w3-allays-at-devilbats.html" aria-label="Matchup preview: Allays at Devilbats"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#00c8dc" title="Allays"><img src="../team_logos/Allays.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/allays.html">Allays</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#c00000" title="Devilbats"><img src="../team_logos/Devilbats.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/devilbats.html">Devilbats</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+<div class="gc-when"><time class="local-time" datetime="2026-10-12T02:00:00Z">Sun Oct 11 · 10:00 PM ET</time></div>  <div class="gc-foot"><span class="gc-status">Scheduled</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="../games/preview-w3-mountaineers-at-sniffers.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w3-mountaineers-at-sniffers.html" aria-label="Matchup preview: Mountaineers at Sniffers"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#009650" title="Mountaineers"><img src="../team_logos/Mountaineers.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/mountaineers.html">Mountaineers</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#f4b084" title="Sniffers"><img src="../team_logos/Sniffers.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/sniffers.html">Sniffers</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="../games/preview-w3-tropics-at-wardens.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w3-tropics-at-wardens.html" aria-label="Matchup preview: Tropics at Wardens"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#e628c8" title="Tropics"><img src="../team_logos/Tropics.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/tropics.html">Tropics</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#0070c0" title="Wardens"><img src="../team_logos/Wardens.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/wardens.html">Wardens</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card final  has-box" data-href="../games/11.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/11.html" aria-label="Box score: Silverfish at Traders"></a>  <div class="gc-row won ">
+    <span class="team-mark md" style="--c:#aaaaaa" title="Silverfish"><img src="../team_logos/Silverfish.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/silverfish.html">Silverfish</a> <span class="gc-rec">3-0</span></span>
+    <span class="gc-side">Away</span>
+<span class="gc-score">97</span>  </div>
+  <div class="gc-row  lost">
+    <span class="team-mark md" style="--c:#ffc000" title="Traders"><img src="../team_logos/Traders.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/traders.html">Traders</a> <span class="gc-rec">1-2</span></span>
+    <span class="gc-side">Home</span>
+<span class="gc-score">26</span>  </div>
+  <div class="gc-foot"><span class="gc-status done">Final</span><span class="gc-box">Box score <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="../games/preview-w3-raiders-at-totems.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w3-raiders-at-totems.html" aria-label="Matchup preview: Raiders at Totems"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/raiders.html">Raiders</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#3cdc64" title="Totems"><img src="../team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/totems.html">Totems</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+<div class="gc-when"><time class="local-time" datetime="2026-10-12T00:00:00Z">Sun Oct 11 · 8:00 PM ET</time></div>  <div class="gc-foot"><span class="gc-status">Scheduled</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-panel" data-group="weeks" data-panel="w4" hidden>
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Season 21</span>
+        <h2 class="section-title">Week 4</h2>
+      </div>
+    </div>
+    <div class="league-row mine">
+      <div class="league-row-head">
+        <span class="lr-name"><img class="lr-logo" src="static/mfl-logo.png" alt="MFL"><strong>MFL</strong><span class="lr-level">Pro</span></span>
+        <span class="faint lr-status">0 of 5 final</span>
+      </div>
+      <div class="game-grid">
+<div class="card game-card   has-box" data-href="games/preview-w4-axolotls-at-phantoms.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w4-axolotls-at-phantoms.html" aria-label="Matchup preview: Axolotls at Phantoms"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#ff82be" title="Axolotls"><img src="team_logos/Axolotls.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/axolotls.html">Axolotls</a> <span class="gc-rec">1-0</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#5a64a0" title="Phantoms"><img src="team_logos/Phantoms.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/phantoms.html">Phantoms</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w4-guardians-at-blazes.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w4-guardians-at-blazes.html" aria-label="Matchup preview: Guardians at Blazes"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#28aaa0" title="Guardians"><img src="team_logos/Guardians.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/guardians.html">Guardians</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#ffaa1e" title="Blazes"><img src="team_logos/Blazes.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/blazes.html">Blazes</a> <span class="gc-rec">3-0</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w4-polar-bears-at-magmas.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w4-polar-bears-at-magmas.html" aria-label="Matchup preview: Polar Bears at Magmas"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#c8e1f5" title="Polar Bears"><img src="team_logos/Polar Bears.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/polar-bears.html">Polar Bears</a> <span class="gc-rec">0-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#e6461e" title="Magmas"><img src="team_logos/Magmas.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/magmas.html">Magmas</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w4-breeze-at-gators.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w4-breeze-at-gators.html" aria-label="Matchup preview: Breeze at Gators"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#78d2f0" title="Breeze"><img src="team_logos/Breeze.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/breeze.html">Breeze</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#3ca03c" title="Gators"><img src="team_logos/Gators.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/gators.html">Gators</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w4-dragons-at-ghasts.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w4-dragons-at-ghasts.html" aria-label="Matchup preview: Dragons at Ghasts"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#8c3cc8" title="Dragons"><img src="team_logos/Dragons.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/dragons.html">Dragons</a> <span class="gc-rec">0-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#ebebeb" title="Ghasts"><img src="team_logos/Ghasts.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/ghasts.html">Ghasts</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+      </div>
+    </div>
+    <div class="league-row ">
+      <div class="league-row-head">
+        <span class="lr-name"><img class="lr-logo" src="../static/mcfl-logo.png" alt="MCFL"><strong>MCFL</strong><span class="lr-level">College</span></span>
+        <span class="faint lr-status">0 of 5 final</span>
+      </div>
+      <div class="game-grid">
+<div class="card game-card   has-box" data-href="../games/preview-w4-mountaineers-at-allays.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w4-mountaineers-at-allays.html" aria-label="Matchup preview: Mountaineers at Allays"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#009650" title="Mountaineers"><img src="../team_logos/Mountaineers.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/mountaineers.html">Mountaineers</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#00c8dc" title="Allays"><img src="../team_logos/Allays.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/allays.html">Allays</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="../games/preview-w4-tropics-at-sniffers.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w4-tropics-at-sniffers.html" aria-label="Matchup preview: Tropics at Sniffers"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#e628c8" title="Tropics"><img src="../team_logos/Tropics.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/tropics.html">Tropics</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#f4b084" title="Sniffers"><img src="../team_logos/Sniffers.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/sniffers.html">Sniffers</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="../games/preview-w4-wardens-at-traders.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w4-wardens-at-traders.html" aria-label="Matchup preview: Wardens at Traders"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#0070c0" title="Wardens"><img src="../team_logos/Wardens.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/wardens.html">Wardens</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#ffc000" title="Traders"><img src="../team_logos/Traders.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/traders.html">Traders</a> <span class="gc-rec">1-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="../games/preview-w4-totems-at-devilbats.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w4-totems-at-devilbats.html" aria-label="Matchup preview: Totems at Devilbats"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#3cdc64" title="Totems"><img src="../team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/totems.html">Totems</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#c00000" title="Devilbats"><img src="../team_logos/Devilbats.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/devilbats.html">Devilbats</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="../games/preview-w4-silverfish-at-raiders.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w4-silverfish-at-raiders.html" aria-label="Matchup preview: Silverfish at Raiders"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#aaaaaa" title="Silverfish"><img src="../team_logos/Silverfish.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/silverfish.html">Silverfish</a> <span class="gc-rec">3-0</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/raiders.html">Raiders</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-panel" data-group="weeks" data-panel="w5" hidden>
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Season 21</span>
+        <h2 class="section-title">Week 5</h2>
+      </div>
+    </div>
+    <div class="league-row mine">
+      <div class="league-row-head">
+        <span class="lr-name"><img class="lr-logo" src="static/mfl-logo.png" alt="MFL"><strong>MFL</strong><span class="lr-level">Pro</span></span>
+        <span class="faint lr-status">0 of 5 final</span>
+      </div>
+      <div class="game-grid">
+<div class="card game-card   has-box" data-href="games/preview-w5-axolotls-at-dragons.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w5-axolotls-at-dragons.html" aria-label="Matchup preview: Axolotls at Dragons"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#ff82be" title="Axolotls"><img src="team_logos/Axolotls.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/axolotls.html">Axolotls</a> <span class="gc-rec">1-0</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#8c3cc8" title="Dragons"><img src="team_logos/Dragons.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/dragons.html">Dragons</a> <span class="gc-rec">0-1</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w5-guardians-at-magmas.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w5-guardians-at-magmas.html" aria-label="Matchup preview: Guardians at Magmas"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#28aaa0" title="Guardians"><img src="team_logos/Guardians.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/guardians.html">Guardians</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#e6461e" title="Magmas"><img src="team_logos/Magmas.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/magmas.html">Magmas</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w5-polar-bears-at-phantoms.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w5-polar-bears-at-phantoms.html" aria-label="Matchup preview: Polar Bears at Phantoms"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#c8e1f5" title="Polar Bears"><img src="team_logos/Polar Bears.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/polar-bears.html">Polar Bears</a> <span class="gc-rec">0-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#5a64a0" title="Phantoms"><img src="team_logos/Phantoms.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/phantoms.html">Phantoms</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w5-breeze-at-ghasts.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w5-breeze-at-ghasts.html" aria-label="Matchup preview: Breeze at Ghasts"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#78d2f0" title="Breeze"><img src="team_logos/Breeze.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/breeze.html">Breeze</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#ebebeb" title="Ghasts"><img src="team_logos/Ghasts.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/ghasts.html">Ghasts</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w5-blazes-at-gators.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w5-blazes-at-gators.html" aria-label="Matchup preview: Blazes at Gators"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#ffaa1e" title="Blazes"><img src="team_logos/Blazes.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/blazes.html">Blazes</a> <span class="gc-rec">3-0</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#3ca03c" title="Gators"><img src="team_logos/Gators.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/gators.html">Gators</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+      </div>
+    </div>
+    <div class="league-row ">
+      <div class="league-row-head">
+        <span class="lr-name"><img class="lr-logo" src="../static/mcfl-logo.png" alt="MCFL"><strong>MCFL</strong><span class="lr-level">College</span></span>
+        <span class="faint lr-status">0 of 5 final</span>
+      </div>
+      <div class="game-grid">
+<div class="card game-card   has-box" data-href="../games/preview-w5-allays-at-totems.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w5-allays-at-totems.html" aria-label="Matchup preview: Allays at Totems"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#00c8dc" title="Allays"><img src="../team_logos/Allays.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/allays.html">Allays</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#3cdc64" title="Totems"><img src="../team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/totems.html">Totems</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="../games/preview-w5-wardens-at-sniffers.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w5-wardens-at-sniffers.html" aria-label="Matchup preview: Wardens at Sniffers"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#0070c0" title="Wardens"><img src="../team_logos/Wardens.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/wardens.html">Wardens</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#f4b084" title="Sniffers"><img src="../team_logos/Sniffers.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/sniffers.html">Sniffers</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="../games/preview-w5-tropics-at-silverfish.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w5-tropics-at-silverfish.html" aria-label="Matchup preview: Tropics at Silverfish"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#e628c8" title="Tropics"><img src="../team_logos/Tropics.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/tropics.html">Tropics</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#aaaaaa" title="Silverfish"><img src="../team_logos/Silverfish.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/silverfish.html">Silverfish</a> <span class="gc-rec">3-0</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="../games/preview-w5-devilbats-at-mountaineers.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w5-devilbats-at-mountaineers.html" aria-label="Matchup preview: Devilbats at Mountaineers"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#c00000" title="Devilbats"><img src="../team_logos/Devilbats.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/devilbats.html">Devilbats</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#009650" title="Mountaineers"><img src="../team_logos/Mountaineers.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/mountaineers.html">Mountaineers</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="../games/preview-w5-raiders-at-traders.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w5-raiders-at-traders.html" aria-label="Matchup preview: Raiders at Traders"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/raiders.html">Raiders</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#ffc000" title="Traders"><img src="../team_logos/Traders.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/traders.html">Traders</a> <span class="gc-rec">1-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-panel" data-group="weeks" data-panel="w6" hidden>
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Season 21</span>
+        <h2 class="section-title">Week 6</h2>
+      </div>
+    </div>
+    <div class="league-row mine">
+      <div class="league-row-head">
+        <span class="lr-name"><img class="lr-logo" src="static/mfl-logo.png" alt="MFL"><strong>MFL</strong><span class="lr-level">Pro</span></span>
+        <span class="faint lr-status">0 of 5 final</span>
+      </div>
+      <div class="game-grid">
+<div class="card game-card   has-box" data-href="games/preview-w6-axolotls-at-blazes.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w6-axolotls-at-blazes.html" aria-label="Matchup preview: Axolotls at Blazes"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#ff82be" title="Axolotls"><img src="team_logos/Axolotls.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/axolotls.html">Axolotls</a> <span class="gc-rec">1-0</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#ffaa1e" title="Blazes"><img src="team_logos/Blazes.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/blazes.html">Blazes</a> <span class="gc-rec">3-0</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w6-guardians-at-gators.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w6-guardians-at-gators.html" aria-label="Matchup preview: Guardians at Gators"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#28aaa0" title="Guardians"><img src="team_logos/Guardians.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/guardians.html">Guardians</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#3ca03c" title="Gators"><img src="team_logos/Gators.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/gators.html">Gators</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w6-polar-bears-at-ghasts.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w6-polar-bears-at-ghasts.html" aria-label="Matchup preview: Polar Bears at Ghasts"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#c8e1f5" title="Polar Bears"><img src="team_logos/Polar Bears.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/polar-bears.html">Polar Bears</a> <span class="gc-rec">0-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#ebebeb" title="Ghasts"><img src="team_logos/Ghasts.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/ghasts.html">Ghasts</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w6-breeze-at-phantoms.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w6-breeze-at-phantoms.html" aria-label="Matchup preview: Breeze at Phantoms"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#78d2f0" title="Breeze"><img src="team_logos/Breeze.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/breeze.html">Breeze</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#5a64a0" title="Phantoms"><img src="team_logos/Phantoms.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/phantoms.html">Phantoms</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w6-dragons-at-magmas.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w6-dragons-at-magmas.html" aria-label="Matchup preview: Dragons at Magmas"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#8c3cc8" title="Dragons"><img src="team_logos/Dragons.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/dragons.html">Dragons</a> <span class="gc-rec">0-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#e6461e" title="Magmas"><img src="team_logos/Magmas.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/magmas.html">Magmas</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+      </div>
+    </div>
+    <div class="league-row ">
+      <div class="league-row-head">
+        <span class="lr-name"><img class="lr-logo" src="../static/mcfl-logo.png" alt="MCFL"><strong>MCFL</strong><span class="lr-level">College</span><span class="tag-rivalry">Rivalry Week</span></span>
+        <span class="faint lr-status">0 of 5 final</span>
+      </div>
+      <div class="game-grid">
+<div class="card game-card   has-box" data-href="../games/preview-w6-allays-at-silverfish.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w6-allays-at-silverfish.html" aria-label="Matchup preview: Allays at Silverfish"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#00c8dc" title="Allays"><img src="../team_logos/Allays.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/allays.html">Allays</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#aaaaaa" title="Silverfish"><img src="../team_logos/Silverfish.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/silverfish.html">Silverfish</a> <span class="gc-rec">3-0</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="../games/preview-w6-sniffers-at-raiders.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w6-sniffers-at-raiders.html" aria-label="Matchup preview: Sniffers at Raiders"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#f4b084" title="Sniffers"><img src="../team_logos/Sniffers.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/sniffers.html">Sniffers</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/raiders.html">Raiders</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="../games/preview-w6-devilbats-at-tropics.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w6-devilbats-at-tropics.html" aria-label="Matchup preview: Devilbats at Tropics"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#c00000" title="Devilbats"><img src="../team_logos/Devilbats.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/devilbats.html">Devilbats</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#e628c8" title="Tropics"><img src="../team_logos/Tropics.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/tropics.html">Tropics</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="../games/preview-w6-mountaineers-at-traders.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w6-mountaineers-at-traders.html" aria-label="Matchup preview: Mountaineers at Traders"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#009650" title="Mountaineers"><img src="../team_logos/Mountaineers.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/mountaineers.html">Mountaineers</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#ffc000" title="Traders"><img src="../team_logos/Traders.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/traders.html">Traders</a> <span class="gc-rec">1-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="../games/preview-w6-totems-at-wardens.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w6-totems-at-wardens.html" aria-label="Matchup preview: Totems at Wardens"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#3cdc64" title="Totems"><img src="../team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/totems.html">Totems</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#0070c0" title="Wardens"><img src="../team_logos/Wardens.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/wardens.html">Wardens</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-panel" data-group="weeks" data-panel="w7" hidden>
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Season 21</span>
+        <h2 class="section-title">Week 7</h2>
+      </div>
+    </div>
+    <div class="league-row mine">
+      <div class="league-row-head">
+        <span class="lr-name"><img class="lr-logo" src="static/mfl-logo.png" alt="MFL"><strong>MFL</strong><span class="lr-level">Pro</span></span>
+        <span class="faint lr-status">0 of 5 final</span>
+      </div>
+      <div class="game-grid">
+<div class="card game-card   has-box" data-href="games/preview-w7-axolotls-at-magmas.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w7-axolotls-at-magmas.html" aria-label="Matchup preview: Axolotls at Magmas"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#ff82be" title="Axolotls"><img src="team_logos/Axolotls.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/axolotls.html">Axolotls</a> <span class="gc-rec">1-0</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#e6461e" title="Magmas"><img src="team_logos/Magmas.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/magmas.html">Magmas</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w7-guardians-at-phantoms.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w7-guardians-at-phantoms.html" aria-label="Matchup preview: Guardians at Phantoms"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#28aaa0" title="Guardians"><img src="team_logos/Guardians.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/guardians.html">Guardians</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#5a64a0" title="Phantoms"><img src="team_logos/Phantoms.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/phantoms.html">Phantoms</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w7-polar-bears-at-gators.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w7-polar-bears-at-gators.html" aria-label="Matchup preview: Polar Bears at Gators"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#c8e1f5" title="Polar Bears"><img src="team_logos/Polar Bears.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/polar-bears.html">Polar Bears</a> <span class="gc-rec">0-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#3ca03c" title="Gators"><img src="team_logos/Gators.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/gators.html">Gators</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w7-breeze-at-dragons.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w7-breeze-at-dragons.html" aria-label="Matchup preview: Breeze at Dragons"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#78d2f0" title="Breeze"><img src="team_logos/Breeze.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/breeze.html">Breeze</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#8c3cc8" title="Dragons"><img src="team_logos/Dragons.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/dragons.html">Dragons</a> <span class="gc-rec">0-1</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="games/preview-w7-blazes-at-ghasts.html" role="link" tabindex="-1">
+<a class="gc-link" href="games/preview-w7-blazes-at-ghasts.html" aria-label="Matchup preview: Blazes at Ghasts"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#ffaa1e" title="Blazes"><img src="team_logos/Blazes.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/blazes.html">Blazes</a> <span class="gc-rec">3-0</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#ebebeb" title="Ghasts"><img src="team_logos/Ghasts.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="teams/ghasts.html">Ghasts</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+      </div>
+    </div>
+    <div class="league-row ">
+      <div class="league-row-head">
+        <span class="lr-name"><img class="lr-logo" src="../static/mcfl-logo.png" alt="MCFL"><strong>MCFL</strong><span class="lr-level">College</span></span>
+        <span class="faint lr-status">0 of 5 final</span>
+      </div>
+      <div class="game-grid">
+<div class="card game-card   has-box" data-href="../games/preview-w7-wardens-at-allays.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w7-wardens-at-allays.html" aria-label="Matchup preview: Wardens at Allays"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#0070c0" title="Wardens"><img src="../team_logos/Wardens.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/wardens.html">Wardens</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#00c8dc" title="Allays"><img src="../team_logos/Allays.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/allays.html">Allays</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="../games/preview-w7-sniffers-at-devilbats.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w7-sniffers-at-devilbats.html" aria-label="Matchup preview: Sniffers at Devilbats"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#f4b084" title="Sniffers"><img src="../team_logos/Sniffers.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/sniffers.html">Sniffers</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#c00000" title="Devilbats"><img src="../team_logos/Devilbats.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/devilbats.html">Devilbats</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="../games/preview-w7-raiders-at-tropics.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w7-raiders-at-tropics.html" aria-label="Matchup preview: Raiders at Tropics"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#141416" title="Raiders"><img src="../team_logos/Raiders.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/raiders.html">Raiders</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#e628c8" title="Tropics"><img src="../team_logos/Tropics.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/tropics.html">Tropics</a> <span class="gc-rec">2-0</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="../games/preview-w7-traders-at-totems.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w7-traders-at-totems.html" aria-label="Matchup preview: Traders at Totems"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#ffc000" title="Traders"><img src="../team_logos/Traders.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/traders.html">Traders</a> <span class="gc-rec">1-2</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#3cdc64" title="Totems"><img src="../team_logos/Totems.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/totems.html">Totems</a> <span class="gc-rec">0-2</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+<div class="card game-card   has-box" data-href="../games/preview-w7-mountaineers-at-silverfish.html" role="link" tabindex="-1">
+<a class="gc-link" href="../games/preview-w7-mountaineers-at-silverfish.html" aria-label="Matchup preview: Mountaineers at Silverfish"></a>  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#009650" title="Mountaineers"><img src="../team_logos/Mountaineers.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/mountaineers.html">Mountaineers</a> <span class="gc-rec">1-1</span></span>
+    <span class="gc-side">Away</span>
+  </div>
+  <div class="gc-row  ">
+    <span class="team-mark md" style="--c:#aaaaaa" title="Silverfish"><img src="../team_logos/Silverfish.png" alt="" loading="lazy" onerror="this.remove()"></span>
+    <span class="gc-team"><a href="../teams/silverfish.html">Silverfish</a> <span class="gc-rec">3-0</span></span>
+    <span class="gc-side">Home</span>
+  </div>
+  <div class="gc-foot"><span class="gc-status tbd">TBD</span><span class="gc-box">Preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img class="" src="static/mfl-logo.png" alt="MFL">
+    </a>
+    <div class="footer-text">
+      <div>MSSN &middot; MFL stats updated October 10, 2026 at 21:00 UTC</div>
+      <div class="footer-credit">Made by <strong>NotDew</strong> &middot; <a class="footer-admin" href="../admin/index.html">Admin</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var GRACE_MS = 3 * 60 * 60 * 1000;
+  document.querySelectorAll('time.local-time').forEach(function (el) {
+    var d = new Date(el.getAttribute('datetime'));
+    if (isNaN(d)) return;
+    if (Date.now() > d.getTime() + GRACE_MS) {
+      var card = el.closest('.game-card');
+      if (card) {
+        var when = card.querySelector('.gc-when'); if (when) when.remove();
+        var st = card.querySelector('.gc-status'); if (st) { st.textContent = 'TBD'; st.className = 'gc-status tbd'; }
+      } else {
+        var tbd = document.createElement('span'); tbd.className = 'faint'; tbd.textContent = 'TBD';
+        el.replaceWith(tbd);
+      }
+      return;
+    }
+    var day = d.toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' });
+    if (el.hasAttribute('data-date-only')) { el.textContent = day + ' \u00b7 time TBD'; return; }
+    var time = d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
+    el.textContent = day + ' \u00b7 ' + time;
+    el.title = d.toLocaleString();
+  });
+</script>
+<script>
+  document.addEventListener('click', function (e) {
+    document.querySelectorAll('details.league-switch[open]').forEach(function (d) {
+      if (!d.contains(e.target)) d.removeAttribute('open');
+    });
+  });
+</script>
+<script>
+  document.addEventListener('click', function (e) {
+    var card = e.target.closest && e.target.closest('[data-href]');
+    if (!card || (e.target.closest('a') && !e.target.closest('.gc-link'))) return;
+    e.preventDefault();
+    window.location.href = card.getAttribute('data-href');
+  });
+</script>
+<script>
+  document.querySelectorAll('[data-tabs]').forEach(function (bar) {
+    var group = bar.dataset.tabs;
+    bar.addEventListener('click', function (e) {
+      var btn = e.target.closest('.pill-tab');
+      if (!btn) return;
+      bar.querySelectorAll('.pill-tab').forEach(function (b) {
+        var on = b === btn;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-selected', on);
+      });
+      document.querySelectorAll('.tab-panel[data-group="' + group + '"]').forEach(function (p) {
+        p.hidden = p.dataset.panel !== btn.dataset.tab;
+      });
+      btn.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
