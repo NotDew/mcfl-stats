@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#0b0b0c">
+<title>Sportsbook &middot; MSSN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://mc-heads.net">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../static/sportsbook.css?v=2b04c35e99">
+<link rel="icon" type="image/png" href="../static/mcfl-logo.png">
+</head>
+<body>
+<div class="sb" id="sb">
+  <header class="sb-top">
+    <div class="sb-top-row">
+      <a class="sb-brand" href="#lines" data-tab="lines">
+        <span class="sb-brand-mark">MSSN</span>
+        <span class="sb-brand-word">Sportsbook</span>
+      </a>
+      <span class="sb-private" title="Nothing on the site links here yet">Private</span>
+      <div class="sb-account" data-account></div>
+    </div>
+    <nav class="sb-nav" aria-label="Sportsbook">
+      <div class="sb-nav-row">
+        <a href="#lines" data-tab="lines">Game Lines</a>
+        <a href="#bets" data-tab="bets">My Bets<span class="sb-badge" data-open-count hidden></span></a>
+        <a href="#standings" data-tab="standings">Standings</a>
+        <a href="#rules" data-tab="rules">House Rules</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="sb-body">
+    <main class="sb-main">
+      <div class="sb-leagues" data-leagues></div>
+      <div data-view aria-live="polite"><div class="sb-empty">Loading the board&hellip;</div></div>
+      <p class="sb-legal">&copy; 2026 Owen (NotDew). All rights reserved. Play money only, for entertainment. Nothing here can be bought or cashed out for real money.</p>
+    </main>
+    <aside class="sb-slip" data-slip aria-label="Bet slip"></aside>
+  </div>
+
+  <button class="sb-slip-bar" type="button" data-slip-bar hidden></button>
+
+  <div class="sb-modal" data-modal hidden>
+    <div class="sb-modal-card" role="dialog" aria-modal="true">
+      <button class="sb-x" type="button" data-close aria-label="Close">&times;</button>
+      <div data-modal-body></div>
+    </div>
+  </div>
+  <div class="sb-toast" data-toast hidden></div>
+</div>
+<script>
+  window.SB = {"accounts": "https://mcfl.duckdns.org/fantasy", "api": "https://mcfl.duckdns.org/sportsbook", "iterations": 310000, "leagues": [{"code": "MCFL", "name": "Minecraft College Football League"}, {"code": "MFL", "name": "Minecraft Football League"}], "max_legs": 10, "start": 1000};
+  window.SB.root = "../";
+</script>
+<script src="../static/sportsbook-app.js?v=2b04c35e99"></script>
+</body>
+</html>

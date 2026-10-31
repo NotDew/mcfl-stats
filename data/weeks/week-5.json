@@ -1,0 +1,1400 @@
+{
+ "league": "MCFL",
+ "league_name": "Minecraft College Football League",
+ "season": 19,
+ "week": 5,
+ "rivalry_week": false,
+ "games": [
+  {
+   "away": "Allays",
+   "home": "Totems",
+   "away_score": 87,
+   "home_score": 7,
+   "winner": "Allays",
+   "margin": 80,
+   "result": "Final",
+   "winner_rank_before": 3,
+   "loser_rank_before": 10,
+   "upset": false,
+   "mvp": "Raccnn",
+   "away_team_stats": {
+    "Passing YD": 549.0,
+    "Rushing YD": 34.0,
+    "Rec YD": 549.0,
+    "Passing TD": 7.0,
+    "Rushing TD": 5.0,
+    "INT (O)": 1.0,
+    "Sacks": 8.0,
+    "INT (D)": 7.0,
+    "Tackles": 22.0
+   },
+   "home_team_stats": {
+    "Passing YD": 242.0,
+    "Rushing YD": -8.0,
+    "Rec YD": 242.0,
+    "Passing TD": 1.0,
+    "INT (O)": 7.0,
+    "Sacks": 1.0,
+    "INT (D)": 1.0,
+    "Tackles": 24.0
+   }
+  },
+  {
+   "away": "Wardens",
+   "home": "Sniffers",
+   "away_score": 13,
+   "home_score": 38,
+   "winner": "Sniffers",
+   "margin": 25,
+   "result": "Final",
+   "winner_rank_before": 8,
+   "loser_rank_before": 7,
+   "upset": false,
+   "mvp": "Kitty7423",
+   "away_team_stats": {
+    "Passing YD": 288.0,
+    "Rushing YD": -32.0,
+    "Rec YD": 288.0,
+    "Passing TD": 2.0,
+    "INT (O)": 7.0,
+    "Sacks": 1.0,
+    "INT (D)": 4.0,
+    "Tackles": 27.0
+   },
+   "home_team_stats": {
+    "Passing YD": 69.0,
+    "Rushing YD": -19.0,
+    "Rec YD": 62.0,
+    "Passing TD": 3.0,
+    "INT (O)": 1.0,
+    "INT (D)": 2.0,
+    "Tackles": 4.0
+   }
+  },
+  {
+   "away": "Tropics",
+   "home": "Silverfish",
+   "away_score": 43,
+   "home_score": 77,
+   "winner": "Silverfish",
+   "margin": 34,
+   "result": "Final",
+   "winner_rank_before": 1,
+   "loser_rank_before": 4,
+   "upset": false,
+   "mvp": "BakkaGhostKofeyy",
+   "away_team_stats": {
+    "Passing YD": 732.0,
+    "Rushing YD": -8.0,
+    "Rec YD": 732.0,
+    "Passing TD": 6.0,
+    "INT (O)": 5.0,
+    "INT (D)": 4.0,
+    "Tackles": 27.0
+   },
+   "home_team_stats": {
+    "Passing YD": 696.0,
+    "Rushing YD": 120.0,
+    "Rec YD": 596.0,
+    "Passing TD": 10.0,
+    "INT (O)": 4.0,
+    "Sacks": 5.0,
+    "INT (D)": 3.0,
+    "Tackles": 22.0
+   }
+  },
+  {
+   "away": "Devilbats",
+   "home": "Mountaineers",
+   "away_score": 71,
+   "home_score": 42,
+   "winner": "Devilbats",
+   "margin": 29,
+   "result": "Final",
+   "winner_rank_before": 2,
+   "loser_rank_before": 5,
+   "upset": false,
+   "mvp": "Tacoman5569",
+   "away_team_stats": {
+    "Passing YD": 722.0,
+    "Rushing YD": 125.0,
+    "Rec YD": 722.0,
+    "Passing TD": 10.0,
+    "INT (O)": 3.0,
+    "Sacks": 5.0,
+    "INT (D)": 2.0,
+    "Tackles": 22.0
+   },
+   "home_team_stats": {
+    "Passing YD": 627.0,
+    "Rushing YD": -68.0,
+    "Rec YD": 627.0,
+    "Passing TD": 6.0,
+    "INT (O)": 2.0,
+    "Sacks": 3.0,
+    "INT (D)": 4.0,
+    "Tackles": 33.0
+   }
+  },
+  {
+   "away": "Raiders",
+   "home": "Traders",
+   "away_score": 56,
+   "home_score": 39,
+   "winner": "Raiders",
+   "margin": 17,
+   "result": "Final",
+   "winner_rank_before": 6,
+   "loser_rank_before": 9,
+   "upset": false,
+   "mvp": "Alexd8011",
+   "away_team_stats": {
+    "Passing YD": 642.0,
+    "Rushing YD": 1.0,
+    "Rec YD": 642.0,
+    "Passing TD": 8.0,
+    "Rushing TD": 1.0,
+    "INT (O)": 1.0,
+    "Sacks": 3.0,
+    "INT (D)": 4.0,
+    "Tackles": 20.0
+   },
+   "home_team_stats": {
+    "Passing YD": 495.0,
+    "Rushing YD": 52.0,
+    "Rec YD": 495.0,
+    "Passing TD": 6.0,
+    "INT (O)": 4.0,
+    "Sacks": 3.0,
+    "INT (D)": 1.0,
+    "Tackles": 24.0
+   }
+  }
+ ],
+ "power_rankings": [
+  {
+   "team": "Silverfish",
+   "gp": 5,
+   "w": 5,
+   "l": 0,
+   "t": 0,
+   "record": "5-0",
+   "pf": 374,
+   "pa": 82,
+   "diff": 292,
+   "win_pct": 1.0,
+   "diff_per_game": 58.4,
+   "model_score": 93.2,
+   "power_score": 1.667,
+   "rank": 1,
+   "previous_rank": 1,
+   "change": 0
+  },
+  {
+   "team": "Devilbats",
+   "gp": 5,
+   "w": 4,
+   "l": 1,
+   "t": 0,
+   "record": "4-1",
+   "pf": 341,
+   "pa": 149,
+   "diff": 192,
+   "win_pct": 0.8,
+   "diff_per_game": 38.4,
+   "model_score": 80.1,
+   "power_score": 1.063,
+   "rank": 2,
+   "previous_rank": 2,
+   "change": 0
+  },
+  {
+   "team": "Allays",
+   "gp": 5,
+   "w": 4,
+   "l": 1,
+   "t": 0,
+   "record": "4-1",
+   "pf": 233,
+   "pa": 151,
+   "diff": 82,
+   "win_pct": 0.8,
+   "diff_per_game": 16.4,
+   "model_score": 76.9,
+   "power_score": 0.81,
+   "rank": 3,
+   "previous_rank": 3,
+   "change": 0
+  },
+  {
+   "team": "Raiders",
+   "gp": 5,
+   "w": 3,
+   "l": 2,
+   "t": 0,
+   "record": "3-2",
+   "pf": 203,
+   "pa": 180,
+   "diff": 23,
+   "win_pct": 0.6,
+   "diff_per_game": 4.6,
+   "model_score": 55.2,
+   "power_score": 0.227,
+   "rank": 4,
+   "previous_rank": 6,
+   "change": 2
+  },
+  {
+   "team": "Tropics",
+   "gp": 5,
+   "w": 3,
+   "l": 2,
+   "t": 0,
+   "record": "3-2",
+   "pf": 176,
+   "pa": 157,
+   "diff": 19,
+   "win_pct": 0.6,
+   "diff_per_game": 3.8,
+   "model_score": 47.4,
+   "power_score": 0.161,
+   "rank": 5,
+   "previous_rank": 4,
+   "change": -1
+  },
+  {
+   "team": "Mountaineers",
+   "gp": 5,
+   "w": 2,
+   "l": 3,
+   "t": 0,
+   "record": "2-3",
+   "pf": 169,
+   "pa": 196,
+   "diff": -27,
+   "win_pct": 0.4,
+   "diff_per_game": -5.4,
+   "model_score": 54.3,
+   "power_score": -0.183,
+   "rank": 6,
+   "previous_rank": 5,
+   "change": -1
+  },
+  {
+   "team": "Wardens",
+   "gp": 5,
+   "w": 2,
+   "l": 3,
+   "t": 0,
+   "record": "2-3",
+   "pf": 149,
+   "pa": 209,
+   "diff": -60,
+   "win_pct": 0.4,
+   "diff_per_game": -12.0,
+   "model_score": 48.9,
+   "power_score": -0.291,
+   "rank": 7,
+   "previous_rank": 7,
+   "change": 0
+  },
+  {
+   "team": "Sniffers",
+   "gp": 5,
+   "w": 1,
+   "l": 4,
+   "t": 0,
+   "record": "1-4",
+   "pf": 88,
+   "pa": 78,
+   "diff": 10,
+   "win_pct": 0.2,
+   "diff_per_game": 2.0,
+   "model_score": 41.1,
+   "power_score": -0.504,
+   "rank": 8,
+   "previous_rank": 8,
+   "change": 0
+  },
+  {
+   "team": "Traders",
+   "gp": 5,
+   "w": 1,
+   "l": 4,
+   "t": 0,
+   "record": "1-4",
+   "pf": 94,
+   "pa": 289,
+   "diff": -195,
+   "win_pct": 0.2,
+   "diff_per_game": -39.0,
+   "model_score": 10.9,
+   "power_score": -1.153,
+   "rank": 9,
+   "previous_rank": 9,
+   "change": 0
+  },
+  {
+   "team": "Totems",
+   "gp": 5,
+   "w": 0,
+   "l": 5,
+   "t": 0,
+   "record": "0-5",
+   "pf": 26,
+   "pa": 362,
+   "diff": -336,
+   "win_pct": 0.0,
+   "diff_per_game": -67.2,
+   "model_score": 3.8,
+   "power_score": -1.798,
+   "rank": 10,
+   "previous_rank": 10,
+   "change": 0
+  }
+ ],
+ "unit_rankings": [
+  {
+   "unit": "Quarterbacks",
+   "key": "qb",
+   "rankings": [
+    {
+     "team": "Silverfish",
+     "score": 5.163,
+     "per_game": {
+      "Passing YD": 563.6,
+      "Passing TD": 9.6,
+      "INT (O)": 1.6,
+      "QBR": 122.7
+     },
+     "leader": {
+      "player": "BakkaGhostKofeyy",
+      "season_line": "2558 pass yds, 45 pass TD, 8 INT thrown, 287 rush yds, 1 rush TD, 28 tackles, 5 sacks, 7 INT, 14 swats, 2 def TD"
+     },
+     "rank": 1
+    },
+    {
+     "team": "Devilbats",
+     "score": 3.728,
+     "per_game": {
+      "Passing YD": 526.2,
+      "Passing TD": 8.4,
+      "INT (O)": 2.2,
+      "QBR": 112.5
+     },
+     "leader": {
+      "player": "deybtww",
+      "season_line": "2586 pass yds, 42 pass TD, 11 INT thrown, 468 rush yds, 2 rush TD, 30 tackles, 1 sacks, 2 INT, 15 swats"
+     },
+     "rank": 2
+    },
+    {
+     "team": "Allays",
+     "score": 1.715,
+     "per_game": {
+      "Passing YD": 568.2,
+      "Passing TD": 5.4,
+      "INT (O)": 3.2,
+      "QBR": 90.2
+     },
+     "leader": {
+      "player": "Raccnn",
+      "season_line": "2841 pass yds, 27 pass TD, 16 INT thrown, -40 rush yds, 1 rush TD, 55 tackles, 6 sacks, 6 INT, 17 swats"
+     },
+     "rank": 3
+    },
+    {
+     "team": "Mountaineers",
+     "score": 1.248,
+     "per_game": {
+      "Passing YD": 521.8,
+      "Passing TD": 4.6,
+      "INT (O)": 2.8,
+      "QBR": 89.0
+     },
+     "leader": {
+      "player": "Tacoman5569",
+      "season_line": "1982 pass yds, 17 pass TD, 12 INT thrown, -10 rush yds, 22 tackles, 5 sacks, 5 INT, 13 swats"
+     },
+     "rank": 4
+    },
+    {
+     "team": "Raiders",
+     "score": 1.025,
+     "per_game": {
+      "Passing YD": 496.2,
+      "Passing TD": 5.2,
+      "INT (O)": 3.2,
+      "QBR": 90.9
+     },
+     "leader": {
+      "player": "Phizix_",
+      "season_line": "1877 pass yds, 20 pass TD, 13 INT thrown, -4 rush yds, 1 rush TD, 23 tackles, 2 sacks, 6 INT, 1 swats"
+     },
+     "rank": 5
+    },
+    {
+     "team": "Tropics",
+     "score": 0.136,
+     "per_game": {
+      "Passing YD": 489.5,
+      "Passing TD": 6.0,
+      "INT (O)": 4.2,
+      "QBR": 67.3
+     },
+     "leader": {
+      "player": "JtownW",
+      "season_line": "1958 pass yds, 24 pass TD, 16 INT thrown, -46 rush yds, 1 rush TD, 20 tackles, 7 INT, 15 swats, 1 def TD"
+     },
+     "rank": 6
+    },
+    {
+     "team": "Sniffers",
+     "score": -0.867,
+     "per_game": {
+      "Passing YD": 338.0,
+      "Passing TD": 4.0,
+      "INT (O)": 3.0,
+      "QBR": 81.0
+     },
+     "leader": {
+      "player": "Phbc",
+      "season_line": "1224 pass yds, 12 pass TD, 10 INT thrown, 104 rush yds, 28 tackles, 1 sacks, 3 INT, 13 swats"
+     },
+     "rank": 7
+    },
+    {
+     "team": "Traders",
+     "score": -2.584,
+     "per_game": {
+      "Passing YD": 449.2,
+      "Passing TD": 3.6,
+      "INT (O)": 5.8,
+      "QBR": 53.2
+     },
+     "leader": {
+      "player": "Hockeyboss3505",
+      "season_line": "1997 pass yds, 17 pass TD, 26 INT thrown, -46 rush yds, 45 tackles, 2 sacks, 2 INT, 3 swats"
+     },
+     "rank": 8
+    },
+    {
+     "team": "Wardens",
+     "score": -3.032,
+     "per_game": {
+      "Passing YD": 321.6,
+      "Passing TD": 3.6,
+      "INT (O)": 5.0,
+      "QBR": 57.2
+     },
+     "leader": {
+      "player": "FredIsLurking",
+      "season_line": "1552 pass yds, 18 pass TD, 22 INT thrown, 186 rush yds, 2 rush TD, 25 tackles, 2 sacks, 3 INT, 13 swats"
+     },
+     "rank": 9
+    },
+    {
+     "team": "Totems",
+     "score": -6.531,
+     "per_game": {
+      "Passing YD": 194.6,
+      "Passing TD": 0.8,
+      "INT (O)": 5.8,
+      "QBR": 19.8
+     },
+     "leader": {
+      "player": "have2",
+      "season_line": "349 pass yds, 2 pass TD, 5 INT thrown, -104 rush yds, 9 tackles, 2 sacks, 1 INT"
+     },
+     "rank": 10
+    }
+   ]
+  },
+  {
+   "unit": "Receiving corps",
+   "key": "rec",
+   "rankings": [
+    {
+     "team": "Silverfish",
+     "score": 3.456,
+     "per_game": {
+      "Rec YD": 544.8,
+      "Rec TD": 9.6,
+      "Rec": 23.8
+     },
+     "leader": {
+      "player": "BakkaGhostGart",
+      "season_line": "61 rush yds, 1 rush TD, 83 rec, 2074 rec yds, 35 rec TD, 27 tackles, 4 sacks, 14 INT, 1 swats"
+     },
+     "rank": 1
+    },
+    {
+     "team": "Devilbats",
+     "score": 2.485,
+     "per_game": {
+      "Rec YD": 527.2,
+      "Rec TD": 8.4,
+      "Rec": 20.6
+     },
+     "leader": {
+      "player": "Flatvent_One",
+      "season_line": "31 rush yds, 1 rush TD, 59 rec, 1317 rec yds, 19 rec TD, 20 tackles, 3 INT, 2 swats"
+     },
+     "rank": 2
+    },
+    {
+     "team": "Allays",
+     "score": 1.544,
+     "per_game": {
+      "Rec YD": 568.2,
+      "Rec TD": 5.4,
+      "Rec": 20.0
+     },
+     "leader": {
+      "player": "tacf",
+      "season_line": "150 rush yds, 6 rush TD, 53 rec, 1640 rec yds, 17 rec TD, 31 tackles, 12 INT, 3 swats"
+     },
+     "rank": 3
+    },
+    {
+     "team": "Mountaineers",
+     "score": 1.301,
+     "per_game": {
+      "Rec YD": 521.8,
+      "Rec TD": 4.6,
+      "Rec": 24.4
+     },
+     "leader": {
+      "player": "Ozimandias43",
+      "season_line": "26 rush yds, 1 rush TD, 63 rec, 1401 rec yds, 11 rec TD, 41 tackles, 11 INT"
+     },
+     "rank": 4
+    },
+    {
+     "team": "Tropics",
+     "score": 1.288,
+     "per_game": {
+      "Rec YD": 498.2,
+      "Rec TD": 6.0,
+      "Rec": 20.8
+     },
+     "leader": {
+      "player": "Jere7iah",
+      "season_line": "-1 rush yds, 40 rec, 1134 rec yds, 14 rec TD, 38 tackles, 1 sacks, 9 INT, 5 swats"
+     },
+     "rank": 5
+    },
+    {
+     "team": "Raiders",
+     "score": 0.418,
+     "per_game": {
+      "Rec YD": 469.2,
+      "Rec TD": 4.8,
+      "Rec": 19.4
+     },
+     "leader": {
+      "player": "Alexd8011",
+      "season_line": "40 rush yds, 2 rush TD, 51 rec, 1291 rec yds, 16 rec TD, 33 tackles, 4 sacks, 3 INT, 9 swats, 1 def TD"
+     },
+     "rank": 6
+    },
+    {
+     "team": "Wardens",
+     "score": -1.784,
+     "per_game": {
+      "Rec YD": 323.2,
+      "Rec TD": 3.6,
+      "Rec": 14.6
+     },
+     "leader": {
+      "player": "DyN0Btw_",
+      "season_line": "4 rush yds, 37 rec, 736 rec yds, 9 rec TD, 21 tackles, 1 sacks, 3 INT, 2 swats"
+     },
+     "rank": 7
+    },
+    {
+     "team": "Traders",
+     "score": -2.084,
+     "per_game": {
+      "Rec YD": 321.0,
+      "Rec TD": 2.8,
+      "Rec": 15.0
+     },
+     "leader": {
+      "player": "G2B_",
+      "season_line": "249 pass yds, 1 pass TD, 3 INT thrown, -111 rush yds, 62 rec, 1207 rec yds, 10 rec TD, 41 tackles, 2 sacks, 4 INT, 4 swats"
+     },
+     "rank": 8
+    },
+    {
+     "team": "Sniffers",
+     "score": -2.096,
+     "per_game": {
+      "Rec YD": 317.2,
+      "Rec TD": 3.5,
+      "Rec": 12.5
+     },
+     "leader": {
+      "player": "Burtec",
+      "season_line": "59 pass yds, 1 pass TD, 1 INT thrown, 46 rush yds, 31 rec, 962 rec yds, 10 rec TD, 30 tackles, 1 sacks, 4 INT"
+     },
+     "rank": 9
+    },
+    {
+     "team": "Totems",
+     "score": -4.53,
+     "per_game": {
+      "Rec YD": 197.6,
+      "Rec TD": 0.8,
+      "Rec": 9.2
+     },
+     "leader": {
+      "player": "YkLight",
+      "season_line": "14 pass yds, 2 INT thrown, -44 rush yds, 12 rec, 361 rec yds, 1 rec TD, 23 tackles, 1 sacks, 2 INT, 1 swats"
+     },
+     "rank": 10
+    }
+   ]
+  },
+  {
+   "unit": "Defense",
+   "key": "defense",
+   "rankings": [
+    {
+     "team": "Silverfish",
+     "score": 4.838,
+     "per_game": {
+      "points allowed": 16.4,
+      "Sacks": 6.0,
+      "INT (D)": 5.6,
+      "Tackles": 15.8,
+      "Swats": 5.2,
+      "Def TD": 0.8
+     },
+     "leader": {
+      "player": "BakkaGhostKofeyy",
+      "season_line": "2558 pass yds, 45 pass TD, 8 INT thrown, 287 rush yds, 1 rush TD, 28 tackles, 5 sacks, 7 INT, 14 swats, 2 def TD"
+     },
+     "rank": 1
+    },
+    {
+     "team": "Allays",
+     "score": 2.926,
+     "per_game": {
+      "points allowed": 30.2,
+      "Sacks": 4.4,
+      "INT (D)": 5.6,
+      "Tackles": 25.6,
+      "Swats": 5.4,
+      "Def TD": 0.0
+     },
+     "leader": {
+      "player": "Raccnn",
+      "season_line": "2841 pass yds, 27 pass TD, 16 INT thrown, -40 rush yds, 1 rush TD, 55 tackles, 6 sacks, 6 INT, 17 swats"
+     },
+     "rank": 2
+    },
+    {
+     "team": "Tropics",
+     "score": 2.638,
+     "per_game": {
+      "points allowed": 31.4,
+      "Sacks": 2.2,
+      "INT (D)": 5.8,
+      "Tackles": 23.0,
+      "Swats": 8.0,
+      "Def TD": 0.5
+     },
+     "leader": {
+      "player": "Jere7iah",
+      "season_line": "-1 rush yds, 40 rec, 1134 rec yds, 14 rec TD, 38 tackles, 1 sacks, 9 INT, 5 swats"
+     },
+     "rank": 3
+    },
+    {
+     "team": "Devilbats",
+     "score": 1.327,
+     "per_game": {
+      "points allowed": 29.8,
+      "Sacks": 4.4,
+      "INT (D)": 3.6,
+      "Tackles": 18.0,
+      "Swats": 8.4,
+      "Def TD": 0.0
+     },
+     "leader": {
+      "player": "ffdwz",
+      "season_line": "45 pass yds, 2 rush yds, 1 rush TD, 3 rec, 124 rec yds, 2 rec TD, 32 tackles, 5 sacks, 10 INT, 3 swats"
+     },
+     "rank": 4
+    },
+    {
+     "team": "Raiders",
+     "score": 0.512,
+     "per_game": {
+      "points allowed": 36.0,
+      "Sacks": 4.2,
+      "INT (D)": 2.6,
+      "Tackles": 23.4,
+      "Swats": 5.4,
+      "Def TD": 0.2
+     },
+     "leader": {
+      "player": "Alexd8011",
+      "season_line": "40 rush yds, 2 rush TD, 51 rec, 1291 rec yds, 16 rec TD, 33 tackles, 4 sacks, 3 INT, 9 swats, 1 def TD"
+     },
+     "rank": 5
+    },
+    {
+     "team": "Mountaineers",
+     "score": 0.364,
+     "per_game": {
+      "points allowed": 39.2,
+      "Sacks": 3.6,
+      "INT (D)": 4.4,
+      "Tackles": 21.2,
+      "Swats": 5.6,
+      "Def TD": 0.0
+     },
+     "leader": {
+      "player": "Ozimandias43",
+      "season_line": "26 rush yds, 1 rush TD, 63 rec, 1401 rec yds, 11 rec TD, 41 tackles, 11 INT"
+     },
+     "rank": 6
+    },
+    {
+     "team": "Sniffers",
+     "score": 0.078,
+     "per_game": {
+      "points allowed": 15.6,
+      "Sacks": 3.5,
+      "INT (D)": 2.8,
+      "Tackles": 18.2,
+      "Swats": 5.2,
+      "Def TD": 0.0
+     },
+     "leader": {
+      "player": "Burtec",
+      "season_line": "59 pass yds, 1 pass TD, 1 INT thrown, 46 rush yds, 31 rec, 962 rec yds, 10 rec TD, 30 tackles, 1 sacks, 4 INT"
+     },
+     "rank": 7
+    },
+    {
+     "team": "Wardens",
+     "score": -1.866,
+     "per_game": {
+      "points allowed": 41.8,
+      "Sacks": 3.4,
+      "INT (D)": 2.8,
+      "Tackles": 16.0,
+      "Swats": 5.4,
+      "Def TD": 0.0
+     },
+     "leader": {
+      "player": "FredIsLurking",
+      "season_line": "1552 pass yds, 18 pass TD, 22 INT thrown, 186 rush yds, 2 rush TD, 25 tackles, 2 sacks, 3 INT, 13 swats"
+     },
+     "rank": 8
+    },
+    {
+     "team": "Traders",
+     "score": -4.737,
+     "per_game": {
+      "points allowed": 57.8,
+      "Sacks": 1.4,
+      "INT (D)": 2.0,
+      "Tackles": 22.2,
+      "Swats": 2.4,
+      "Def TD": 0.0
+     },
+     "leader": {
+      "player": "Hockeyboss3505",
+      "season_line": "1997 pass yds, 17 pass TD, 26 INT thrown, -46 rush yds, 45 tackles, 2 sacks, 2 INT, 3 swats"
+     },
+     "rank": 9
+    },
+    {
+     "team": "Totems",
+     "score": -6.079,
+     "per_game": {
+      "points allowed": 72.4,
+      "Sacks": 1.6,
+      "INT (D)": 1.2,
+      "Tackles": 19.8,
+      "Swats": 3.4,
+      "Def TD": 0.0
+     },
+     "leader": {
+      "player": "YkLight",
+      "season_line": "14 pass yds, 2 INT thrown, -44 rush yds, 12 rec, 361 rec yds, 1 rec TD, 23 tackles, 1 sacks, 2 INT, 1 swats"
+     },
+     "rank": 10
+    }
+   ]
+  }
+ ],
+ "player_rankings": [
+  {
+   "position": "Quarterbacks",
+   "key": "qb",
+   "rankings": [
+    {
+     "rank": 1,
+     "player": "BakkaGhostKofeyy",
+     "team": "Silverfish",
+     "games": 5,
+     "stats": {
+      "Pass Comp": 114.0,
+      "Pass Att": 182.0,
+      "Passing YD": 2558.0,
+      "Passing TD": 45.0,
+      "INT (O)": 8.0,
+      "Rushing YD": 287.0,
+      "QBR": 130.5
+     },
+     "score": 3258.0
+    },
+    {
+     "rank": 2,
+     "player": "deybtww",
+     "team": "Devilbats",
+     "games": 5,
+     "stats": {
+      "Pass Comp": 113.0,
+      "Pass Att": 223.0,
+      "Passing YD": 2586.0,
+      "Passing TD": 42.0,
+      "INT (O)": 11.0,
+      "Rushing YD": 468.0,
+      "QBR": 114.5
+     },
+     "score": 3151.0
+    },
+    {
+     "rank": 3,
+     "player": "Raccnn",
+     "team": "Allays",
+     "games": 5,
+     "stats": {
+      "Pass Comp": 101.0,
+      "Pass Att": 262.0,
+      "Passing YD": 2841.0,
+      "Passing TD": 27.0,
+      "INT (O)": 16.0,
+      "Rushing YD": -40.0,
+      "QBR": 90.2
+     },
+     "score": 2981.0
+    },
+    {
+     "rank": 4,
+     "player": "JtownW",
+     "team": "Tropics",
+     "games": 4,
+     "stats": {
+      "Pass Comp": 82.0,
+      "Pass Att": 230.0,
+      "Passing YD": 1958.0,
+      "Passing TD": 24.0,
+      "INT (O)": 16.0,
+      "Rushing YD": -46.0,
+      "QBR": 72.1
+     },
+     "score": 2038.0
+    },
+    {
+     "rank": 5,
+     "player": "Tacoman5569",
+     "team": "Mountaineers",
+     "games": 4,
+     "stats": {
+      "Pass Comp": 102.0,
+      "Pass Att": 218.0,
+      "Passing YD": 1982.0,
+      "Passing TD": 17.0,
+      "INT (O)": 12.0,
+      "Rushing YD": -10.0,
+      "QBR": 82.1
+     },
+     "score": 2022.0
+    }
+   ]
+  },
+  {
+   "position": "Receivers",
+   "key": "rec",
+   "rankings": [
+    {
+     "rank": 1,
+     "player": "BakkaGhostGart",
+     "team": "Silverfish",
+     "games": 5,
+     "stats": {
+      "Rec": 83.0,
+      "Rec YD": 2074.0,
+      "Rec TD": 35.0
+     },
+     "score": 2774.0
+    },
+    {
+     "rank": 2,
+     "player": "tacf",
+     "team": "Allays",
+     "games": 5,
+     "stats": {
+      "Rec": 53.0,
+      "Rec YD": 1640.0,
+      "Rec TD": 17.0
+     },
+     "score": 1980.0
+    },
+    {
+     "rank": 3,
+     "player": "Flatvent_One",
+     "team": "Devilbats",
+     "games": 5,
+     "stats": {
+      "Rec": 59.0,
+      "Rec YD": 1317.0,
+      "Rec TD": 19.0
+     },
+     "score": 1697.0
+    },
+    {
+     "rank": 4,
+     "player": "Ozimandias43",
+     "team": "Mountaineers",
+     "games": 5,
+     "stats": {
+      "Rec": 63.0,
+      "Rec YD": 1401.0,
+      "Rec TD": 11.0
+     },
+     "score": 1621.0
+    },
+    {
+     "rank": 5,
+     "player": "canboon2",
+     "team": "Devilbats",
+     "games": 5,
+     "stats": {
+      "Rec": 41.0,
+      "Rec YD": 1195.0,
+      "Rec TD": 21.0
+     },
+     "score": 1615.0
+    }
+   ]
+  },
+  {
+   "position": "Defenders",
+   "key": "def",
+   "rankings": [
+    {
+     "rank": 1,
+     "player": "Raccnn",
+     "team": "Allays",
+     "games": 5,
+     "stats": {
+      "Tackles": 55.0,
+      "Sacks": 6.0,
+      "INT (D)": 6.0,
+      "Swats": 17.0
+     },
+     "score": 143.0
+    },
+    {
+     "rank": 2,
+     "player": "canboon2",
+     "team": "Devilbats",
+     "games": 5,
+     "stats": {
+      "Tackles": 8.0,
+      "Sacks": 16.0,
+      "INT (D)": 3.0,
+      "Swats": 22.0
+     },
+     "score": 131.0
+    },
+    {
+     "rank": 3,
+     "player": "BakkaGhostKofeyy",
+     "team": "Silverfish",
+     "games": 5,
+     "stats": {
+      "Tackles": 28.0,
+      "Sacks": 5.0,
+      "INT (D)": 7.0,
+      "Swats": 14.0,
+      "Def TD": 2.0
+     },
+     "score": 131.0
+    },
+    {
+     "rank": 4,
+     "player": "BakkaGhostGart",
+     "team": "Silverfish",
+     "games": 5,
+     "stats": {
+      "Tackles": 27.0,
+      "Sacks": 4.0,
+      "INT (D)": 14.0,
+      "Swats": 1.0
+     },
+     "score": 115.0
+    },
+    {
+     "rank": 5,
+     "player": "ffdwz",
+     "team": "Devilbats",
+     "games": 5,
+     "stats": {
+      "Tackles": 32.0,
+      "Sacks": 5.0,
+      "INT (D)": 10.0,
+      "Swats": 3.0
+     },
+     "score": 108.0
+    }
+   ]
+  }
+ ],
+ "next_week": {
+  "week": 6,
+  "rivalry_week": true,
+  "predictions": [
+   {
+    "away": "Sniffers",
+    "home": "Raiders",
+    "away_record": "1-4",
+    "home_record": "3-2",
+    "away_power_rank": 8,
+    "home_power_rank": 4,
+    "when": null,
+    "predicted_score": {
+     "Sniffers": 22,
+     "Raiders": 25
+    },
+    "favorite": "Raiders",
+    "win_probability": {
+     "Sniffers": 47,
+     "Raiders": 53
+    },
+    "confidence": "toss-up",
+    "unit_matchups": {
+     "away": {
+      "qb": 7,
+      "receiving": 9,
+      "defense": 7
+     },
+     "home": {
+      "qb": 5,
+      "receiving": 6,
+      "defense": 5
+     }
+    }
+   },
+   {
+    "away": "Devilbats",
+    "home": "Tropics",
+    "away_record": "4-1",
+    "home_record": "3-2",
+    "away_power_rank": 2,
+    "home_power_rank": 5,
+    "when": null,
+    "predicted_score": {
+     "Devilbats": 56,
+     "Tropics": 30
+    },
+    "favorite": "Devilbats",
+    "win_probability": {
+     "Devilbats": 72,
+     "Tropics": 28
+    },
+    "confidence": "solid",
+    "unit_matchups": {
+     "away": {
+      "qb": 2,
+      "receiving": 2,
+      "defense": 4
+     },
+     "home": {
+      "qb": 6,
+      "receiving": 5,
+      "defense": 3
+     }
+    }
+   },
+   {
+    "away": "Mountaineers",
+    "home": "Traders",
+    "away_record": "2-3",
+    "home_record": "1-4",
+    "away_power_rank": 6,
+    "home_power_rank": 9,
+    "when": null,
+    "predicted_score": {
+     "Mountaineers": 50,
+     "Traders": 25
+    },
+    "favorite": "Mountaineers",
+    "win_probability": {
+     "Mountaineers": 72,
+     "Traders": 28
+    },
+    "confidence": "solid",
+    "unit_matchups": {
+     "away": {
+      "qb": 4,
+      "receiving": 4,
+      "defense": 6
+     },
+     "home": {
+      "qb": 8,
+      "receiving": 8,
+      "defense": 9
+     }
+    }
+   },
+   {
+    "away": "Totems",
+    "home": "Wardens",
+    "away_record": "0-5",
+    "home_record": "2-3",
+    "away_power_rank": 10,
+    "home_power_rank": 7,
+    "when": null,
+    "predicted_score": {
+     "Totems": 17,
+     "Wardens": 58
+    },
+    "favorite": "Wardens",
+    "win_probability": {
+     "Totems": 17,
+     "Wardens": 83
+    },
+    "confidence": "strong",
+    "unit_matchups": {
+     "away": {
+      "qb": 10,
+      "receiving": 10,
+      "defense": 10
+     },
+     "home": {
+      "qb": 9,
+      "receiving": 7,
+      "defense": 8
+     }
+    }
+   }
+  ]
+ },
+ "top_performers": [
+  {
+   "player": "BakkaGhostKofeyy",
+   "team": "Silverfish",
+   "opponent": "Tropics",
+   "fp": 231.2,
+   "line": "696 pass yds, 10 pass TD, 4 INT thrown, 101 rush yds, 9 tackles, 1 sacks, 6 swats, 2 def TD"
+  },
+  {
+   "player": "BakkaGhostGart",
+   "team": "Silverfish",
+   "opponent": "Tropics",
+   "fp": 198.2,
+   "line": "19 rush yds, 21 rec, 596 rec yds, 10 rec TD, 9 tackles, 3 INT"
+  },
+  {
+   "player": "deybtww",
+   "team": "Devilbats",
+   "opponent": "Mountaineers",
+   "fp": 178.2,
+   "line": "677 pass yds, 10 pass TD, 3 INT thrown, 107 rush yds, 7 tackles, 3 swats"
+  },
+  {
+   "player": "Raccnn",
+   "team": "Allays",
+   "opponent": "Totems",
+   "fp": 158.3,
+   "line": "549 pass yds, 7 pass TD, 1 INT thrown, -12 rush yds, 1 rush TD, 4 tackles, 2 sacks, 1 INT"
+  },
+  {
+   "player": "canboon2",
+   "team": "Devilbats",
+   "opponent": "Mountaineers",
+   "fp": 156.2,
+   "line": "18 rush yds, 9 rec, 321 rec yds, 4 rec TD, 1 tackles, 4 sacks, 1 INT, 2 swats"
+  },
+  {
+   "player": "tacf",
+   "team": "Allays",
+   "opponent": "Totems",
+   "fp": 150.4,
+   "line": "44 rush yds, 4 rush TD, 8 rec, 293 rec yds, 4 rec TD, 5 tackles, 4 INT, 1 swats"
+  },
+  {
+   "player": "Alexd8011",
+   "team": "Raiders",
+   "opponent": "Traders",
+   "fp": 148.3,
+   "line": "14 rush yds, 1 rush TD, 19 rec, 511 rec yds, 7 rec TD, 5 tackles, 2 swats"
+  },
+  {
+   "player": "Phizix_",
+   "team": "Raiders",
+   "opponent": "Traders",
+   "fp": 142.8,
+   "line": "642 pass yds, 8 pass TD, 1 INT thrown, 7 rush yds, 4 tackles, 1 INT"
+  },
+  {
+   "player": "Jere7iah",
+   "team": "Tropics",
+   "opponent": "Silverfish",
+   "fp": 138.1,
+   "line": "-1 rush yds, 15 rec, 485 rec yds, 4 rec TD, 14 tackles, 1 INT, 1 swats"
+  },
+  {
+   "player": "G2B_",
+   "team": "Traders",
+   "opponent": "Raiders",
+   "fp": 133.2,
+   "line": "20 rec, 455 rec yds, 6 rec TD, 7 tackles"
+  }
+ ],
+ "highlights": {
+  "upsets": [],
+  "biggest_blowout": {
+   "away": "Allays",
+   "home": "Totems",
+   "away_score": 87,
+   "home_score": 7,
+   "winner": "Allays",
+   "margin": 80,
+   "result": "Final",
+   "winner_rank_before": 3,
+   "loser_rank_before": 10,
+   "upset": false,
+   "mvp": "Raccnn",
+   "away_team_stats": {
+    "Passing YD": 549.0,
+    "Rushing YD": 34.0,
+    "Rec YD": 549.0,
+    "Passing TD": 7.0,
+    "Rushing TD": 5.0,
+    "INT (O)": 1.0,
+    "Sacks": 8.0,
+    "INT (D)": 7.0,
+    "Tackles": 22.0
+   },
+   "home_team_stats": {
+    "Passing YD": 242.0,
+    "Rushing YD": -8.0,
+    "Rec YD": 242.0,
+    "Passing TD": 1.0,
+    "INT (O)": 7.0,
+    "Sacks": 1.0,
+    "INT (D)": 1.0,
+    "Tackles": 24.0
+   }
+  },
+  "closest_game": {
+   "away": "Raiders",
+   "home": "Traders",
+   "away_score": 56,
+   "home_score": 39,
+   "winner": "Raiders",
+   "margin": 17,
+   "result": "Final",
+   "winner_rank_before": 6,
+   "loser_rank_before": 9,
+   "upset": false,
+   "mvp": "Alexd8011",
+   "away_team_stats": {
+    "Passing YD": 642.0,
+    "Rushing YD": 1.0,
+    "Rec YD": 642.0,
+    "Passing TD": 8.0,
+    "Rushing TD": 1.0,
+    "INT (O)": 1.0,
+    "Sacks": 3.0,
+    "INT (D)": 4.0,
+    "Tackles": 20.0
+   },
+   "home_team_stats": {
+    "Passing YD": 495.0,
+    "Rushing YD": 52.0,
+    "Rec YD": 495.0,
+    "Passing TD": 6.0,
+    "INT (O)": 4.0,
+    "Sacks": 3.0,
+    "INT (D)": 1.0,
+    "Tackles": 24.0
+   }
+  },
+  "risers": [
+   {
+    "team": "Raiders",
+    "gp": 5,
+    "w": 3,
+    "l": 2,
+    "t": 0,
+    "record": "3-2",
+    "pf": 203,
+    "pa": 180,
+    "diff": 23,
+    "win_pct": 0.6,
+    "diff_per_game": 4.6,
+    "model_score": 55.2,
+    "power_score": 0.227,
+    "rank": 4,
+    "previous_rank": 6,
+    "change": 2
+   }
+  ],
+  "fallers": [
+   {
+    "team": "Tropics",
+    "gp": 5,
+    "w": 3,
+    "l": 2,
+    "t": 0,
+    "record": "3-2",
+    "pf": 176,
+    "pa": 157,
+    "diff": 19,
+    "win_pct": 0.6,
+    "diff_per_game": 3.8,
+    "model_score": 47.4,
+    "power_score": 0.161,
+    "rank": 5,
+    "previous_rank": 4,
+    "change": -1
+   },
+   {
+    "team": "Mountaineers",
+    "gp": 5,
+    "w": 2,
+    "l": 3,
+    "t": 0,
+    "record": "2-3",
+    "pf": 169,
+    "pa": 196,
+    "diff": -27,
+    "win_pct": 0.4,
+    "diff_per_game": -5.4,
+    "model_score": 54.3,
+    "power_score": -0.183,
+    "rank": 6,
+    "previous_rank": 5,
+    "change": -1
+   }
+  ],
+  "unbeaten": [
+   "Silverfish"
+  ],
+  "winless": [
+   "Totems"
+  ]
+ },
+ "method": "Power ranking (through the week): a weighted blend of z-scores --\n45% win percentage, 35% point differential per game, 20% the repo's\ndata-driven power model (power_model.py, fit on every game so far) once\nthere are enough games to fit it, else yardage differential per game.\n\nUnit rankings (through the week, per game with stats logged): each unit's\nstats turned into z-scores across the league and added up --\n  Quarterbacks:     passing yards + passing TD - interceptions + QBR/2\n  Receiving corps:  receiving yards + receiving TD + receptions/2\n  Defense:          - points allowed + sacks + interceptions\n                    + (tackles + swats + defensive TD)/2\n\nPlayer rankings (season totals through the week, top 5 each):\n  Quarterbacks:  passing yards + 20 x passing TD - 25 x interceptions\n  Receivers:     receiving yards + 20 x receiving TD\n  Defenders:     tackles + 4 x sacks + 5 x interceptions + 2 x swats\n                 + 10 x defensive TD\n\nNext week's predictions (from every game through the week): each team's\nexpected points = league average + its scoring edge (points scored per\ngame above average) + the opponent's defensive leak (points allowed per\ngame above average), each shrunk toward average for teams with few games\n(weight = games / (games + 2)), then tilted 1.5 points per unit of power\nscore difference. Win probability = normal CDF of the predicted margin\nover the league's spread of game margins so far. No home-field bonus.\n"
+}
