@@ -1,0 +1,1354 @@
+{
+ "league": "MFL",
+ "league_name": "Minecraft Football League",
+ "season": 21,
+ "week": 5,
+ "rivalry_week": false,
+ "games": [
+  {
+   "away": "Axolotls",
+   "home": "Ghasts",
+   "status": "not played"
+  },
+  {
+   "away": "Phantoms",
+   "home": "Breeze",
+   "status": "not played"
+  },
+  {
+   "away": "Guardians",
+   "home": "Magmas",
+   "away_score": 55,
+   "home_score": 49,
+   "winner": "Guardians",
+   "margin": 6,
+   "result": "Final",
+   "winner_rank_before": 4,
+   "loser_rank_before": 5,
+   "upset": false,
+   "mvp": "BradTheCool",
+   "away_team_stats": {
+    "Passing YD": 678.0,
+    "Rushing YD": -83.0,
+    "Rec YD": 678.0,
+    "Passing TD": 8.0,
+    "INT (O)": 3.0,
+    "Sacks": 3.0,
+    "INT (D)": 6.0,
+    "Tackles": 25.0
+   },
+   "home_team_stats": {
+    "Passing YD": 571.0,
+    "Rushing YD": -8.0,
+    "Rec YD": 571.0,
+    "Passing TD": 6.0,
+    "INT (O)": 6.0,
+    "Sacks": 5.0,
+    "INT (D)": 3.0,
+    "Tackles": 27.0
+   }
+  },
+  {
+   "away": "Blazes",
+   "home": "Gators",
+   "away_score": 42,
+   "home_score": 44,
+   "winner": "Gators",
+   "margin": 2,
+   "result": "Final",
+   "winner_rank_before": 7,
+   "loser_rank_before": 2,
+   "upset": true,
+   "mvp": "1e36",
+   "away_team_stats": {
+    "Passing YD": 473.0,
+    "Rushing YD": 108.0,
+    "Rec YD": 408.0,
+    "Passing TD": 5.0,
+    "Rushing TD": 1.0,
+    "INT (O)": 3.0,
+    "Sacks": 1.0,
+    "INT (D)": 3.0,
+    "Tackles": 12.0
+   },
+   "home_team_stats": {
+    "Passing YD": 637.0,
+    "Rushing YD": 2.0,
+    "Rec YD": 386.0,
+    "Passing TD": 4.0,
+    "Rushing TD": 1.0,
+    "INT (O)": 5.0,
+    "Sacks": 3.0,
+    "INT (D)": 3.0,
+    "Tackles": 21.0
+   }
+  }
+ ],
+ "power_rankings": [
+  {
+   "team": "Ghasts",
+   "gp": 4,
+   "w": 4,
+   "l": 0,
+   "t": 0,
+   "record": "4-0",
+   "pf": 186,
+   "pa": 158,
+   "diff": 28,
+   "win_pct": 1.0,
+   "diff_per_game": 7.0,
+   "model_score": 78.3,
+   "power_score": 1.241,
+   "rank": 1,
+   "previous_rank": 1,
+   "change": 0
+  },
+  {
+   "team": "Axolotls",
+   "gp": 4,
+   "w": 2,
+   "l": 2,
+   "t": 0,
+   "record": "2-2",
+   "pf": 130,
+   "pa": 46,
+   "diff": 84,
+   "win_pct": 0.5,
+   "diff_per_game": 21.0,
+   "model_score": 92.7,
+   "power_score": 1.007,
+   "rank": 2,
+   "previous_rank": 3,
+   "change": 1
+  },
+  {
+   "team": "Guardians",
+   "gp": 5,
+   "w": 4,
+   "l": 1,
+   "t": 0,
+   "record": "4-1",
+   "pf": 271,
+   "pa": 237,
+   "diff": 34,
+   "win_pct": 0.8,
+   "diff_per_game": 6.8,
+   "model_score": 62.9,
+   "power_score": 0.798,
+   "rank": 3,
+   "previous_rank": 4,
+   "change": 1
+  },
+  {
+   "team": "Blazes",
+   "gp": 5,
+   "w": 3,
+   "l": 2,
+   "t": 0,
+   "record": "3-2",
+   "pf": 236,
+   "pa": 176,
+   "diff": 60,
+   "win_pct": 0.6,
+   "diff_per_game": 12.0,
+   "model_score": 68.7,
+   "power_score": 0.694,
+   "rank": 4,
+   "previous_rank": 2,
+   "change": -2
+  },
+  {
+   "team": "Magmas",
+   "gp": 5,
+   "w": 2,
+   "l": 3,
+   "t": 0,
+   "record": "2-3",
+   "pf": 205,
+   "pa": 192,
+   "diff": 13,
+   "win_pct": 0.4,
+   "diff_per_game": 2.6,
+   "model_score": 45.4,
+   "power_score": -0.084,
+   "rank": 5,
+   "previous_rank": 5,
+   "change": 0
+  },
+  {
+   "team": "Gators",
+   "gp": 5,
+   "w": 3,
+   "l": 2,
+   "t": 0,
+   "record": "3-2",
+   "pf": 169,
+   "pa": 193,
+   "diff": -24,
+   "win_pct": 0.6,
+   "diff_per_game": -4.8,
+   "model_score": 25.8,
+   "power_score": -0.161,
+   "rank": 6,
+   "previous_rank": 7,
+   "change": 1
+  },
+  {
+   "team": "Phantoms",
+   "gp": 4,
+   "w": 2,
+   "l": 2,
+   "t": 0,
+   "record": "2-2",
+   "pf": 72,
+   "pa": 103,
+   "diff": -31,
+   "win_pct": 0.5,
+   "diff_per_game": -7.8,
+   "model_score": 36.6,
+   "power_score": -0.307,
+   "rank": 7,
+   "previous_rank": 6,
+   "change": -1
+  },
+  {
+   "team": "Breeze",
+   "gp": 4,
+   "w": 2,
+   "l": 2,
+   "t": 0,
+   "record": "2-2",
+   "pf": 81,
+   "pa": 110,
+   "diff": -29,
+   "win_pct": 0.5,
+   "diff_per_game": -7.2,
+   "model_score": 24.8,
+   "power_score": -0.393,
+   "rank": 8,
+   "previous_rank": 8,
+   "change": 0
+  },
+  {
+   "team": "Dragons",
+   "gp": 4,
+   "w": 0,
+   "l": 4,
+   "t": 0,
+   "record": "0-4",
+   "pf": 88,
+   "pa": 133,
+   "diff": -45,
+   "win_pct": 0.0,
+   "diff_per_game": -11.2,
+   "model_score": 23.8,
+   "power_score": -1.281,
+   "rank": 9,
+   "previous_rank": 9,
+   "change": 0
+  },
+  {
+   "team": "Polar Bears",
+   "gp": 4,
+   "w": 0,
+   "l": 4,
+   "t": 0,
+   "record": "0-4",
+   "pf": 48,
+   "pa": 138,
+   "diff": -90,
+   "win_pct": 0.0,
+   "diff_per_game": -22.5,
+   "model_score": 34.6,
+   "power_score": -1.515,
+   "rank": 10,
+   "previous_rank": 10,
+   "change": 0
+  }
+ ],
+ "unit_rankings": [
+  {
+   "unit": "Quarterbacks",
+   "key": "qb",
+   "rankings": [
+    {
+     "team": "Axolotls",
+     "score": 6.412,
+     "per_game": {
+      "Passing YD": 754.0,
+      "Passing TD": 8.5,
+      "INT (O)": 1.5,
+      "QBR": 129.0
+     },
+     "leader": {
+      "player": "eennvy",
+      "season_line": "1489 pass yds, 16 pass TD, 3 INT thrown, -59 rush yds, 1 rec, 23 rec yds, 1 rec TD, 8 tackles, 2 sacks, 5 INT, 1 swats"
+     },
+     "rank": 1
+    },
+    {
+     "team": "Guardians",
+     "score": 2.45,
+     "per_game": {
+      "Passing YD": 692.0,
+      "Passing TD": 7.4,
+      "INT (O)": 4.2,
+      "QBR": 100.3
+     },
+     "leader": {
+      "player": "BradTheCool",
+      "season_line": "3270 pass yds, 34 pass TD, 19 INT thrown, -165 rush yds, 2 rec, 100 rec yds, 2 rec TD, 24 tackles, 2 sacks, 5 INT, 18 swats"
+     },
+     "rank": 2
+    },
+    {
+     "team": "Magmas",
+     "score": 1.683,
+     "per_game": {
+      "Passing YD": 564.8,
+      "Passing TD": 6.8,
+      "INT (O)": 3.5,
+      "QBR": 97.0
+     },
+     "leader": {
+      "player": "beefourr",
+      "season_line": "2212 pass yds, 26 pass TD, 13 INT thrown, 41 rush yds, 1 rec, 36 tackles, 1 sacks, 7 INT, 7 swats"
+     },
+     "rank": 3
+    },
+    {
+     "team": "Blazes",
+     "score": 1.514,
+     "per_game": {
+      "Passing YD": 429.0,
+      "Passing TD": 5.2,
+      "INT (O)": 2.0,
+      "QBR": 113.8
+     },
+     "leader": {
+      "player": "Vx3sty",
+      "season_line": "2145 pass yds, 26 pass TD, 10 INT thrown, 184 rush yds, 1 rush TD, 31 tackles, 10 INT, 5 swats, 1 def TD"
+     },
+     "rank": 4
+    },
+    {
+     "team": "Ghasts",
+     "score": 0.275,
+     "per_game": {
+      "Passing YD": 585.5,
+      "Passing TD": 6.0,
+      "INT (O)": 4.5,
+      "QBR": 82.1
+     },
+     "leader": {
+      "player": "Avoidss",
+      "season_line": "1175 pass yds, 12 pass TD, 8 INT thrown, 51 rush yds, 13 rec, 383 rec yds, 5 rec TD, 19 tackles, 2 sacks, 9 INT, 8 swats"
+     },
+     "rank": 5
+    },
+    {
+     "team": "Gators",
+     "score": -1.037,
+     "per_game": {
+      "Passing YD": 494.6,
+      "Passing TD": 4.6,
+      "INT (O)": 4.4,
+      "QBR": 82.3
+     },
+     "leader": {
+      "player": "Dead_Rr",
+      "season_line": "1496 pass yds, 16 pass TD, 13 INT thrown, -141 rush yds, 14 tackles, 1 sacks, 1 INT, 8 swats"
+     },
+     "rank": 6
+    },
+    {
+     "team": "Breeze",
+     "score": -2.315,
+     "per_game": {
+      "Passing YD": 426.3,
+      "Passing TD": 3.7,
+      "INT (O)": 4.7,
+      "QBR": 79.7
+     },
+     "leader": {
+      "player": "Arxtlc",
+      "season_line": "843 pass yds, 9 pass TD, 11 INT thrown, -16 rush yds, 13 tackles"
+     },
+     "rank": 7
+    },
+    {
+     "team": "Dragons",
+     "score": -2.445,
+     "per_game": {
+      "Passing YD": 407.3,
+      "Passing TD": 3.3,
+      "INT (O)": 4.3,
+      "QBR": 75.1
+     },
+     "leader": {
+      "player": "nood",
+      "season_line": "1133 pass yds, 9 pass TD, 13 INT thrown, -33 rush yds, 1 rush TD, 1 rec, 36 rec yds, 17 tackles, 2 INT"
+     },
+     "rank": 8
+    },
+    {
+     "team": "Phantoms",
+     "score": -2.57,
+     "per_game": {
+      "Passing YD": 482.5,
+      "Passing TD": 4.5,
+      "INT (O)": 5.5,
+      "QBR": 61.7
+     },
+     "leader": {
+      "player": "Henryvz",
+      "season_line": "965 pass yds, 9 pass TD, 11 INT thrown, 11 rush yds, 11 tackles, 2 sacks, 3 INT, 1 swats"
+     },
+     "rank": 9
+    },
+    {
+     "team": "Polar Bears",
+     "score": -3.968,
+     "per_game": {
+      "Passing YD": 285.0,
+      "Passing TD": 1.7,
+      "INT (O)": 3.3,
+      "QBR": 47.8
+     },
+     "leader": {
+      "player": "M7ku",
+      "season_line": "407 pass yds, 3 pass TD, 5 INT thrown, -11 rush yds, 1 rush TD, 8 rec, 192 rec yds, 1 rec TD, 10 tackles, 2 sacks, 2 swats"
+     },
+     "rank": 10
+    }
+   ]
+  },
+  {
+   "unit": "Receiving corps",
+   "key": "rec",
+   "rankings": [
+    {
+     "team": "Guardians",
+     "score": 3.93,
+     "per_game": {
+      "Rec YD": 660.4,
+      "Rec TD": 6.8,
+      "Rec": 25.2
+     },
+     "leader": {
+      "player": "slicksters",
+      "season_line": "51 rec, 1756 rec yds, 17 rec TD, 39 tackles, 2 sacks, 8 INT"
+     },
+     "rank": 1
+    },
+    {
+     "team": "Ghasts",
+     "score": 2.911,
+     "per_game": {
+      "Rec YD": 585.5,
+      "Rec TD": 6.0,
+      "Rec": 27.0
+     },
+     "leader": {
+      "player": "Cxozy",
+      "season_line": "55 pass yds, 1 pass TD, 12 rush yds, 1 rush TD, 64 rec, 1356 rec yds, 13 rec TD, 24 tackles, 2 sacks, 1 INT, 3 swats"
+     },
+     "rank": 2
+    },
+    {
+     "team": "Magmas",
+     "score": 1.651,
+     "per_game": {
+      "Rec YD": 509.8,
+      "Rec TD": 5.8,
+      "Rec": 23.0
+     },
+     "leader": {
+      "player": "NotQC1",
+      "season_line": "-3 rush yds, 42 rec, 968 rec yds, 12 rec TD, 20 tackles, 2 sacks, 1 INT, 9 swats"
+     },
+     "rank": 3
+    },
+    {
+     "team": "Axolotls",
+     "score": 1.262,
+     "per_game": {
+      "Rec YD": 494.0,
+      "Rec TD": 6.0,
+      "Rec": 19.0
+     },
+     "leader": {
+      "player": "Mbz_",
+      "season_line": "22 rec, 647 rec yds, 8 rec TD, 2 tackles, 1 INT, 1 swats"
+     },
+     "rank": 4
+    },
+    {
+     "team": "Blazes",
+     "score": 0.096,
+     "per_game": {
+      "Rec YD": 416.0,
+      "Rec TD": 5.2,
+      "Rec": 19.6
+     },
+     "leader": {
+      "player": "1e36",
+      "season_line": "155 rush yds, 6 rush TD, 62 rec, 1302 rec yds, 21 rec TD, 36 tackles, 5 sacks, 2 INT, 14 swats"
+     },
+     "rank": 5
+    },
+    {
+     "team": "Phantoms",
+     "score": -0.174,
+     "per_game": {
+      "Rec YD": 420.0,
+      "Rec TD": 4.0,
+      "Rec": 24.0
+     },
+     "leader": {
+      "player": "TECHhector",
+      "season_line": "7 rush yds, 1 rush TD, 36 rec, 534 rec yds, 5 rec TD, 15 tackles, 1 INT, 7 swats"
+     },
+     "rank": 6
+    },
+    {
+     "team": "Gators",
+     "score": -0.796,
+     "per_game": {
+      "Rec YD": 411.6,
+      "Rec TD": 4.4,
+      "Rec": 16.0
+     },
+     "leader": {
+      "player": "B0TZ_",
+      "season_line": "1 INT thrown, 34 rush yds, 1 rush TD, 44 rec, 1543 rec yds, 19 rec TD, 46 tackles, 7 INT, 2 swats"
+     },
+     "rank": 7
+    },
+    {
+     "team": "Breeze",
+     "score": -2.383,
+     "per_game": {
+      "Rec YD": 326.7,
+      "Rec TD": 3.3,
+      "Rec": 14.7
+     },
+     "leader": {
+      "player": "L8_Knight",
+      "season_line": "11 rush yds, 29 rec, 729 rec yds, 7 rec TD, 23 tackles, 5 sacks, 1 INT, 4 swats"
+     },
+     "rank": 8
+    },
+    {
+     "team": "Dragons",
+     "score": -2.45,
+     "per_game": {
+      "Rec YD": 389.0,
+      "Rec TD": 2.3,
+      "Rec": 14.3
+     },
+     "leader": {
+      "player": "tkzq",
+      "season_line": "12 rec, 447 rec yds, 2 rec TD, 7 tackles, 2 INT, 1 def TD"
+     },
+     "rank": 9
+    },
+    {
+     "team": "Polar Bears",
+     "score": -4.048,
+     "per_game": {
+      "Rec YD": 297.7,
+      "Rec TD": 1.7,
+      "Rec": 11.0
+     },
+     "leader": {
+      "player": "ilyfade",
+      "season_line": "11 rec, 279 rec yds, 2 rec TD, 8 tackles, 4 INT"
+     },
+     "rank": 10
+    }
+   ]
+  },
+  {
+   "unit": "Defense",
+   "key": "defense",
+   "rankings": [
+    {
+     "team": "Phantoms",
+     "score": 3.101,
+     "per_game": {
+      "points allowed": 25.8,
+      "Sacks": 5.0,
+      "INT (D)": 3.5,
+      "Tackles": 23.5,
+      "Swats": 8.0,
+      "Def TD": 0.0
+     },
+     "leader": {
+      "player": "TECHhector",
+      "season_line": "7 rush yds, 1 rush TD, 36 rec, 534 rec yds, 5 rec TD, 15 tackles, 1 INT, 7 swats"
+     },
+     "rank": 1
+    },
+    {
+     "team": "Blazes",
+     "score": 2.25,
+     "per_game": {
+      "points allowed": 35.2,
+      "Sacks": 4.6,
+      "INT (D)": 4.0,
+      "Tackles": 19.6,
+      "Swats": 6.4,
+      "Def TD": 0.2
+     },
+     "leader": {
+      "player": "1e36",
+      "season_line": "155 rush yds, 6 rush TD, 62 rec, 1302 rec yds, 21 rec TD, 36 tackles, 5 sacks, 2 INT, 14 swats"
+     },
+     "rank": 2
+    },
+    {
+     "team": "Ghasts",
+     "score": 1.847,
+     "per_game": {
+      "points allowed": 39.5,
+      "Sacks": 3.5,
+      "INT (D)": 5.0,
+      "Tackles": 20.8,
+      "Swats": 9.5,
+      "Def TD": 0.0
+     },
+     "leader": {
+      "player": "Cxozy",
+      "season_line": "55 pass yds, 1 pass TD, 12 rush yds, 1 rush TD, 64 rec, 1356 rec yds, 13 rec TD, 24 tackles, 2 sacks, 1 INT, 3 swats"
+     },
+     "rank": 3
+    },
+    {
+     "team": "Axolotls",
+     "score": 1.284,
+     "per_game": {
+      "points allowed": 11.5,
+      "Sacks": 3.0,
+      "INT (D)": 4.5,
+      "Tackles": 11.5,
+      "Swats": 4.0,
+      "Def TD": 0.0
+     },
+     "leader": {
+      "player": "DilPM",
+      "season_line": "15 rec, 318 rec yds, 3 rec TD, 11 tackles, 3 INT"
+     },
+     "rank": 4
+    },
+    {
+     "team": "Guardians",
+     "score": -0.062,
+     "per_game": {
+      "points allowed": 47.4,
+      "Sacks": 3.6,
+      "INT (D)": 4.6,
+      "Tackles": 21.8,
+      "Swats": 5.4,
+      "Def TD": 0.0
+     },
+     "leader": {
+      "player": "slicksters",
+      "season_line": "51 rec, 1756 rec yds, 17 rec TD, 39 tackles, 2 sacks, 8 INT"
+     },
+     "rank": 5
+    },
+    {
+     "team": "Magmas",
+     "score": -0.546,
+     "per_game": {
+      "points allowed": 38.4,
+      "Sacks": 2.5,
+      "INT (D)": 3.8,
+      "Tackles": 23.0,
+      "Swats": 6.8,
+      "Def TD": 0.0
+     },
+     "leader": {
+      "player": "beefourr",
+      "season_line": "2212 pass yds, 26 pass TD, 13 INT thrown, 41 rush yds, 1 rec, 36 tackles, 1 sacks, 7 INT, 7 swats"
+     },
+     "rank": 6
+    },
+    {
+     "team": "Dragons",
+     "score": -0.899,
+     "per_game": {
+      "points allowed": 33.2,
+      "Sacks": 1.3,
+      "INT (D)": 3.3,
+      "Tackles": 19.0,
+      "Swats": 5.3,
+      "Def TD": 0.3
+     },
+     "leader": {
+      "player": "nood",
+      "season_line": "1133 pass yds, 9 pass TD, 13 INT thrown, -33 rush yds, 1 rush TD, 1 rec, 36 rec yds, 17 tackles, 2 INT"
+     },
+     "rank": 7
+    },
+    {
+     "team": "Breeze",
+     "score": -1.515,
+     "per_game": {
+      "points allowed": 27.5,
+      "Sacks": 4.0,
+      "INT (D)": 2.0,
+      "Tackles": 20.0,
+      "Swats": 1.7,
+      "Def TD": 0.0
+     },
+     "leader": {
+      "player": "L8_Knight",
+      "season_line": "11 rush yds, 29 rec, 729 rec yds, 7 rec TD, 23 tackles, 5 sacks, 1 INT, 4 swats"
+     },
+     "rank": 8
+    },
+    {
+     "team": "Polar Bears",
+     "score": -2.114,
+     "per_game": {
+      "points allowed": 34.5,
+      "Sacks": 3.3,
+      "INT (D)": 2.7,
+      "Tackles": 18.7,
+      "Swats": 2.7,
+      "Def TD": 0.0
+     },
+     "leader": {
+      "player": "purgutory",
+      "season_line": "144 pass yds, 1 pass TD, 3 INT thrown, -19 rush yds, 4 rec, 166 rec yds, 1 rec TD, 16 tackles, 1 sacks, 1 INT"
+     },
+     "rank": 9
+    },
+    {
+     "team": "Gators",
+     "score": -3.347,
+     "per_game": {
+      "points allowed": 38.6,
+      "Sacks": 1.6,
+      "INT (D)": 2.8,
+      "Tackles": 22.4,
+      "Swats": 2.8,
+      "Def TD": 0.0
+     },
+     "leader": {
+      "player": "B0TZ_",
+      "season_line": "1 INT thrown, 34 rush yds, 1 rush TD, 44 rec, 1543 rec yds, 19 rec TD, 46 tackles, 7 INT, 2 swats"
+     },
+     "rank": 10
+    }
+   ]
+  }
+ ],
+ "player_rankings": [
+  {
+   "position": "Quarterbacks",
+   "key": "qb",
+   "rankings": [
+    {
+     "rank": 1,
+     "player": "BradTheCool",
+     "team": "Guardians",
+     "games": 5,
+     "stats": {
+      "Pass Comp": 139.0,
+      "Pass Att": 249.0,
+      "Passing YD": 3270.0,
+      "Passing TD": 34.0,
+      "INT (O)": 19.0,
+      "Rushing YD": -165.0,
+      "QBR": 108.7
+     },
+     "score": 3475.0
+    },
+    {
+     "rank": 2,
+     "player": "Vx3sty",
+     "team": "Blazes",
+     "games": 5,
+     "stats": {
+      "Pass Comp": 103.0,
+      "Pass Att": 185.0,
+      "Passing YD": 2145.0,
+      "Passing TD": 26.0,
+      "INT (O)": 10.0,
+      "Rushing YD": 184.0,
+      "QBR": 113.8
+     },
+     "score": 2415.0
+    },
+    {
+     "rank": 3,
+     "player": "beefourr",
+     "team": "Polar Bears",
+     "games": 5,
+     "stats": {
+      "Pass Comp": 111.0,
+      "Pass Att": 217.0,
+      "Passing YD": 2212.0,
+      "Passing TD": 26.0,
+      "INT (O)": 13.0,
+      "Rushing YD": 41.0,
+      "QBR": 98.5
+     },
+     "score": 2407.0
+    },
+    {
+     "rank": 4,
+     "player": "nood",
+     "team": "Gators",
+     "games": 5,
+     "stats": {
+      "Pass Comp": 73.0,
+      "Pass Att": 178.0,
+      "Passing YD": 2110.0,
+      "Passing TD": 16.0,
+      "INT (O)": 21.0,
+      "Rushing YD": -63.0,
+      "QBR": 76.3
+     },
+     "score": 1905.0
+    },
+    {
+     "rank": 5,
+     "player": "eennvy",
+     "team": "Axolotls",
+     "games": 2,
+     "stats": {
+      "Pass Comp": 57.0,
+      "Pass Att": 102.0,
+      "Passing YD": 1489.0,
+      "Passing TD": 16.0,
+      "INT (O)": 3.0,
+      "Rushing YD": -59.0,
+      "QBR": 128.0
+     },
+     "score": 1734.0
+    }
+   ]
+  },
+  {
+   "position": "Receivers",
+   "key": "rec",
+   "rankings": [
+    {
+     "rank": 1,
+     "player": "slicksters",
+     "team": "Guardians",
+     "games": 4,
+     "stats": {
+      "Rec": 51.0,
+      "Rec YD": 1756.0,
+      "Rec TD": 17.0
+     },
+     "score": 2096.0
+    },
+    {
+     "rank": 2,
+     "player": "B0TZ_",
+     "team": "Gators",
+     "games": 5,
+     "stats": {
+      "Rec": 44.0,
+      "Rec YD": 1543.0,
+      "Rec TD": 19.0
+     },
+     "score": 1923.0
+    },
+    {
+     "rank": 3,
+     "player": "1e36",
+     "team": "Blazes",
+     "games": 5,
+     "stats": {
+      "Rec": 62.0,
+      "Rec YD": 1302.0,
+      "Rec TD": 21.0
+     },
+     "score": 1722.0
+    },
+    {
+     "rank": 4,
+     "player": "Cxozy",
+     "team": "Ghasts",
+     "games": 4,
+     "stats": {
+      "Rec": 64.0,
+      "Rec YD": 1356.0,
+      "Rec TD": 13.0
+     },
+     "score": 1616.0
+    },
+    {
+     "rank": 5,
+     "player": "BigPoppaRS",
+     "team": "Guardians",
+     "games": 3,
+     "stats": {
+      "Rec": 54.0,
+      "Rec YD": 1114.0,
+      "Rec TD": 14.0
+     },
+     "score": 1394.0
+    }
+   ]
+  },
+  {
+   "position": "Defenders",
+   "key": "def",
+   "rankings": [
+    {
+     "rank": 1,
+     "player": "beefourr",
+     "team": "Polar Bears",
+     "games": 5,
+     "stats": {
+      "Tackles": 36.0,
+      "Sacks": 2.0,
+      "INT (D)": 7.0,
+      "Swats": 12.0
+     },
+     "score": 103.0
+    },
+    {
+     "rank": 2,
+     "player": "Vx3sty",
+     "team": "Blazes",
+     "games": 5,
+     "stats": {
+      "Tackles": 31.0,
+      "INT (D)": 10.0,
+      "Swats": 5.0,
+      "Def TD": 1.0
+     },
+     "score": 101.0
+    },
+    {
+     "rank": 3,
+     "player": "1e36",
+     "team": "Blazes",
+     "games": 5,
+     "stats": {
+      "Tackles": 36.0,
+      "Sacks": 5.0,
+      "INT (D)": 2.0,
+      "Swats": 14.0
+     },
+     "score": 94.0
+    },
+    {
+     "rank": 4,
+     "player": "Someb0ddy",
+     "team": "Blazes",
+     "games": 4,
+     "stats": {
+      "Tackles": 3.0,
+      "Sacks": 17.0,
+      "INT (D)": 2.0,
+      "Swats": 6.0
+     },
+     "score": 93.0
+    },
+    {
+     "rank": 5,
+     "player": "BradTheCool",
+     "team": "Guardians",
+     "games": 5,
+     "stats": {
+      "Tackles": 24.0,
+      "Sacks": 2.0,
+      "INT (D)": 5.0,
+      "Swats": 18.0
+     },
+     "score": 93.0
+    }
+   ]
+  }
+ ],
+ "next_week": {
+  "week": 6,
+  "rivalry_week": false,
+  "predictions": [
+   {
+    "away": "Phantoms",
+    "home": "Ghasts",
+    "away_record": "2-2",
+    "home_record": "4-0",
+    "away_power_rank": 7,
+    "home_power_rank": 1,
+    "when": null,
+    "predicted_score": {
+     "Phantoms": 26,
+     "Ghasts": 38
+    },
+    "favorite": "Ghasts",
+    "win_probability": {
+     "Phantoms": 28,
+     "Ghasts": 72
+    },
+    "confidence": "solid",
+    "unit_matchups": {
+     "away": {
+      "qb": 9,
+      "receiving": 6,
+      "defense": 1
+     },
+     "home": {
+      "qb": 5,
+      "receiving": 2,
+      "defense": 3
+     }
+    }
+   },
+   {
+    "away": "Guardians",
+    "home": "Gators",
+    "away_record": "4-1",
+    "home_record": "3-2",
+    "away_power_rank": 3,
+    "home_power_rank": 6,
+    "when": null,
+    "predicted_score": {
+     "Guardians": 53,
+     "Gators": 43
+    },
+    "favorite": "Guardians",
+    "win_probability": {
+     "Guardians": 68,
+     "Gators": 32
+    },
+    "confidence": "solid",
+    "unit_matchups": {
+     "away": {
+      "qb": 2,
+      "receiving": 1,
+      "defense": 5
+     },
+     "home": {
+      "qb": 6,
+      "receiving": 7,
+      "defense": 10
+     }
+    }
+   },
+   {
+    "away": "Axolotls",
+    "home": "Magmas",
+    "away_record": "2-2",
+    "home_record": "2-3",
+    "away_power_rank": 2,
+    "home_power_rank": 5,
+    "when": null,
+    "predicted_score": {
+     "Axolotls": 37,
+     "Magmas": 23
+    },
+    "favorite": "Axolotls",
+    "win_probability": {
+     "Axolotls": 74,
+     "Magmas": 26
+    },
+    "confidence": "solid",
+    "unit_matchups": {
+     "away": {
+      "qb": 1,
+      "receiving": 4,
+      "defense": 4
+     },
+     "home": {
+      "qb": 3,
+      "receiving": 3,
+      "defense": 6
+     }
+    }
+   }
+  ]
+ },
+ "top_performers": [
+  {
+   "player": "BradTheCool",
+   "team": "Guardians",
+   "opponent": "Magmas",
+   "fp": 175.5,
+   "line": "637 pass yds, 7 pass TD, 2 INT thrown, -81 rush yds, 1 rec, 41 rec yds, 1 rec TD, 7 tackles, 1 sacks, 3 INT, 5 swats"
+  },
+  {
+   "player": "Cozyyy",
+   "team": "Magmas",
+   "opponent": "Guardians",
+   "fp": 139.0,
+   "line": "1 INT thrown, 14 rec, 262 rec yds, 3 rec TD, 13 tackles, 1 sacks, 2 INT"
+  },
+  {
+   "player": "1e36",
+   "team": "Blazes",
+   "opponent": "Gators",
+   "fp": 134.8,
+   "line": "45 rush yds, 1 rush TD, 19 rec, 408 rec yds, 5 rec TD, 6 tackles, 1 INT, 2 swats"
+  },
+  {
+   "player": "nood",
+   "team": "Gators",
+   "opponent": "Blazes",
+   "fp": 132.3,
+   "line": "637 pass yds, 4 pass TD, 5 INT thrown, -9 rush yds, 9 tackles, 2 sacks"
+  },
+  {
+   "player": "B0TZ_",
+   "team": "Gators",
+   "opponent": "Blazes",
+   "fp": 128.1,
+   "line": "11 rush yds, 1 rush TD, 11 rec, 386 rec yds, 4 rec TD, 8 tackles, 3 INT"
+  },
+  {
+   "player": "beefourr",
+   "team": "Magmas",
+   "opponent": "Guardians",
+   "fp": 126.1,
+   "line": "571 pass yds, 6 pass TD, 5 INT thrown, -8 rush yds, 6 tackles, 1 sacks, 1 INT"
+  },
+  {
+   "player": "BigPoppaRS",
+   "team": "Guardians",
+   "opponent": "Magmas",
+   "fp": 123.7,
+   "line": "41 pass yds, 1 pass TD, 1 INT thrown, -2 rush yds, 19 rec, 397 rec yds, 2 rec TD, 8 tackles, 1 INT"
+  },
+  {
+   "player": "Vx3sty",
+   "team": "Blazes",
+   "opponent": "Gators",
+   "fp": 120.8,
+   "line": "473 pass yds, 5 pass TD, 3 INT thrown, 63 rush yds, 4 tackles, 2 INT, 2 swats"
+  },
+  {
+   "player": "TheJehovah",
+   "team": "Magmas",
+   "opponent": "Guardians",
+   "fp": 110.6,
+   "line": "4 rec, 62 rec yds, 1 rec TD, 3 tackles, 3 sacks, 3 swats"
+  },
+  {
+   "player": "slicksters",
+   "team": "Guardians",
+   "opponent": "Magmas",
+   "fp": 107.7,
+   "line": "10 rec, 240 rec yds, 5 rec TD, 8 tackles, 1 sacks, 1 INT"
+  }
+ ],
+ "highlights": {
+  "upsets": [
+   {
+    "away": "Blazes",
+    "home": "Gators",
+    "away_score": 42,
+    "home_score": 44,
+    "winner": "Gators",
+    "margin": 2,
+    "result": "Final",
+    "winner_rank_before": 7,
+    "loser_rank_before": 2,
+    "upset": true,
+    "mvp": "1e36",
+    "away_team_stats": {
+     "Passing YD": 473.0,
+     "Rushing YD": 108.0,
+     "Rec YD": 408.0,
+     "Passing TD": 5.0,
+     "Rushing TD": 1.0,
+     "INT (O)": 3.0,
+     "Sacks": 1.0,
+     "INT (D)": 3.0,
+     "Tackles": 12.0
+    },
+    "home_team_stats": {
+     "Passing YD": 637.0,
+     "Rushing YD": 2.0,
+     "Rec YD": 386.0,
+     "Passing TD": 4.0,
+     "Rushing TD": 1.0,
+     "INT (O)": 5.0,
+     "Sacks": 3.0,
+     "INT (D)": 3.0,
+     "Tackles": 21.0
+    }
+   }
+  ],
+  "biggest_blowout": {
+   "away": "Guardians",
+   "home": "Magmas",
+   "away_score": 55,
+   "home_score": 49,
+   "winner": "Guardians",
+   "margin": 6,
+   "result": "Final",
+   "winner_rank_before": 4,
+   "loser_rank_before": 5,
+   "upset": false,
+   "mvp": "BradTheCool",
+   "away_team_stats": {
+    "Passing YD": 678.0,
+    "Rushing YD": -83.0,
+    "Rec YD": 678.0,
+    "Passing TD": 8.0,
+    "INT (O)": 3.0,
+    "Sacks": 3.0,
+    "INT (D)": 6.0,
+    "Tackles": 25.0
+   },
+   "home_team_stats": {
+    "Passing YD": 571.0,
+    "Rushing YD": -8.0,
+    "Rec YD": 571.0,
+    "Passing TD": 6.0,
+    "INT (O)": 6.0,
+    "Sacks": 5.0,
+    "INT (D)": 3.0,
+    "Tackles": 27.0
+   }
+  },
+  "closest_game": {
+   "away": "Blazes",
+   "home": "Gators",
+   "away_score": 42,
+   "home_score": 44,
+   "winner": "Gators",
+   "margin": 2,
+   "result": "Final",
+   "winner_rank_before": 7,
+   "loser_rank_before": 2,
+   "upset": true,
+   "mvp": "1e36",
+   "away_team_stats": {
+    "Passing YD": 473.0,
+    "Rushing YD": 108.0,
+    "Rec YD": 408.0,
+    "Passing TD": 5.0,
+    "Rushing TD": 1.0,
+    "INT (O)": 3.0,
+    "Sacks": 1.0,
+    "INT (D)": 3.0,
+    "Tackles": 12.0
+   },
+   "home_team_stats": {
+    "Passing YD": 637.0,
+    "Rushing YD": 2.0,
+    "Rec YD": 386.0,
+    "Passing TD": 4.0,
+    "Rushing TD": 1.0,
+    "INT (O)": 5.0,
+    "Sacks": 3.0,
+    "INT (D)": 3.0,
+    "Tackles": 21.0
+   }
+  },
+  "risers": [
+   {
+    "team": "Axolotls",
+    "gp": 4,
+    "w": 2,
+    "l": 2,
+    "t": 0,
+    "record": "2-2",
+    "pf": 130,
+    "pa": 46,
+    "diff": 84,
+    "win_pct": 0.5,
+    "diff_per_game": 21.0,
+    "model_score": 92.7,
+    "power_score": 1.007,
+    "rank": 2,
+    "previous_rank": 3,
+    "change": 1
+   },
+   {
+    "team": "Guardians",
+    "gp": 5,
+    "w": 4,
+    "l": 1,
+    "t": 0,
+    "record": "4-1",
+    "pf": 271,
+    "pa": 237,
+    "diff": 34,
+    "win_pct": 0.8,
+    "diff_per_game": 6.8,
+    "model_score": 62.9,
+    "power_score": 0.798,
+    "rank": 3,
+    "previous_rank": 4,
+    "change": 1
+   },
+   {
+    "team": "Gators",
+    "gp": 5,
+    "w": 3,
+    "l": 2,
+    "t": 0,
+    "record": "3-2",
+    "pf": 169,
+    "pa": 193,
+    "diff": -24,
+    "win_pct": 0.6,
+    "diff_per_game": -4.8,
+    "model_score": 25.8,
+    "power_score": -0.161,
+    "rank": 6,
+    "previous_rank": 7,
+    "change": 1
+   }
+  ],
+  "fallers": [
+   {
+    "team": "Blazes",
+    "gp": 5,
+    "w": 3,
+    "l": 2,
+    "t": 0,
+    "record": "3-2",
+    "pf": 236,
+    "pa": 176,
+    "diff": 60,
+    "win_pct": 0.6,
+    "diff_per_game": 12.0,
+    "model_score": 68.7,
+    "power_score": 0.694,
+    "rank": 4,
+    "previous_rank": 2,
+    "change": -2
+   },
+   {
+    "team": "Phantoms",
+    "gp": 4,
+    "w": 2,
+    "l": 2,
+    "t": 0,
+    "record": "2-2",
+    "pf": 72,
+    "pa": 103,
+    "diff": -31,
+    "win_pct": 0.5,
+    "diff_per_game": -7.8,
+    "model_score": 36.6,
+    "power_score": -0.307,
+    "rank": 7,
+    "previous_rank": 6,
+    "change": -1
+   }
+  ],
+  "unbeaten": [
+   "Ghasts"
+  ],
+  "winless": [
+   "Dragons",
+   "Polar Bears"
+  ]
+ },
+ "method": "Power ranking (through the week): a weighted blend of z-scores --\n45% win percentage, 35% point differential per game, 20% the repo's\ndata-driven power model (power_model.py, fit on every game so far) once\nthere are enough games to fit it, else yardage differential per game.\n\nUnit rankings (through the week, per game with stats logged): each unit's\nstats turned into z-scores across the league and added up --\n  Quarterbacks:     passing yards + passing TD - interceptions + QBR/2\n  Receiving corps:  receiving yards + receiving TD + receptions/2\n  Defense:          - points allowed + sacks + interceptions\n                    + (tackles + swats + defensive TD)/2\n\nPlayer rankings (season totals through the week, top 5 each):\n  Quarterbacks:  passing yards + 20 x passing TD - 25 x interceptions\n  Receivers:     receiving yards + 20 x receiving TD\n  Defenders:     tackles + 4 x sacks + 5 x interceptions + 2 x swats\n                 + 10 x defensive TD\n\nNext week's predictions (from every game through the week): each team's\nexpected points = league average + its scoring edge (points scored per\ngame above average) + the opponent's defensive leak (points allowed per\ngame above average), each shrunk toward average for teams with few games\n(weight = games / (games + 2)), then tilted 1.5 points per unit of power\nscore difference. Win probability = normal CDF of the predicted margin\nover the league's spread of game margins so far. No home-field bonus.\n"
+}
