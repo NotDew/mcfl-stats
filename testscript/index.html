@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Play Tracking</title>
+<style>
+:root{color-scheme:dark;--bg:#101214;--panel:#191d20;--line:#30363b;--muted:#9aa3aa;--text:#e7eaec;--blue:#6aa9e9;--red:#e47b7b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 Arial,Helvetica,sans-serif}main{max-width:1480px;margin:auto;padding:26px 20px}
+h1{font-size:22px;font-weight:600;margin:0 0 5px}.sub{color:var(--muted);margin-bottom:20px}
+.files,.panel{background:var(--panel);border:1px solid var(--line);padding:14px}.files{display:flex;gap:14px;align-items:end;flex-wrap:wrap;margin-bottom:15px}.file{display:grid;gap:5px;color:var(--muted);font-size:12px}input[type=file]{max-width:260px;color:var(--text);font-size:12px}
+button,select{background:#292f34;border:1px solid #414950;color:var(--text);padding:8px 11px;border-radius:3px;font:inherit;cursor:pointer}button:hover{background:#343c42}.status,.muted{color:var(--muted);font-size:12px}.status{margin-left:auto}
+.tabs{display:flex;gap:8px;margin:0 0 14px;border-bottom:1px solid var(--line)}.tab{border:0;border-bottom:2px solid transparent;border-radius:0;background:transparent;padding:11px 16px;color:var(--muted);font-weight:600}.tab.active{color:var(--text);border-bottom-color:#6aa9e9;background:#1b2228}.tabpane{display:block}.tabpane[hidden]{display:none!important}.pbp-list{max-height:280px;overflow:auto;display:grid;gap:6px}.pbp-row{display:grid;grid-template-columns:60px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:#20262b;border:1px solid #343c42}.pbp-row.selected{border-color:#6aa9e9;background:#263541}.pbp-row small{color:var(--muted)}.qb-controls{display:flex;align-items:center;gap:12px;margin:12px 0}.qb-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.qb-stat{background:#242a2f;padding:12px;text-align:center}.qb-stat small{display:block;color:var(--muted);font-size:11px}.qb-stat strong{font-size:20px}.qb-stat{padding:8px}.chart-legend{display:flex;flex-wrap:wrap;gap:18px;margin:12px 0;font-size:12px;font-weight:600}.legend-dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;border:2px solid currentColor}.complete{color:#54df43}.touchdown{color:#267cff}.incomplete{color:#fff}.interception{color:#ff3333}.legend-line{display:inline-block;width:24px;border-top:3px solid #4e82ff;margin-right:6px;vertical-align:middle}.chart-note{margin-top:8px}.grade-good{color:#62d98b}.grade-mid{color:#e8c45c}.grade-low{color:#ef7777}.grade-audit{padding:5px 2px}.grade-audit summary{cursor:pointer;color:#9fc8f0;font-weight:600}.audit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:10px 0}.audit-grid>div{background:#20262b;padding:10px;white-space:normal}.audit-grid p{margin:5px 0;color:var(--muted)}@media(max-width:900px){.audit-grid{grid-template-columns:1fr}}.defense-table tr{cursor:pointer}.defense-table tr:hover{background:#252d33}.grade-pill{font-weight:700}.chart-panel #passChart{max-height:470px;width:auto;max-width:100%;margin:0 auto}.layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(320px,1fr);gap:14px;margin-top:14px}.side{display:grid;gap:14px;align-content:start}.topline{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px;font-size:12px;font-weight:600;letter-spacing:.05em}
+select.playselect{width:100%;margin-bottom:12px}.metrics{display:flex;gap:22px;flex-wrap:wrap;margin:8px 0 14px}.metric small{display:block;color:var(--muted);font-size:11px}.metric strong{font-size:15px;font-weight:600}
+canvas{display:block;width:100%;height:auto;background:#286044;border:1px solid #557260}.controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:11px}input[type=range]{flex:1;min-width:100px;accent-color:#aaa}.time{font-variant-numeric:tabular-nums;color:var(--muted);min-width:70px}
+.tablewrap{max-height:320px;overflow:auto}table{border-collapse:collapse;width:100%;font-size:12px}th,td{text-align:left;padding:7px 5px;border-bottom:1px solid var(--line);white-space:nowrap}th{position:sticky;top:0;background:var(--panel);color:var(--muted);font-weight:500}td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}.events{max-height:190px;overflow:auto}.event{display:grid;grid-template-columns:55px 1fr;gap:8px;padding:6px 0;border-bottom:1px solid var(--line);font-size:12px}.event time{color:var(--muted);font-variant-numeric:tabular-nums}
+@media(max-width:900px){.qb-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.layout{grid-template-columns:1fr}main{padding:16px 10px}.status{width:100%;margin:0}}
+</style></head>
+<body><main>
+<h1>Play Tracking</h1><div class="sub">Review each snap, player movement, possession and field position.</div>
+<div class="files">
+<label class="file">REPLACE GAME JSON<input id="gamefile" type="file" accept=".json,application/json"></label>
+<label class="file">REPLACE TRACKS JSON<input id="tracksfile" type="file" accept=".json,application/json"></label>
+<button id="load">Load selected files</button><span class="status" id="status">Trying to load the default recording…</span>
+</div>
+<nav class="tabs" id="mainTabs"><button class="tab active" data-tab="playbyplay">Play-by-Play</button><button class="tab" data-tab="analyze">Quarterbacks</button><button class="tab" data-tab="receivers">Receivers</button><button class="tab" data-tab="defense">Defense</button></nav>
+<div id="viewer" hidden>
+<section id="playbyplay" class="tabpane">
+<div class="panel"><div class="topline"><span>PLAY-BY-PLAY</span><span class="muted">Select a play to review</span></div><div id="pbpList" class="pbp-list"></div></div>
+<section class="panel"><div class="topline"><span>PLAY SELECTION</span><span id="gameinfo" class="muted"></span></div><select id="playselect" class="playselect"></select><div class="metrics" id="metrics"></div></section>
+<div class="layout">
+<section class="panel"><div class="topline"><span>FIELD TRACKING</span><span class="muted" id="frameinfo"></span></div>
+<canvas id="field" width="900" height="650"></canvas>
+<div class="controls"><button id="toggle">Play</button><button id="back">-1s</button><button id="forward">+1s</button><input id="scrub" type="range" min="0" max="1000" value="0"><span class="time" id="time">0.00s</span><select id="speed"><option value=".5">0.5x</option><option value="1" selected>1x</option><option value="2">2x</option><option value="4">4x</option></select></div>
+<div class="muted" style="margin-top:9px">Blue = home · Red = away · Glowing marker = ball carrier · Yellow dot = ball · White = line of scrimmage · Gold = first down</div>
+</section>
+<div class="side">
+<section class="panel"><div class="topline"><span>PLAYER COORDINATES</span><span class="muted" id="playercount"></span></div><div class="tablewrap"><table><thead><tr><th>Player</th><th>Team / Role</th><th class="num">X</th><th class="num">Y</th><th class="num">Z</th><th>Movement</th></tr></thead><tbody id="players"></tbody></table></div></section>
+<section class="panel"><div class="topline"><span>PLAY EVENTS</span><span class="muted">Playback timeline</span></div><div class="events" id="events"></div></section>
+<section class="panel"><div class="topline"><span>RESULT</span><span id="playstatus" class="muted"></span></div><div id="result" class="muted"></div></section>
+</div></div></section>
+<section id="receivers" class="tabpane" hidden>
+<div class="panel chart-panel"><div class="topline"><span>RECEIVER ROUTE CHART</span><span class="muted">Routes begin after a 2-second release buffer</span></div>
+<div class="qb-controls"><label for="receiverSelect">RECEIVER</label><select id="receiverSelect"></select></div>
+<div id="receiverStats" class="qb-stats"></div>
+<canvas id="routeChart" width="760" height="510"></canvas>
+<div class="chart-legend"><span><i class="legend-line" style="border-color:#aaa"></i> INCOMPLETE</span><span><i class="legend-line" style="border-color:#fff"></i> COMPLETION</span><span><i class="legend-line" style="border-color:#49cf35"></i> AFTER CATCH</span><span><i class="legend-dot touchdown"></i> TOUCHDOWN</span><span><i class="legend-dot interception"></i> INTERCEPTION</span></div>
+<div class="muted chart-note">Average separation is the mean distance to the nearest opposing player, sampled from 2.0 seconds after the snap until the pass outcome. Distances are in yards.</div>
+<div id="receiverRouteTable" class="tablewrap"></div>
+</div></section><section id="analyze" class="tabpane" hidden>
+<div class="panel chart-panel"><div class="topline"><span>QUARTERBACK PASS CHART</span><span class="muted">Each marker represents one recorded pass attempt</span></div>
+<div class="qb-controls"><label for="qbSelect">QUARTERBACK</label><select id="qbSelect"></select></div>
+<div id="qbStats" class="qb-stats"></div>
+<canvas id="passChart" width="760" height="540"></canvas>
+<div class="chart-legend"><span><i class="legend-dot complete"></i> COMPLETE</span><span><i class="legend-dot touchdown"></i> TOUCHDOWN</span><span><i class="legend-dot incomplete"></i> INCOMPLETE</span><span><i class="legend-dot interception"></i> INTERCEPTION</span><span><i class="legend-line"></i> LINE OF SCRIMMAGE</span></div>
+<div class="muted chart-note">Completed and intercepted passes use the recorded catch position; incompletions use the recorded pass-decision position. The chart is clipped to the field boundaries.</div>
+<div id="qbPassTable" class="tablewrap"></div>
+</div></section><section id="defense" class="tabpane" hidden>
+<div class="panel">
+<div class="topline"><span>TEAM DEFENSE</span><span class="muted">PFF-inspired tracking grades · every coverage defender graded on each pass snap</span></div>
+<div class="qb-controls"><label for="defenseTeam">DEFENSE</label><select id="defenseTeam"></select></div>
+<div id="defenseSummary" class="qb-stats"></div>
+<div class="tablewrap"><table><thead><tr><th>DEFENDER</th><th>ROLE</th><th class="num">GRADE</th><th class="num">SNAPS</th><th class="num">COMP ALLOWED</th><th class="num">INCOMPLETIONS</th><th class="num">INT</th><th class="num">SWATS</th><th class="num">BLOCKS</th></tr></thead><tbody id="defenseTable"></tbody></table></div>
+<div class="muted chart-note">Each tracked CB and MLB receives one -2.0 to +2.0 grade on every recorded pass snap. Route separation starts when a defender first gets within 5 yards of their assigned receiver. Each receiver is assigned to one closest defender; untargeted coverage deductions are capped at -0.5, below swat and interception value. Overall grade uses a custom transparent conversion: 50 + average snap grade × 25; this is not PFF's proprietary formula. DL are not graded as coverage defenders.</div>
+</div>
+<div class="panel" style="margin-top:14px">
+<div class="topline"><span>DEFENDER BREAKDOWN</span><span class="muted">Route-by-route grades</span></div>
+<div class="qb-controls"><label for="defenderSelect">PLAYER</label><select id="defenderSelect"></select></div>
+<div id="defenderStats" class="qb-stats"></div>
+<div id="defenderPlays" class="tablewrap"></div>
+</div>
+</section></div>
+</main>
+<script>
+const $=id=>document.getElementById(id);let game=null,tracks=null,plays=[],selected=0,frame=0,duration=1,playing=false,last=0,raf=0,payload=null;
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const clock=n=>n==null?"--:--":Math.floor(n/60)+":"+String(Math.floor(n%60)).padStart(2,"0");
+async function readFile(file){return JSON.parse(await file.text())}
+async function loadData(g,t,label){game=g;tracks=t;plays=game.plays||[];if(!plays.length)throw Error("No plays found in game.json.");const meta=game.game||{};$("playselect").innerHTML=plays.map((p,i)=>{const s=p.start||{},r=p.result||{};return '<option value="'+i+'">Play '+String(i+1).padStart(3,"0")+' · Q'+(s.quarter??"?")+' '+clock(s.gameClockSeconds)+' · '+(s.down??"?")+' & '+(r.gainYards??0)+' · '+esc(r.outcome||r.type||"Unknown")+'</option>'}).join("");$("gameinfo").textContent=(meta.awayTeam||"Away")+" at "+(meta.homeTeam||"Home")+" · "+plays.length+" plays";$("viewer").hidden=false;selectPlay(0);$("status").textContent=label+" · "+plays.length+" plays loaded."}
+async function autoLoad(){try{const [gr,tr]=await Promise.all([fetch("./game.json",{cache:"no-store"}),fetch("./tracks.json",{cache:"no-store"})]);if(!gr.ok||!tr.ok)throw Error("Default files not found beside this page.");await loadData(await gr.json(),await tr.json(),"Default recording")}catch(e){$("status").textContent="Default files unavailable. Choose game.json and tracks.json to load a different recording."}}
+$("load").onclick=async()=>{try{const gf=$("gamefile").files[0],tf=$("tracksfile").files[0];if(!gf||!tf)throw Error("Choose both replacement JSON files.");await loadData(await readFile(gf),await readFile(tf),"Uploaded recording")}catch(e){$("status").textContent=e.message}};
+$("playselect").onchange=()=>selectPlay(Number($("playselect").value));
+function selectPlay(i){stop();selected=i;frame=0;const p=plays[i],s=p.start||{},r=p.result||{},meta=game.game||{},tp=(tracks.plays||{})[p.id]||{},participants={};(s.participants||[]).forEach(x=>{if(x.playerId)participants[x.playerId]=x});const ps=tp.players||{},names=meta.players||{},home=meta.homeTeam||"Home",away=meta.awayTeam||"Away";
+let samples=[];Object.values(ps).forEach(a=>a.forEach(v=>samples.push(v[1])));Object.values(tp.ball||{}).forEach(a=>a.forEach(v=>samples.push(v[1])));duration=Math.max(100,...samples);
+const origin=meta.origin||{},xs=[],zs=[];Object.values(ps).forEach(a=>a.forEach(v=>{xs.push(v[2]);zs.push(v[4])}));const x0=Math.min((meta.minX??-17.5)-(origin.x||0),...xs)-3,x1=Math.max((meta.maxX??17.5)-(origin.x||0),...xs)+3,z0=Math.min((meta.minZ??-60)-(origin.z||0),...zs)-3,z1=Math.max((meta.maxZ??60)-(origin.z||0),...zs)+3;
+payload={p,s,r,tp,ps,participants,names,home,away,bounds:{x0,x1,z0,z1}};
+$("metrics").innerHTML=[["Outcome",r.outcome||r.type||"Unknown"],["Yards",((r.gainYards??0)>0?"+":"")+(r.gainYards??0)],["Down",s.down??"—"],["Score",(s.homeScore??0)+" – "+(s.awayScore??0)],["To gain",s.goalToGo?"Goal to go":(s.lineToGain&&s.lineOfScrimmage?Math.round(Math.abs(s.lineToGain.z-s.lineOfScrimmage.z))+" yd":"—")]].map(([k,v])=>'<div class="metric"><small>'+k+'</small><strong>'+esc(v)+'</strong></div>').join("");
+$("events").innerHTML=(p.events||[]).map(e=>'<div class="event"><time>'+((e.elapsedMillis||0)/1000).toFixed(2)+'s</time><span>'+esc(e.type)+(e.actorId&&names[e.actorId]?" · "+esc(names[e.actorId]):"")+(e.detail?" · "+esc(e.detail):"")+'</span></div>').join("")||'<span class="muted">No events recorded.</span>';
+$("result").innerHTML="<strong>"+esc(r.outcome||r.type||"Unknown")+"</strong> · "+(r.gainYards??0)+" yards"+(r.firstDownAwarded?" · First down":"")+"<br>Final spot: "+(r.finalSpot?"X "+r.finalSpot.x+", Y "+r.finalSpot.y+", Z "+r.finalSpot.z:"Not recorded")+"<br>Next down: "+(r.nextDown??"—");$("playstatus").textContent=p.status||"";draw();if($("pbpList"))renderPlayByPlay()}
+
+function showTab(name){document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("active",b.dataset.tab===name));document.querySelectorAll(".tabpane").forEach(p=>p.hidden=p.id!==name);if(name==="analyze")drawPassChart();if(name==="receivers")drawReceiverChart();if(name==="defense")renderDefense()}
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
+function qbForPlay(p){const s=p.start||{};const q=(s.participants||[]).find(x=>x.role==="QB"&&x.home===s.homeOffense);return q?.playerId||s.snapperId||null}
+function passRecord(p){
+const s=p.start||{},r=p.result||{},events=p.events||[];
+const release=events.find(e=>e.type==="PASS_RELEASE");
+const officialAttempt=events.some(e=>e.type==="OFFICIAL_PASS_ATTEMPT");
+if(!officialAttempt)return null;
+const qb=release?.actorId||qbForPlay(p);if(!qb)return null;
+const caught=events.find(e=>e.type==="CATCH_CONFIRMED");
+const decision=events.find(e=>e.type==="PASS_DECISION");
+const isPick=events.some(e=>e.type==="OFFICIAL_THROWN_INT"||e.type==="OFFICIAL_DEF_INT")||(caught?.detail||"").toLowerCase()==="interception"||(decision?.detail||"").toUpperCase()==="INTERCEPTED";
+const isComplete=events.some(e=>e.type==="OFFICIAL_PASS_COMPLETION")||!!caught&&!isPick;
+const isTD=events.some(e=>e.type==="OFFICIAL_PASS_TD")||(r.outcome||"").toUpperCase()==="TOUCHDOWN";
+const kind=isPick?"interception":isTD?"touchdown":isComplete?"complete":"incomplete";
+const target=caught?.position||decision?.position||null;
+return {p,qb,kind,target,release:release?.position||null,outcome:isPick?"INTERCEPTION":isTD?"TOUCHDOWN":isComplete?"COMPLETE":"INCOMPLETE",yards:Number(r.gainYards)||0,receiver:caught?.actorId||r.finalCarrier||null};
+}
+function renderPlayByPlay(){const rows=plays.map((p,i)=>{const s=p.start||{},r=p.result||{},q=qbForPlay(p),name=(game.game.players||{})[q]||"Unknown QB";return {p,i,q,name,s,r}});$("pbpList").innerHTML=rows.map(x=>'<button class="pbp-row '+(x.i===selected?"selected":"")+'" data-index="'+x.i+'"><small>Q'+(x.s.quarter??"?")+' '+clock(x.s.gameClockSeconds)+'</small><span><b>'+esc("Play "+(x.i+1)+" · "+(x.s.down??"?")+" & "+(x.r.gainYards??0)+" · "+(x.r.outcome||x.r.type||"Play"))+'</b><br><small>'+esc(x.name)+" · "+(x.s.homeOffense?"Home":"Away")+'</small></span><small>'+esc((x.r.gainYards>0?"+":"")+(x.r.gainYards??0)+" YDS")+'</small></button>').join("");document.querySelectorAll(".pbp-row").forEach(b=>b.onclick=()=>{selectPlay(Number(b.dataset.index));renderPlayByPlay()})}
+let qbRecords=[];
+function buildQBAnalysis(){const names=game.game.players||{},map={};plays.forEach(p=>{const rec=passRecord(p);if(!rec)return;(map[rec.qb]??=[]).push(rec)});qbRecords=Object.entries(map).map(([id,records])=>({id,name:names[id]||id.slice(0,8),records})).sort((a,b)=>a.name.localeCompare(b.name));$("qbSelect").innerHTML=qbRecords.map(q=>'<option value="'+esc(q.id)+'">'+esc(q.name)+'</option>').join("");$("qbSelect").onchange=drawPassChart;drawPassChart()}
+function avgTimeToThrow(records){const vals=records.map(x=>{const ev=x.p.events||[],snap=ev.find(e=>e.type==="SNAP"),release=ev.find(e=>e.type==="PASS_RELEASE");return snap&&release?(release.elapsedMillis-snap.elapsedMillis)/1000:null}).filter(x=>x!==null&&x>=0);return vals.length?(vals.reduce((a,b)=>a+b,0)/vals.length).toFixed(2)+" s":"—"}
+let receiverRecords=[];
+function buildReceiverAnalysis(){
+const map={},names=game.game.players||{};
+plays.forEach(p=>{
+const ev=p.events||[];if(!ev.some(e=>e.type==="OFFICIAL_PASS_ATTEMPT"))return;if(ev.some(e=>e.type==="OFFICIAL_THROWN_INT"||e.type==="OFFICIAL_DEF_INT"))return;
+const targetEvent=ev.find(e=>e.type==="OFFICIAL_TARGET"&&(e.actorId||e.otherId));
+const catchEvent=ev.find(e=>e.type==="CATCH_CONFIRMED"&&e.actorId);
+const decision=ev.find(e=>e.type==="PASS_DECISION"&&(e.otherId||e.actorId));
+const targetId=targetEvent?.actorId||targetEvent?.otherId||catchEvent?.actorId||decision?.otherId;
+if(!targetId)return;
+const part=(p.start?.participants||[]).find(x=>x.playerId===targetId);
+const track=(tracks.plays||{})[p.id]?.players||{};
+if(!track[targetId]?.length)return;
+(map[targetId]??=[]).push({p,targetId,part:part||{playerId:targetId,home:null,role:"Target"}});
+});
+receiverRecords=Object.entries(map).map(([id,records])=>({id,name:names[id]||id.slice(0,8),records})).sort((a,b)=>a.name.localeCompare(b.name));
+const select=$("receiverSelect");
+select.innerHTML=receiverRecords.map(q=>'<option value="'+esc(q.id)+'">'+esc(q.name)+'</option>').join("");
+select.onchange=drawReceiverChart;
+if(!receiverRecords.length){
+$("receiverStats").innerHTML='<div class="muted">No receiver targets with tracking data were found in this recording.</div>';
+$("receiverRouteTable").innerHTML="";
+const ctx=$("routeChart").getContext("2d");ctx.clearRect(0,0,$("routeChart").width,$("routeChart").height);
+return;
+}
+drawReceiverChart();
+}
+function nearestDefenderAt(trackPlayers,parts,receiverId,elapsed){
+const recArr=trackPlayers[receiverId];if(!recArr)return null;
+const rp=sampleAt(recArr,elapsed);if(!rp)return null;
+let min=Infinity;
+Object.entries(parts).forEach(([id,part])=>{if(part.home===parts[receiverId]?.home)return;const a=trackPlayers[id];if(!a)return;const dp=sampleAt(a,elapsed);if(!dp)return;const d=Math.hypot(rp.x-dp.x,rp.z-dp.z)/Number(game.game.blocksPerYard||1);if(d<min)min=d});
+return Number.isFinite(min)?min:null;
+}
+function drawReceiverChart(){
+const rec=receiverRecords.find(x=>x.id===$("receiverSelect").value)||receiverRecords[0];if(!rec)return;
+const routes=rec.records;
+const td=routes.filter(x=>x.p.events.some(e=>e.type==="OFFICIAL_PASS_TD")).length;
+const separation=[];
+function separationFor(route){
+const p=route.p,ev=p.events||[],players=(tracks.plays||{})[p.id]?.players||{},parts={};
+(p.start?.participants||[]).forEach(x=>{if(x.playerId)parts[x.playerId]=x});
+const a=players[rec.id]||[];
+const outcome=ev.find(e=>["CATCH_CONFIRMED","PASS_DECISION","WHISTLE"].includes(e.type));
+const end=outcome?.elapsedMillis??a[a.length-1]?.[1]??0;
+const vals=[];
+a.forEach(v=>{if(v[1]<2000||v[1]>end)return;const d=nearestDefenderAt(players,parts,rec.id,v[1]);if(d!==null)vals.push(d)});
+return vals;
+}
+const routeSeparation=routes.map(r=>({route:r,values:separationFor(r)}));
+routeSeparation.forEach(x=>separation.push(...x.values));
+const avgSep=separation.length?separation.reduce((a,b)=>a+b,0)/separation.length:null;
+const catches=routes.filter(x=>x.p.events.some(e=>e.type==="CATCH_CONFIRMED")).length;
+const recYards=routes.reduce((sum,x)=>sum+(Number(x.p.result?.gainYards)||0),0);
+$("receiverStats").innerHTML=[["TARGETS",routes.length],["RECEPTIONS",catches],["YARDS",recYards],["TD",td],["AVG SEPARATION",avgSep===null?"—":avgSep.toFixed(1)+" yd"]].map(([a,b])=>'<div class="qb-stat"><small>'+a+'</small><strong>'+b+'</strong></div>').join("");
+const cv=$("routeChart"),ctx=cv.getContext("2d"),W=cv.width,H=cv.height,left=54,right=54,top=28,bottom=32,plotW=W-left-right,plotH=H-top-bottom,xMin=-17.5,xMax=17.5,yMin=-5,yMax=55,X=x=>left+(x-xMin)/(xMax-xMin)*plotW,Y=y=>top+(yMax-y)/(yMax-yMin)*plotH;
+ctx.clearRect(0,0,W,H);ctx.fillStyle="#20252b";ctx.fillRect(0,0,W,H);
+ctx.save();ctx.beginPath();ctx.rect(left,top,plotW,plotH);ctx.clip();ctx.fillStyle="#293039";ctx.fillRect(left,top,plotW,plotH);
+ctx.strokeStyle="rgba(255,255,255,.09)";ctx.lineWidth=1;
+for(let yd=0;yd<=50;yd+=10){ctx.beginPath();ctx.moveTo(left,Y(yd));ctx.lineTo(left+plotW,Y(yd));ctx.stroke()}
+for(let x=-15;x<=15;x+=10){ctx.beginPath();ctx.moveTo(X(x),top);ctx.lineTo(X(x),top+plotH);ctx.stroke()}
+ctx.strokeStyle="#8d969e";ctx.lineWidth=1.5;ctx.strokeRect(left,top,plotW,plotH);
+ctx.strokeStyle="#3478ff";ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(left,Y(0));ctx.lineTo(left+plotW,Y(0));ctx.stroke();
+routes.forEach(route=>{
+const p=route.p,ev=p.events||[],players=(tracks.plays||{})[p.id]?.players||{},a=players[rec.id]||[];
+if(!a.length||!p.start?.lineOfScrimmage)return;
+const catchEvent=ev.find(e=>e.type==="CATCH_CONFIRMED"),decision=ev.find(e=>e.type==="PASS_DECISION"),whistle=ev.find(e=>e.type==="WHISTLE");
+const end=whistle?.elapsedMillis??decision?.elapsedMillis??catchEvent?.elapsedMillis??a[a.length-1][1];
+const start=a[0][1],catchTime=catchEvent?.elapsedMillis??null;
+if(end<=start)return;
+const isComplete=!!catchEvent;
+const color=isComplete?"rgba(255,255,255,.92)":"rgba(165,165,165,.22)";
+function point(v){return {x:X(Math.max(xMin,Math.min(xMax,v[2]))),y:Y(Math.max(yMin,Math.min(yMax,(v[4]-p.start.lineOfScrimmage.z)*(Number(p.start.attackZ)||1))))}}
+function segment(t0,t1,stroke,width){
+if(t1<=t0)return;const pts=[];const first=sampleAt(a,t0);if(first)pts.push(point([0,t0,first.x,first.y,first.z]));
+a.forEach(v=>{if(v[1]>t0&&v[1]<t1)pts.push(point(v))});
+const last=sampleAt(a,t1);if(last)pts.push(point([0,t1,last.x,last.y,last.z]));
+if(pts.length<2)return;ctx.beginPath();ctx.moveTo(pts[0].x,pts[0].y);for(let i=1;i<pts.length;i++)ctx.lineTo(pts[i].x,pts[i].y);ctx.strokeStyle=stroke;ctx.lineWidth=width;ctx.lineCap="round";ctx.lineJoin="round";ctx.stroke();
+}
+segment(start,Math.min(end,catchTime??end),color,isComplete?2.5:1.8);
+if(isComplete&&catchTime!==null&&catchTime<end)segment(catchTime,end,"rgba(73,207,53,.9)",2.7);
+if(ev.some(e=>e.type==="OFFICIAL_PASS_TD")&&catchEvent?.position){ctx.beginPath();ctx.arc(X(Math.max(xMin,Math.min(xMax,catchEvent.position.x))),Y(Math.max(yMin,Math.min(yMax,(catchEvent.position.z-p.start.lineOfScrimmage.z)*(Number(p.start.attackZ)||1)))),5,0,Math.PI*2);ctx.fillStyle="#267cff";ctx.fill();ctx.strokeStyle="#fff";ctx.stroke()}
+});
+ctx.restore();
+ctx.fillStyle="#e7eaec";ctx.font="bold 12px Arial";ctx.textAlign="center";ctx.fillText("RECEIVER ROUTES · YARDS FROM LOS",W/2,16);ctx.font="11px Arial";ctx.textAlign="right";for(let yd=0;yd<=50;yd+=10)ctx.fillText(String(yd),left-8,Y(yd)+4);ctx.textAlign="left";for(let yd=0;yd<=50;yd+=10)ctx.fillText(String(yd),left+plotW+8,Y(yd)+4);ctx.fillStyle="#6aa9e9";ctx.font="bold 12px Arial";ctx.fillText("LOS",left+5,Y(0)-7);
+$("receiverRouteTable").innerHTML='<table><thead><tr><th>PLAY</th><th>QTR / CLOCK</th><th>RESULT</th><th class="num">YARDS</th><th class="num">AVG SEPARATION</th></tr></thead><tbody>'+routeSeparation.map(({route:x,values})=>{const p=x.p,avg=values.length?values.reduce((m,n)=>m+n,0)/values.length:null;return '<tr><td><button data-play="'+plays.indexOf(p)+'">View</button></td><td>Q'+(p.start.quarter??"?")+' '+clock(p.start.gameClockSeconds)+'</td><td>'+esc(p.result?.outcome||"—")+'</td><td class="num">'+(p.result?.gainYards??0)+'</td><td class="num">'+(avg===null?"—":avg.toFixed(1)+" yd")+'</td></tr>'}).join("")+'</tbody></table>';
+document.querySelectorAll("#receiverRouteTable button[data-play]").forEach(b=>b.onclick=()=>{selectPlay(Number(b.dataset.play));renderPlayByPlay();showTab("playbyplay")});
+}
+function drawPassChart(){
+const q=qbRecords.find(x=>x.id===$("qbSelect").value)||qbRecords[0];if(!q)return;
+const recs=q.records,att=recs.length,comp=recs.filter(x=>x.kind==="complete"||x.kind==="touchdown").length,td=recs.filter(x=>x.kind==="touchdown").length,ints=recs.filter(x=>x.kind==="interception").length,yards=recs.reduce((a,x)=>a+x.yards,0),pct=att?comp/att*100:0;
+const depths=recs.filter(x=>x.target&&x.p.start?.lineOfScrimmage).map(x=>(x.target.z-x.p.start.lineOfScrimmage.z)*(Number(x.p.start.attackZ)||1)/(Number(game.game.blocksPerYard)||1));
+const avgDepth=depths.length?depths.reduce((a,b)=>a+b,0)/depths.length:null;
+$("qbStats").innerHTML=[["COMP/ATT",comp+"/"+att],["YARDS",yards],["TD–INT",td+"–"+ints],["COMP %",pct.toFixed(1)+"%"],["AVG YDS",att?(yards/att).toFixed(1):"0.0"],["AVG THROW LENGTH",avgDepth===null?"—":avgDepth.toFixed(1)+" yd"],["AVG TIME TO THROW",avgTimeToThrow(q.records)]].map(([a,b])=>'<div class="qb-stat"><small>'+a+'</small><strong>'+b+'</strong></div>').join("");
+const cv=$("passChart"),ctx=cv.getContext("2d"),W=cv.width,H=cv.height,left=64,right=64,top=32,bottom=34,plotW=W-left-right,plotH=H-top-bottom;
+const xMin=-17.5,xMax=17.5,yMin=-10,maxDepth=Math.max(40,...depths.map(v=>Number.isFinite(v)?v:0)),yMax=Math.min(70,Math.max(40,Math.ceil((maxDepth+5)/5)*5));
+const X=x=>left+(x-xMin)/(xMax-xMin)*plotW,Y=y=>top+(yMax-y)/(yMax-yMin)*plotH;
+ctx.clearRect(0,0,W,H);ctx.fillStyle="#20252b";ctx.fillRect(0,0,W,H);
+ctx.save();ctx.beginPath();ctx.rect(left,top,plotW,plotH);ctx.clip();
+ctx.fillStyle="#293039";ctx.fillRect(left,top,plotW,plotH);
+ctx.strokeStyle="rgba(255,255,255,.10)";ctx.lineWidth=1;
+for(let yd=0;yd<=yMax;yd+=5){const yy=Y(yd);ctx.beginPath();ctx.moveTo(left,yy);ctx.lineTo(left+plotW,yy);ctx.stroke()}
+for(let x=-15;x<=15;x+=5){const xx=X(x);ctx.beginPath();ctx.moveTo(xx,top);ctx.lineTo(xx,top+plotH);ctx.stroke()}
+ctx.strokeStyle="#8d969e";ctx.lineWidth=1.5;ctx.strokeRect(left,top,plotW,plotH);
+const losY=Y(0);ctx.strokeStyle="#3478ff";ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(left,losY);ctx.lineTo(left+plotW,losY);ctx.stroke();
+const colors={complete:"#54df43",touchdown:"#267cff",incomplete:"#ffffff",interception:"#ff3333"};
+recs.forEach(rec=>{
+if(!rec.target||!Number.isFinite(rec.target.x)||!Number.isFinite(rec.target.z))return;
+const los=rec.p.start?.lineOfScrimmage;if(!los)return;
+const depth=(rec.target.z-los.z)*(Number(rec.p.start.attackZ)||1)/(Number(game.game.blocksPerYard)||1);
+const lateral=rec.target.x,cx=Math.max(xMin,Math.min(xMax,lateral)),cy=Math.max(yMin,Math.min(yMax,depth));
+const xx=X(cx),yy=Y(cy),edge=lateral<xMin||lateral>xMax||depth<yMin||depth>yMax;
+ctx.beginPath();ctx.arc(xx,yy,5.5,0,Math.PI*2);ctx.fillStyle=colors[rec.kind];ctx.fill();ctx.lineWidth=1.5;ctx.strokeStyle="#101214";ctx.stroke();
+if(edge){ctx.beginPath();ctx.arc(xx,yy,8.5,0,Math.PI*2);ctx.strokeStyle=colors[rec.kind];ctx.lineWidth=1.5;ctx.stroke()}
+});
+ctx.restore();
+ctx.fillStyle="#e7eaec";ctx.font="bold 12px Arial";ctx.textAlign="center";ctx.fillText("FIELD WIDTH",W/2,16);
+ctx.font="11px Arial";ctx.textAlign="right";for(let yd=0;yd<=yMax;yd+=5)ctx.fillText(String(yd),left-9,Y(yd)+4);
+ctx.textAlign="left";for(let yd=0;yd<=yMax;yd+=5)ctx.fillText(String(yd),left+plotW+9,Y(yd)+4);
+ctx.fillStyle="#6aa9e9";ctx.font="bold 12px Arial";ctx.textAlign="left";ctx.fillText("LOS",left+5,losY-7);ctx.textAlign="right";ctx.fillText("LOS",left+plotW-5,losY-7);
+ctx.fillStyle="#aeb7be";ctx.font="11px Arial";ctx.textAlign="center";ctx.fillText("LEFT SIDELINE  ←  X (YARDS)  →  RIGHT SIDELINE",W/2,H-9);
+$("qbPassTable").innerHTML='<table><thead><tr><th>PLAY</th><th>QTR / CLOCK</th><th>RESULT</th><th class="num">YARDS</th><th class="num">THROW LENGTH</th><th>RECEIVER / TARGET</th></tr></thead><tbody>'+recs.map(x=>{const los=x.p.start?.lineOfScrimmage,depth=x.target&&los?(x.target.z-los.z)*(Number(x.p.start.attackZ)||1)/(Number(game.game.blocksPerYard)||1):null;return '<tr><td><button data-play="'+plays.indexOf(x.p)+'">View</button></td><td>Q'+(x.p.start.quarter??"?")+' '+clock(x.p.start.gameClockSeconds)+'</td><td>'+esc(x.outcome)+'</td><td class="num">'+x.yards+'</td><td class="num">'+(depth===null?"—":depth.toFixed(1)+" yd")+'</td><td>'+esc((game.game.players||{})[x.receiver]||"—")+'</td></tr>'}).join("")+'</tbody></table>';
+document.querySelectorAll("#qbPassTable button[data-play]").forEach(b=>b.onclick=()=>{selectPlay(Number(b.dataset.play));renderPlayByPlay();showTab("playbyplay")});
+}
+
+let defenseTeams=[],defenseRows=[],defenderMap={};
+function buildDefenseAnalysis(){
+analyzeDefense();
+const meta=game.game||{},home=meta.homeTeam||"Home",away=meta.awayTeam||"Away";
+defenseTeams=[{label:home,home:true},{label:away,home:false}];
+$("defenseTeam").innerHTML=defenseTeams.map(x=>'<option value="'+x.home+'">'+esc(x.label)+'</option>').join("");
+$("defenseTeam").onchange=renderDefense;
+$("defenderSelect").onchange=renderDefenderDetail;
+renderDefense();
+}
+function defenderRecord(id,part){
+return defenderMap[id]??={id,name:(game.game.players||{})[id]||id.slice(0,8),role:part.role||"—",home:part.home,targets:[],swats:0,blocks:0,ints:0,completionAllowed:0,incompletions:0,grades:[]};
+}
+function coverageLook(qbPos,receiverPos,receiverTrack,defenderPos,releaseTime){
+let dir=null;
+if(receiverTrack&&receiverTrack.length){
+const before=sampleAt(receiverTrack,Math.max(receiverTrack[0][1],releaseTime-150));
+const after=sampleAt(receiverTrack,Math.min(receiverTrack[receiverTrack.length-1][1],releaseTime+400));
+if(before&&after){const dx=after.x-before.x,dz=after.z-before.z,n=Math.hypot(dx,dz);if(n>.35)dir={x:dx/n,z:dz/n}}
+}
+let ahead=false,lane=false;
+if(dir){
+const rx=defenderPos.x-receiverPos.x,rz=defenderPos.z-receiverPos.z;
+const along=rx*dir.x+rz*dir.z,lat=Math.abs(rx*dir.z-rz*dir.x);
+ahead=along>0.4&&along<=6&&lat<=3.25;
+}
+if(qbPos&&receiverPos){
+const vx=receiverPos.x-qbPos.x,vz=receiverPos.z-qbPos.z,len2=vx*vx+vz*vz;
+if(len2>1){const wx=defenderPos.x-qbPos.x,wz=defenderPos.z-qbPos.z,t=(wx*vx+wz*vz)/len2;
+if(t>.12&&t<.96){const px=qbPos.x+t*vx,pz=qbPos.z+t*vz;lane=Math.hypot(defenderPos.x-px,defenderPos.z-pz)<=2.25}}
+}
+return {covered:ahead||lane,ahead,lane,direction:dir};
+}
+function analyzeDefense(){
+defenderMap={};const meta=game.game||{},scale=Number(meta.blocksPerYard)||1,names=meta.players||{};
+const dist=(a,b)=>a&&b?Math.hypot(a.x-b.x,a.z-b.z)/scale:Infinity;
+const snapGrade=v=>Math.max(-2,Math.min(2,Math.round(v*2)/2));
+plays.forEach((p,playIndex)=>{
+const ev=p.events||[];if(!ev.some(e=>e.type==="OFFICIAL_PASS_ATTEMPT"))return;
+const parts={};(p.start?.participants||[]).forEach(x=>{if(x.playerId)parts[x.playerId]=x});
+const players=(tracks.plays||{})[p.id]?.players||{};
+const release=ev.find(e=>e.type==="PASS_RELEASE"),targetEvent=ev.find(e=>e.type==="OFFICIAL_TARGET"&&(e.actorId||e.otherId));
+const targetId=targetEvent?.actorId||targetEvent?.otherId||ev.find(e=>e.type==="CATCH_CONFIRMED")?.actorId||null;
+const releaseTime=release?.elapsedMillis??targetEvent?.elapsedMillis??0;
+const snapEvent=ev.find(e=>e.type==="SNAP"),routeStart=Math.max(0,(snapEvent?.elapsedMillis??releaseTime-1000));
+const endEvent=ev.find(e=>e.type==="PASS_DECISION")||ev.find(e=>e.type==="CATCH_CONFIRMED")||ev.find(e=>e.type==="WHISTLE");
+const lastTrack=Math.max(0,...Object.values(players).filter(a=>a?.length).map(a=>a[a.length-1][1]));
+const endTime=Math.max(releaseTime,Math.min(endEvent?.elapsedMillis??lastTrack,lastTrack||releaseTime));
+const defenders=Object.values(parts).filter(x=>x.home!==p.start?.homeOffense&&["CB","MLB"].includes(x.role)&&players[x.playerId]?.length);
+const receivers=Object.values(parts).filter(x=>x.home===p.start?.homeOffense&&!["QB","OL","C","G","T"].includes(x.role)&&players[x.playerId]?.length);
+if(!defenders.length)return;
+// Assign each receiver to one defender: the first defender to get within 5 yards owns the route.
+// If multiple receivers stay short, each is assigned only to the closest defender, avoiding duplicate credit/blame.
+const assignments={};
+receivers.forEach(receiver=>{
+ const rt=players[receiver.playerId],times=rt.filter(v=>v[1]>=routeStart&&v[1]<=endTime).map(v=>v[1]);
+ if(!times.length)return;
+ let chosen=null,chosenTime=null,chosenDistance=Infinity;
+ for(const t of times){
+  const rp=sampleAt(rt,t);if(!rp)continue;
+  let nearest=null,nearestDistance=Infinity;
+  defenders.forEach(def=>{
+   const dp=sampleAt(players[def.playerId],t),sep=dist(dp,rp);
+   if(sep<nearestDistance){nearest=def;nearestDistance=sep}
+  });
+  if(nearest&&nearestDistance<=5){chosen=nearest;chosenTime=t;chosenDistance=nearestDistance;break}
+ }
+ if(!chosen){
+  const rp=sampleAt(rt,releaseTime);if(!rp)return;
+  defenders.forEach(def=>{const sep=dist(sampleAt(players[def.playerId],releaseTime),rp);if(sep<chosenDistance){chosen=def;chosenDistance=sep}});
+  if(chosen)chosenTime=releaseTime;
+ }
+ if(chosen)assignments[receiver.playerId]={receiver,defender:chosen,startTime:chosenTime,initialDistance:chosenDistance};
+});
+const routeStats=(defTrack,recvTrack,startTime)=>{
+ const ts=recvTrack.filter(v=>v[1]>=startTime&&v[1]<=endTime).map(v=>v[1]);
+ if(!ts.length)return null;if(!ts.includes(startTime))ts.push(startTime);if(!ts.includes(endTime))ts.push(endTime);
+ let total=0,count=0,tight=0,front=0,close=0,endSep=Infinity;
+ [...new Set(ts)].sort((a,b)=>a-b).forEach(t=>{
+  const rp=sampleAt(recvTrack,t),dp=sampleAt(defTrack,t);if(!rp||!dp)return;
+  const sep=dist(rp,dp);if(!Number.isFinite(sep))return;total+=sep;count++;
+  if(sep<=2.5)tight++;if(sep<=3.5)close++;if(Math.abs(t-endTime)<150)endSep=sep;
+  const before=sampleAt(recvTrack,Math.max(startTime,t-300)),after=sampleAt(recvTrack,Math.min(endTime,t+300));
+  if(before&&after){const dx=after.x-before.x,dz=after.z-before.z,n=Math.hypot(dx,dz);if(n>.2){const rx=dp.x-rp.x,rz=dp.z-rp.z;const ahead=(rx*dx+rz*dz)/n,lateral=Math.abs(rx*dz-rz*dx)/n;if(ahead>.25*scale&&lateral<=3.5*scale)front++}}
+ });
+ return count?{avg:total/count,tightPct:tight/count,closePct:close/count,frontPct:front/count,endSep,count,startTime}:null;
+};
+defenders.forEach(part=>{
+ const d=defenderRecord(part.playerId,part),defTrack=players[part.playerId];
+ const assigned=Object.values(assignments).filter(x=>x.defender.playerId===part.playerId);
+ const route=assigned.find(x=>x.receiver.playerId===targetId)||assigned[0]||null;
+ const best=route?{receiver:route.receiver,stats:routeStats(defTrack,players[route.receiver.playerId],route.startTime)}:null;
+ const st=best?.stats||{avg:Infinity,tightPct:0,closePct:0,frontPct:0,endSep:Infinity,count:0,startTime:null};
+ const targeted=!!(targetId&&route&&route.receiver.playerId===targetId);
+ let raw=0;const scoreParts=[];const add=(label,delta)=>{if(delta){raw+=delta;scoreParts.push({label,delta})}};
+ if(best){
+  if(targeted){
+   if(st.avg<=1.5)add("Average separation ≤1.5 yd",1.5);else if(st.avg<=2.5)add("Average separation ≤2.5 yd",1);else if(st.avg<=3.5)add("Average separation ≤3.5 yd",.5);else if(st.avg>=9)add("Average separation ≥9 yd",-1.5);else if(st.avg>=7)add("Average separation ≥7 yd",-1);else if(st.avg>=5)add("Average separation ≥5 yd",-.5);
+   if(st.frontPct>=.65)add("Sustained front leverage",.5);else if(st.frontPct<.15&&st.avg>3.5)add("Lost route leverage",-.5);
+   if(st.tightPct>=.7&&st.avg<=3)add("Consistently tight coverage",.5);
+  }else{
+   // Untargeted reps still count, but the deduction is deliberately capped below a swat or INT.
+   if(st.avg>=8||st.endSep>=9)add("Untargeted coverage separation",-0.5);
+   else if(st.avg>=6.5&&st.frontPct<.15)add("Untargeted route leverage lost",-0.5);
+  }
+ }
+ const swat=ev.some(e=>["OFFICIAL_SWAT","SWAT"].includes(e.type)&&e.actorId===part.playerId);
+ const interception=targeted&&ev.some(e=>["OFFICIAL_THROWN_INT","OFFICIAL_DEF_INT"].includes(e.type));
+ if(swat)add("Pass breakup / swat",.5);if(interception)add("Interception",1);
+ const grade=snapGrade(raw);
+ const rep={playIndex,quarter:p.start?.quarter,clock:p.start?.gameClockSeconds,outcome:targeted?(interception?"INTERCEPTION":ev.some(e=>e.type==="OFFICIAL_PASS_COMPLETION")||ev.some(e=>e.type==="CATCH_CONFIRMED")?"COMPLETE":"TARGETED"):"NOT TARGETED",receiver:best?(names[best.receiver.playerId]||best.receiver.playerId.slice(0,8)):"No assigned route",targeted,distance:st.endSep,avgSep:st.avg,grade,scoreParts,audit:{avgSep:st.avg,endSep:st.endSep,tightPct:st.tightPct,closePct:st.closePct,frontPct:st.frontPct,samples:st.count,trackingStart:st.startTime,selectedReceiver:best?(names[best.receiver.playerId]||best.receiver.playerId.slice(0,8)):"—",assignmentDistance:route?.initialDistance??null,rawGrade:raw,grade,method:"One-to-one route assignment: defender is assigned when first within 5 yards; separation is measured from that point. Untargeted deductions are capped at -0.5."}};
+ d.targets.push(rep);d.grades.push(grade);
+ if(targeted){if(interception)d.ints++;else if(rep.outcome==="COMPLETE")d.completionAllowed++;else d.incompletions++}
+ if(swat)d.swats++;
+});
+});
+plays.forEach(p=>{
+const ev=p.events||[],parts={};(p.start?.participants||[]).forEach(x=>{if(x.playerId)parts[x.playerId]=x});
+const players=(tracks.plays||{})[p.id]?.players||{};
+ev.filter(e=>e.type==="BALL_CONTACT"&&(e.detail||"").toLowerCase()==="block").forEach(e=>{
+const pos=e.position;if(!pos)return;let nearest=null;
+Object.values(parts).filter(x=>x.home!==p.start?.homeOffense&&x.role==="MLB").forEach(part=>{const q=players[part.playerId]&&sampleAt(players[part.playerId],e.elapsedMillis||0);if(!q)return;const distance=Math.hypot(q.x-pos.x,q.z-pos.z);if(!nearest||distance<nearest.distance)nearest={part,distance}});
+if(nearest&&nearest.distance<=3)defenderRecord(nearest.part.playerId,nearest.part).blocks++;
+});
+});
+}
+function renderDefense(){
+const team=defenseTeams.find(x=>String(x.home)===$("defenseTeam").value)||defenseTeams[0];
+const rows=Object.values(defenderMap).filter(x=>x.home===team.home).sort((a,b)=>(b.grades.length?b.grades.reduce((m,n)=>m+n,0)/b.grades.length:0)-(a.grades.length?a.grades.reduce((m,n)=>m+n,0)/a.grades.length:0)||a.name.localeCompare(b.name));
+defenseRows=rows;
+const all=rows.flatMap(x=>x.grades),avg=all.length?all.reduce((a,b)=>a+b,0)/all.length:null;
+const overall=avg===null?null:Math.max(0,Math.min(100,50+avg*25));
+const snaps=rows.reduce((a,x)=>a+x.targets.length,0),targeted=rows.reduce((a,x)=>a+x.targets.filter(t=>t.targeted).length,0),swats=rows.reduce((a,x)=>a+x.swats,0),ints=rows.reduce((a,x)=>a+x.ints,0);
+$("defenseSummary").innerHTML=[["COVERAGE GRADE",overall===null?"—":overall.toFixed(1)],["COVERAGE SNAPS",snaps],["TARGETED SNAPS",targeted],["SWATS / INT",swats+" / "+ints]].map(([a,b])=>'<div class="qb-stat"><small>'+a+'</small><strong>'+b+'</strong></div>').join("");
+$("defenseTable").innerHTML=rows.map(x=>{const m=x.grades.length?x.grades.reduce((a,b)=>a+b,0)/x.grades.length:null,g=m===null?null:Math.max(0,Math.min(100,50+m*25));return '<tr data-defender="'+esc(x.id)+'"><td>'+esc(x.name)+'</td><td>'+esc(x.role)+'</td><td class="num grade-pill '+(g===null?"":g>=75?"grade-good":g>=50?"grade-mid":"grade-low")+'">'+(g===null?"—":g.toFixed(1))+'</td><td class="num">'+x.targets.length+'</td><td class="num">'+x.targets.filter(t=>t.targeted&&t.outcome==="COMPLETE").length+'</td><td class="num">'+x.targets.filter(t=>t.targeted&&t.outcome!=="COMPLETE"&&t.outcome!=="INTERCEPTION").length+'</td><td class="num">'+x.ints+'</td><td class="num">'+x.swats+'</td><td class="num">'+x.blocks+'</td></tr>'}).join("")||'<tr><td colspan="9" class="muted">No tracked defenders found for this team.</td></tr>';
+$("defenseTable").querySelectorAll("tr[data-defender]").forEach(row=>row.onclick=()=>{$("defenderSelect").value=row.dataset.defender;renderDefenderDetail()});
+$("defenderSelect").innerHTML=rows.map(x=>'<option value="'+esc(x.id)+'">'+esc(x.name)+' · '+esc(x.role)+'</option>').join("");
+renderDefenderDetail();
+}
+function renderDefenderDetail(){
+const d=defenseRows.find(x=>x.id===$("defenderSelect").value);
+if(!d){$("defenderStats").innerHTML="";$("defenderPlays").innerHTML='<div class="muted">Select a defender with recorded coverage reps.</div>';return}
+const mean=d.grades.length?d.grades.reduce((a,b)=>a+b,0)/d.grades.length:null,overall=mean===null?null:Math.max(0,Math.min(100,50+mean*25));
+const targeted=d.targets.filter(x=>x.targeted).length,pos=d.grades.filter(x=>x>0).length,neg=d.grades.filter(x=>x<0).length;
+$("defenderStats").innerHTML=[["OVERALL GRADE",overall===null?"—":overall.toFixed(1)],["COVERAGE SNAPS",d.targets.length],["TARGETED",targeted],["+ / − SNAPS",pos+" / "+neg]].map(([a,b])=>'<div class="qb-stat"><small>'+a+'</small><strong>'+b+'</strong></div>').join("");
+$("defenderPlays").innerHTML='<table><thead><tr><th>PLAY</th><th>QTR / CLOCK</th><th>RESULT</th><th>ROUTE MATCH</th><th class="num">AVG SEP</th><th class="num">SNAP GRADE</th></tr></thead><tbody>'+d.targets.map(x=>{const a=x.audit||{};return '<tr><td><button data-play="'+x.playIndex+'">View</button></td><td>Q'+(x.quarter??"?")+' '+clock(x.clock)+'</td><td>'+x.outcome+'</td><td>'+esc(x.receiver)+'</td><td class="num">'+(Number.isFinite(x.avgSep)?x.avgSep.toFixed(1)+" yd":"—")+'</td><td class="num grade-pill">'+(x.grade>0?"+":"")+x.grade.toFixed(1)+'</td></tr><tr><td colspan="6"><details class="grade-audit"><summary>Snap grade audit · '+(x.grade>0?"+":"")+x.grade.toFixed(1)+' / -2.0 to +2.0</summary><div class="audit-grid"><div><b>Coverage assignment</b><p>Inferred route: '+esc(a.selectedReceiver||"No clear match")+'</p><p>Targeted: '+(x.targeted?"Yes":"No")+'</p><p>'+esc(a.method||"Tracking estimate")+'</p></div><div><b>Tracking measurements</b><p>Tracking starts: '+(Number.isFinite(a.trackingStart)?(a.trackingStart/1000).toFixed(2)+"s":"—")+'</p><p>Assignment distance: '+(Number.isFinite(a.assignmentDistance)?a.assignmentDistance.toFixed(1)+" yd":"—")+'</p><p>Average separation: '+(Number.isFinite(a.avgSep)?a.avgSep.toFixed(1)+" yd":"—")+'</p><p>At end: '+(Number.isFinite(a.endSep)?a.endSep.toFixed(1)+" yd":"—")+'</p><p>Within 2.5 yd: '+(a.tightPct*100).toFixed(0)+'%</p><p>Front leverage: '+(a.frontPct*100).toFixed(0)+'%</p><p>Samples: '+a.samples+'</p></div><div><b>Score calculation</b><p>'+x.scoreParts.map(v=>esc(v.label)+": "+(v.delta>0?"+":"")+v.delta.toFixed(1)).join("<br>")+'</p><p><b>Final: '+(x.grade>0?"+":"")+x.grade.toFixed(1)+'</b></p></div></div></details></td></tr>'}).join("")+'</tbody></table>';
+$("defenderPlays").querySelectorAll("button[data-play]").forEach(b=>b.onclick=()=>{selectPlay(Number(b.dataset.play));renderPlayByPlay();showTab("playbyplay")});
+}
+function stop(){playing=false;$("toggle").textContent="Play";cancelAnimationFrame(raf)}
+function sampleAt(a,t){
+if(!a||!a.length)return null;
+let lo=0,hi=a.length-1;
+while(lo<hi){const mid=(lo+hi+1)>>1;if(a[mid][1]<=t)lo=mid;else hi=mid-1}
+const j=lo,q=a[j],n=a[Math.min(j+1,a.length-1)];
+if(!n||n[1]===q[1])return {x:q[2],y:q[3],z:q[4],index:j};
+const u=Math.max(0,Math.min(1,(t-q[1])/(n[1]-q[1])));
+if(j===a.length-1||u===0)return {x:q[2],y:q[3],z:q[4],index:j};
+const p0=a[Math.max(0,j-1)],p3=a[Math.min(a.length-1,j+2)],dt=n[1]-q[1];
+function smooth(k){
+const v0=p0[k],v1=q[k],v2=n[k],v3=p3[k];
+const t0=p0[1],t1=q[1],t2=n[1],t3=p3[1];
+const m1=t2===t0?0:(v2-v0)*dt/(t2-t0);
+const m2=t3===t1?0:(v3-v1)*dt/(t3-t1);
+const u2=u*u,u3=u2*u;
+const value=(2*u3-3*u2+1)*v1+(u3-2*u2+u)*m1+(-2*u3+3*u2)*v2+(u3-u2)*m2;
+// Prevent spline overshoot from placing a player outside the two recorded samples.
+return Math.max(Math.min(v1,v2),Math.min(Math.max(v1,v2),value));
+}
+return {x:smooth(2),y:smooth(3),z:smooth(4),index:j};
+}
+function carrierAt(t){const {p,s}=payload;let carrier=s.snapperId||null;for(const e of (p.events||[]).slice().sort((a,b)=>(a.elapsedMillis||0)-(b.elapsedMillis||0))){const et=e.elapsedMillis||0;if(et>t)break;if(e.type==="PASS_RELEASE"||e.type==="KICK_RELEASE")carrier=null;if(e.type==="POSSESSION"&&e.actorId)carrier=e.actorId;if(e.type==="CATCH_CONFIRMED"&&e.actorId)carrier=e.actorId;if(["WHISTLE","KICK_RESULT","PUNT_RESULT"].includes(e.type))carrier=null}return carrier}
+function direction(a,j){if(!a||a.length<2)return null;let k=Math.max(0,Math.min(a.length-1,j)),q=a[k],prev=a[Math.max(0,k-3)];let dx=q[2]-prev[2],dz=q[4]-prev[4],d=Math.hypot(dx,dz);if(d<.12)return null;return {dx:dx/d,dz:dz/d,speed:d/Math.max(.05,(q[1]-prev[1])/1000)}}
+function draw(){if(!payload)return;const {p,s,r,tp,ps,participants,names,home,away,bounds}=payload,cv=$("field"),c=cv.getContext("2d"),W=cv.width,H=cv.height,pad=48,{x0,x1,z0,z1}=bounds,X=x=>pad+(x-x0)/(x1-x0)*(W-2*pad),Z=z=>pad+(z-z0)/(z1-z0)*(H-2*pad);
+c.clearRect(0,0,W,H);c.fillStyle="#286044";c.fillRect(0,0,W,H);c.strokeStyle="rgba(255,255,255,.18)";c.lineWidth=1;for(let i=0;i<=12;i++){let z=z0+(z1-z0)*i/12;c.beginPath();c.moveTo(pad,Z(z));c.lineTo(W-pad,Z(z));c.stroke()}c.strokeStyle="rgba(255,255,255,.6)";c.lineWidth=2;c.strokeRect(pad,pad,W-2*pad,H-2*pad);
+function markerLine(pos,col,label){if(!pos||!Number.isFinite(pos.z))return;const z=pos.z;c.strokeStyle=col;c.setLineDash([10,6]);c.lineWidth=3;c.beginPath();c.moveTo(pad,Z(z));c.lineTo(W-pad,Z(z));c.stroke();c.setLineDash([]);c.fillStyle=col;c.font="bold 13px Arial";c.fillText(label,pad+7,Z(z)-7)}
+// The start snapshot records both field markers directly; coordinates are already relative to game origin.
+markerLine(s.lineOfScrimmage,"#ffffff","LINE OF SCRIMMAGE");markerLine(s.lineToGain,"#f4d35e",s.goalToGo?"GOAL LINE":"FIRST DOWN");
+const carrier=carrierAt(frame);let rows=[];
+Object.entries(ps).forEach(([id,a])=>{if(!a.length)return;const pos=sampleAt(a,frame);if(!pos)return;const part=participants[id]||{},isHome=!!part.home,col=isHome?"#6aa9e9":"#e47b7b",isCarrier=id===carrier,dir=direction(a,pos.index);
+c.strokeStyle=isHome?"rgba(106,169,233,.38)":"rgba(228,123,123,.38)";c.lineWidth=2;c.beginPath();let begun=false;for(const v of a){if(v[1]>frame)break;if(!begun){c.moveTo(X(v[2]),Z(v[4]));begun=true}else c.lineTo(X(v[2]),Z(v[4]))}if(begun)c.stroke();
+if(isCarrier){c.save();c.shadowColor="#ffe85c";c.shadowBlur=30;c.fillStyle="rgba(255,225,70,.28)";c.beginPath();c.arc(X(pos.x),Z(pos.z),23,0,Math.PI*2);c.fill();c.shadowBlur=22;c.strokeStyle="#fff2a0";c.lineWidth=5;c.beginPath();c.arc(X(pos.x),Z(pos.z),14,0,Math.PI*2);c.stroke();c.restore()}
+c.fillStyle=col;c.beginPath();c.arc(X(pos.x),Z(pos.z),isCarrier?10:7,0,Math.PI*2);c.fill();c.strokeStyle=isCarrier?"#fff2a0":"#15191c";c.lineWidth=isCarrier?3:1.5;c.stroke();
+if(dir){const sx=X(pos.x),sy=Z(pos.z),ex=X(pos.x+dir.dx*2.8),ey=Z(pos.z+dir.dz*2.8);c.strokeStyle=isCarrier?"#fff5a8":"rgba(255,255,255,.85)";c.fillStyle=c.strokeStyle;c.lineWidth=isCarrier?4:2;c.beginPath();c.moveTo(sx,sy);c.lineTo(ex,ey);c.stroke();const ang=Math.atan2(ey-sy,ex-sx);c.beginPath();c.moveTo(ex,ey);c.lineTo(ex-8*Math.cos(ang-.55),ey-8*Math.sin(ang-.55));c.lineTo(ex-8*Math.cos(ang+.55),ey-8*Math.sin(ang+.55));c.closePath();c.fill()}
+const name=names[id]||id.slice(0,8);c.fillStyle=isCarrier?"#fff4a8":"#fff";c.font=isCarrier?"bold 13px Arial":"11px Arial";c.fillText(name+(isCarrier?" · BALL":"") ,X(pos.x)+10,Z(pos.z)-8);rows.push({name,team:isHome?home:away,role:part.role||"—",x:pos.x,y:pos.y,z:pos.z,isHome,dir})});
+Object.values(tp.ball||{}).forEach(a=>{const q=sampleAt(a,frame);if(!q)return;c.fillStyle="#f4d35e";c.beginPath();c.arc(X(q.x),Z(q.z),5,0,Math.PI*2);c.fill();c.strokeStyle="#29200a";c.stroke()});
+$("players").innerHTML=rows.sort((a,b)=>Number(b.isHome)-Number(a.isHome)||a.name.localeCompare(b.name)).map(v=>'<tr><td><span class="dot" style="background:'+(v.isHome?"#6aa9e9":"#e47b7b")+'"></span>'+esc(v.name)+(v.name===(names[carrier]||"")?' <b style="color:#ffe879">● BALL</b>':'')+'</td><td>'+esc(v.team)+" / "+esc(v.role)+'</td><td class="num">'+v.x.toFixed(2)+'</td><td class="num">'+v.y.toFixed(2)+'</td><td class="num">'+v.z.toFixed(2)+'</td><td>'+(v.dir?Math.round(Math.atan2(v.dir.dx,-v.dir.dz)*180/Math.PI)+"° · "+v.dir.speed.toFixed(1)+" b/s":"—")+'</td></tr>').join("");
+$("playercount").textContent=rows.length+" tracked";$("time").textContent=(frame/1000).toFixed(2)+"s";$("scrub").value=Math.round(frame/duration*1000);$("frameinfo").textContent=(frame/1000).toFixed(2)+" / "+(duration/1000).toFixed(2)+"s"}
+function tick(now){if(!playing)return;if(!last)last=now;frame+=(now-last)*Number($("speed").value);last=now;if(frame>=duration){frame=duration;draw();stop();return}draw();raf=requestAnimationFrame(tick)}
+$("toggle").onclick=()=>{if(playing){stop();return}if(frame>=duration)frame=0;playing=true;last=0;$("toggle").textContent="Pause";raf=requestAnimationFrame(tick)};
+$("back").onclick=()=>{stop();frame=Math.max(0,frame-1000);draw()};$("forward").onclick=()=>{stop();frame=Math.min(duration,frame+1000);draw()};$("scrub").oninput=e=>{stop();frame=duration*Number(e.target.value)/1000;draw()};
+autoLoad().then(()=>{renderPlayByPlay();buildQBAnalysis();buildReceiverAnalysis();buildDefenseAnalysis()});
+</script></body></html>
